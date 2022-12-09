@@ -18,14 +18,14 @@ output:
 
 # Intro {.sidebar}
 
-This dashboard covers the materials for the course introducing R. Course held in Ghana, November 29 - December 2, 2022.
+This dashboard covers the materials for the course introducing R. Course held in Ghana, December 12 - December 15, 2022.
 
 ---
 
 Instructors: 
 
- - Femke 
  - Ernest
+ - Femke 
  - Laurent
 
 
@@ -48,44 +48,20 @@ The course starts at a very basic level and builds up gradually. No previous exp
 ## Column 2
 
 ### Course schedule 
-
-| Time        | Topic                                           |
-|:------------|:------------------------------------------------|
-| *Monday*    |                                                 |
-| 11.00-14.00 | Introduction to R and RStudio (A)               |
-| *Tuesday*   |                                                 |
-| 09.00-13.00 | How is R organized? (B)                         |
-|             | Data manipulation (C), lecture                  |
-|             | *Break*                                         |     
-| 14.00-17.00 | Data manipulation (C), practical                |
-|             | Analyzing data (D), lecture                     |
-| *Wednesday* |                                                 |
-| 09.00-13.00 | Analyzing data(D), practical                    |
-|             | Data visualization (E), lecture                 |
-|             | *Break*                                         |             
-| 14.00-17.00 | Data visualization (E), practical               |
-|             | Loop and functions (F), lecture                 |
-| *Thursday*  |                                                 |
-| 09.00-13.00 | Loops and functions (F), practical              |
-|             | R Markdown, lecture                             |
-|             | *Break*                                         |
-| 14.00-17.00 | R Markdown, practical                           |
-| *Friday*    |                                                 |
-| 09.00-11.30 | Outstanding issues, Q and A                     |
-
+| Day         | Hours       | Topic                               | 
+|:------------|:------------|:------------------------------------|
+| *Monday*    | 09.00-12.00 | Installation of R and RStudio       |
+|             | 12.30-16.00 | Introduction to R and Rstudio (A+B) |
+| *Tuesday*   | 09.00-12.00 | Data manipulation (C)               |
+|             | 13.30-16.30 |  Data manipulation (C)                   |
+| *Wednesday* | 09.00-12.00 | Analyzing data (D)             |
+|             | 13.30-16.30 | Data visualization  (E)          |
+| *Thursday*  | 09.00-11.30 | Outstanding issues, Q and A         |
 
 # How to prepare
 
 ## Column 1
 
-### Preparing your machine for the course
-Dear all, 
-
-The below steps guide you through installing both `R` as well as the necessary additions.
-
-We look forward to see you all in Accra,  
-
-*Signe and Mikkel*
 
 ### **System requirements**
 

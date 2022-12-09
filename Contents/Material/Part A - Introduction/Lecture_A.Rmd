@@ -39,13 +39,13 @@ output:
 
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Tuesday*   | 09.00-12.00 | Installation of R and RStudio       |
+| *Monday*    | 09.00-12.00 | Installation of R and RStudio       |
 |             | 12.30-16.00 | Introduction to R and Rstudio (A+B) |
-| *Wednesday* | 09.00-12.00 | Data manipulation (C)               |
-|             | 13.30-16.30 | Analyzing data (D)                  |
-| *Thursday*  | 09.00-12.00 | Data visualization  (E)             |
-|             | 13.30-16.30 | Loops and functions (F)             |
-| *Friday*    | 09.00-11.30 | Outstanding issues, Q and A         |
+| *Tuesday*   | 09.00-12.00 | Data manipulation (C)               |
+|             | 13.30-16.30 |  Data manipulation (C)                   |
+| *Wednesday* | 09.00-12.00 | Analyzing data (D)             |
+|             | 13.30-16.30 | Data visualization  (E)          |
+| *Thursday*  | 09.00-11.30 | Outstanding issues, Q and A         |
 
 
 
