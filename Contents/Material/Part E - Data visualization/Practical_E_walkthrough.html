@@ -14,7 +14,7 @@
 
 <title>Practical E - solutions</title>
 
-<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -105,8 +105,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -114,16 +114,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -181,9 +174,12 @@ pre code {
 <p>The following packages are required for this practical:</p>
 <pre class="r"><code>library(dplyr)
 library(magrittr)
-library(mice)
-library(ggplot2)
-library(stringr)</code></pre>
+library(mice)</code></pre>
+<pre><code>## Warning: package &#39;mice&#39; was built under R version 4.2.2</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning in as.POSIXlt.POSIXct(Sys.time()): unable to identify current timezone &#39;C&#39;:
+## please set environment variable &#39;TZ&#39;</code></pre>
+<pre class="r"><code>library(stringr)</code></pre>
 <p>and if you’d like the same results as I have obtained, you can fix
 the random seed</p>
 <pre class="r"><code>set.seed(123)</code></pre>
@@ -454,7 +450,7 @@ municipal-level population.</strong></li>
 <pre><code>## Linking to GEOS 3.9.1, GDAL 3.4.3, PROJ 7.2.1; sf_use_s2() is TRUE</code></pre>
 <pre class="r"><code>denmark &lt;- st_read(&quot;DK_map.shp&quot;)</code></pre>
 <pre><code>## Reading layer `DK_map&#39; from data source 
-##   `C:\Mikkel\Dropbox\Work\RWORK\DSTStuff\Ghana\RGhana\Contents\Material\Part E - Data visualization\DK_map.shp&#39; 
+##   `C:\Users\laure\OneDrive\GSS\RGhana\Contents\Material\Part E - Data visualization\DK_map.shp&#39; 
 ##   using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 306 features and 6 fields
 ## Geometry type: POLYGON
