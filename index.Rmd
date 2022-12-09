@@ -53,10 +53,11 @@ The course starts at a very basic level and builds up gradually. No previous exp
 | *Monday*    | 09.00-12.00 | Installation of R and RStudio       |
 |             | 12.30-16.00 | Introduction to R and Rstudio (A+B) |
 | *Tuesday*   | 09.00-12.00 | Data manipulation (C)               |
-|             | 13.30-16.30 |  Data manipulation (C)                   |
-| *Wednesday* | 09.00-12.00 | Analyzing data (D)             |
-|             | 13.30-16.30 | Data visualization  (E)          |
-| *Thursday*  | 09.00-11.30 | Outstanding issues, Q and A         |
+|             | 13.30-16.30 | Analyzing data (D)                  |
+| *Wednesday* | 09.00-12.00 | Analyzing data (D)                  |
+|             | 13.30-16.30 |                                     |
+| *Thursday*  | 09.00-11.30 | Data visualization  (E)             |
+|             | 09.00-11.30 | Outstanding issues, Q and A         |
 
 # How to prepare
 
@@ -115,6 +116,13 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
     - [`notebook.R`](Contents/Material/Part A - Introduction/notebook.R){target="_blank"}
     - [`markdown.Rmd`](Contents/Material/Part A - Introduction/markdown.Rmd){target="_blank"}
 
+- Part B: How is `R` organized?
+    <!-- - [Lecture B](Contents/Material/Part B - How is R organized/Lecture_B.html){target="_blank"} -->
+    - [Lecture B](Contents/Material/Part B - How is R organized/Lecture-B_november.html){target="_blank"}
+    - [Practical B](Contents/Material/Part B - How is R organized/Practical_B.html){target="_blank"}
+    - [Practical B with solutions](Contents/Material/Part B - How is R organized/Practical_B_walkthrough.html){target="_blank"}
+    - [`boys.RData`](Contents/Material/Part B - How is R organized/boys.RData)
+
 All lectures are in `html` format. Practicals are are provided both as naked questions but also with ample explanations and solutions - choose according to your taste!
 
 <!-- All lectures are in `html` format. Practicals are walkthrough files that guide you through the exercises. `Impractical` files contain the exercises, without walkthrough, explanations and solutions.  -->
@@ -154,22 +162,17 @@ See also [this `rmarkdown` cheat sheet](Contents/Material/Part A - Introduction/
 ### Tuesday's materials
 We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
-- Part B: How is `R` organized?
-    <!-- - [Lecture B](Contents/Material/Part B - How is R organized/Lecture_B.html){target="_blank"} -->
-    - [Lecture B](Contents/Material/Part B - How is R organized/Lecture-B_november.html){target="_blank"}
-    - [Practical B](Contents/Material/Part B - How is R organized/Practical_B.html){target="_blank"}
-    - [Practical B with solutions](Contents/Material/Part B - How is R organized/Practical_B_walkthrough.html){target="_blank"}
-    - [`boys.RData`](Contents/Material/Part B - How is R organized/boys.RData)
+
 
 - Part C: Data manipulation
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
     - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C_webex.html)
-- Part D: Analyzing data 
+
+- Part D: Analyzing data (start) 
     - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
     - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_november.html)
     - [Practical D with solutions](Contents/Material/Part D - Analyzing data/Practical_D_walkthrough_november.html)
 
-    
     
 All lectures are in `html` format. Practicals are are provided both as naked questions but also with ample explanations and solutions - choose according to your taste!
 
@@ -182,6 +185,8 @@ All lectures are in `html` format. Practicals are are provided both as naked que
 - [R-bloggers tutorial on pipes](https://www.r-bloggers.com/2017/12/pipes-in-r-tutorial-for-beginners/)
 - [pipe tutorial on datacamp](https://www.datacamp.com/community/tutorials/pipe-r-tutorial)
 
+
+
 The above links are useful references that connect to today's materials.
 
 # Wednesday
@@ -191,26 +196,11 @@ The above links are useful references that connect to today's materials.
 ### Wednesdays's materials
 We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
+
 - Part D: Analyzing data (continued) 
     - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
     - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_november.html)
     - [Practical D with solutions](Contents/Material/Part D - Analyzing data/Practical_D_walkthrough_november.html)
-- Part E: Data visualization
-    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
-    - [Practical E with base R](Contents/Material/Part E - Data visualization/Practical_E_webex.html){target="_blank"}
-    - [Practical E with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
-    <!-- - [Practical E](Contents/Material/Part E - Data visualization/Practical_E.html){target="_blank"} -->
-    <!-- - [Practical E with solutions](Contents/Material/Part E - Data visualization/Practical_E_walkthrough.html){target="_blank"} -->
-    <!-- - [Practical E with solutions - using ggplot](Contents/Material/Part E - Data visualization/Practical_E_walkthrough_ggplot.html){target="_blank"} -->
-    - [`DK_map.shp`](Contents/Material/Part E - Data visualization/DK_map.shp), [`DK_map.shx`](Contents/Material/Part E - Data visualization/DK_map.shx), [`DK_map.dbf`](Contents/Material/Part E - Data visualization/DK_map.dbf) shapefiles for mapping data on Danish municipalities
-- Part F: Loops and functions
-    - [Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F.html){target="_blank"}
-    - [Practical F](Contents/Material/Part F - Loops and functions/Practical_F.html){target="_blank"}
-    - [Practical F with solutions](Contents/Material/Part F - Loops and functions/Practical_F_walkthrough.html){target="_blank"}
-    - [New Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F_new.html){target="_blank"}
-    - [New Practical F](Contents/Material/Part F - Loops and functions/Practical_F_new.html){target="_blank"}
-    - [New Practical F with solutions](Contents/Material/Part F - Loops and functions/Practical_F_walkthrough_new.html){target="_blank"}
-    
 
 <!-- - Part F: Loops and functions -->
 <!--     - [Lecture E](Contents/Material/Part E - Functions apply and looping/Lecture_E.html){target="_blank"} -->
@@ -230,13 +220,7 @@ All lectures are in `html` format. Practicals are are provided both as naked que
 
 <!-- - [`magrittr`](https://magrittr.tidyverse.org) -->
 <!-- - [`R` for Data Science](http://r4ds.had.co.nz) - [Chapter 18 on pipes](http://r4ds.had.co.nz/pipes.html) -->
-- [The `ggplot2` reference page](https://ggplot2.tidyverse.org/reference/)
 
-The above link details pretty much all you can do with package `ggplot2`.
-
-- [Geocomputation with `R`](https://bookdown.org/robinlovelace/geocompr/)
-
-The `sf` setup for `R` is relatively new, and a lot of material about spatial data in `R` uses the older `sp` setup. This book is an introduction to spatial data the `sf` way.
 
 
 # Thursday
@@ -244,7 +228,25 @@ The `sf` setup for `R` is relatively new, and a lot of material about spatial da
 ## Column 1
 
 ### Thursday's materials
-We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
+Today we will see what is still outstanding and what else we can cover and not. Probably do the data visualiztion lectures
+
+
+- Part E: Data visualization
+    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
+    - [Practical E with base R](Contents/Material/Part E - Data visualization/Practical_E_webex.html){target="_blank"}
+    - [Practical E with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
+    <!-- - [Practical E](Contents/Material/Part E - Data visualization/Practical_E.html){target="_blank"} -->
+    <!-- - [Practical E with solutions](Contents/Material/Part E - Data visualization/Practical_E_walkthrough.html){target="_blank"} -->
+    <!-- - [Practical E with solutions - using ggplot](Contents/Material/Part E - Data visualization/Practical_E_walkthrough_ggplot.html){target="_blank"} -->
+    - [`DK_map.shp`](Contents/Material/Part E - Data visualization/DK_map.shp), [`DK_map.shx`](Contents/Material/Part E - Data visualization/DK_map.shx), [`DK_map.dbf`](Contents/Material/Part E - Data visualization/DK_map.dbf) shapefiles for mapping data on Danish municipalities
+- Part F: Loops and functions
+    - [Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F.html){target="_blank"}
+    - [Practical F](Contents/Material/Part F - Loops and functions/Practical_F.html){target="_blank"}
+    - [Practical F with solutions](Contents/Material/Part F - Loops and functions/Practical_F_walkthrough.html){target="_blank"}
+    - [New Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F_new.html){target="_blank"}
+    - [New Practical F](Contents/Material/Part F - Loops and functions/Practical_F_new.html){target="_blank"}
+    - [New Practical F with solutions](Contents/Material/Part F - Loops and functions/Practical_F_walkthrough_new.html){target="_blank"}
+    
 
 - Part G: R Markdown
     - [Lecture G](Contents/Material/Part G - R Markdown/Lecture_G.html){target="_blank"}
@@ -261,6 +263,14 @@ All lectures are in `html` format. Practicals are are provided both as naked que
 
 <!-- - [`magrittr`](https://magrittr.tidyverse.org) -->
 <!-- - [`R` for Data Science](http://r4ds.had.co.nz) - [Chapter 18 on pipes](http://r4ds.had.co.nz/pipes.html) -->
+- [The `ggplot2` reference page](https://ggplot2.tidyverse.org/reference/)
+
+The above link details pretty much all you can do with package `ggplot2`.
+
+- [Geocomputation with `R`](https://bookdown.org/robinlovelace/geocompr/)
+
+The `sf` setup for `R` is relatively new, and a lot of material about spatial data in `R` uses the older `sp` setup. This book is an introduction to spatial data the `sf` way.
+
 - [Create awesome HTML tables with `knitr::kable` and `kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
 
 - [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
