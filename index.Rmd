@@ -24,8 +24,9 @@ This dashboard covers the materials for the course introducing R. Course held in
 
 Instructors: 
 
- - Signe Hermann (she@dst.dk)
- - Mikkel Mollerup (mim@dst.dk)
+ - Femke 
+ - Ernest
+ - Laurent
 
 
 ---
