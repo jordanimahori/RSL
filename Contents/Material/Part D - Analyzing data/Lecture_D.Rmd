@@ -1,0 +1,14 @@
+---
+title: 'Analyzing data'
+author: "Statistical Programming with R"
+date: ""
+output:
+  ioslides_presentation:
+    fig_height: 5
+    fig_width: 8
+    logo: logo_en.png
+    transition: faster
+    smaller: true
+  beamer_presentation: default
+---
+

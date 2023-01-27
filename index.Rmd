@@ -55,8 +55,8 @@ The course starts at a very basic level and builds up gradually. No previous exp
 |             | 13.30-17.00 | Basics of R (B) |
 | *Tuesday*   | 9.00-12.00 | Data manipulation (C)               |
 |             | 13.30-17.00 | Analyzing data (D)            |
-| *Wednesday* | 9.00-12.30 | Loops and functions (E)       |
-|             | 13.30-17.00 | Visualizations (F)              |
+| *Wednesday* | 9.00-12.30 | Visualizations (E)       |
+|             | 13.30-17.00 | Q&A / Experimenting / Loops and functions (F)  |
 | *Thursday*  | 9.00- 17.00 | Specific sessions: CPI / Trade  |
 | *Friday*  |   9.00-17.00  | Specific sessions: CPI / Trade |
 
