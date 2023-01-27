@@ -24,14 +24,15 @@ This dashboard covers the materials for the course introducing R. Course held in
 
 Instructors: 
 
- - Ernest
- - Femke 
+ - Femke
+ - Peter
+ - Simon
  - Laurent
 
 
 ---
 
-Material adopted from [Gerko Vink](https://github.com/gerkovink/R) and Statistics Denmark.
+Material adopted from [Gerko Vink](https://github.com/gerkovink/R), Statistics Denmark and [Laurent Smeets](https://github.com/Laurent-Smeets-GSS-Account/RGhana).
 
 
 ---
@@ -50,23 +51,19 @@ The course starts at a very basic level and builds up gradually. No previous exp
 ### Course schedule 
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Monday*    | 8.30-12.00 | Installation of R and RStudio       |
-|             | 12.30-16.30 | Introduction to R and Rstudio (A+B) |
-| *Tuesday*   | 8.30-12.00 | Data manipulation (C)               |
-|             | 13.30-16.30 | Analyzing data (D start)            |
-| *Wednesday* | 8.30-12.00 | Analyzing data (D continued)        |
-|             | 13.30-16.30 | Loops and Functions (F)              |
-| *Thursday*  |8.30-11.30 | Data visualization  (E)             |
-|             | 13.30-16.30  | Outstanding issues, Q and A         |
+| *Monday*    | 9.00-12.30 | Introduction to R and RStudio  (A)   |
+|             | 13.30-17.00 | Basics of R (B) |
+| *Tuesday*   | 9.00-12.00 | Data manipulation (C)               |
+|             | 13.30-17.00 | Analyzing data (D)            |
+| *Wednesday* | 9.00-12.30 | Loops and functions (E)       |
+|             | 13.30-17.00 | Visualizations (F)              |
+| *Thursday*  | 9.00- 17.00 | Specific sessions: CPI / Trade  |
+| *Friday*  |   9.00-17.00  | Specific sessions: CPI / Trade |
 
-# How to prepare
+
+# Installing R + RStudio
 
 ## Column 1
-
-
-### **System requirements**
-
-Bring a laptop computer to the course and make sure that you have full write access and administrator rights to the machine. We will explore programming and compiling in this course. This means that you need full access to your machine. Some corporate laptops come with limited access for their users, we therefore advice you to bring a personal laptop computer, if you have one. 
 
 ### **1. Install `R`**
 `R` can be obtained [here](https://cran.r-project.org). We won't use `R` directly in the course, but rather call `R` through `RStudio`. Therefore it needs to be installed. 
@@ -80,10 +77,11 @@ Rstudio is an Integrated Development Environment (IDE). It can be obtained as st
 Execute the following lines of code in the console window:
 
 ```{r eval=FALSE, echo = TRUE}
-install.packages(c("ggplot2", "stats","tidyverse", "magrittr", "micemd", "jomo", "pan", 
-                 "lme4", "knitr", "rmarkdown", "plotly", "ggplot2", "shiny", 
-                 "devtools", "boot", "class", "car", "MASS", "ggplot2movies", 
-                 "ISLR", "DAAG", "mice", "mitml", "miceadds", "sf"), 
+install.packages(c("ggplot2", "stats", "tidyverse", "magrittr", "knitr", 
+                   "rmarkdown", "plotly", "shiny", "readxl", "tidyr", 
+                   "janitor", "lubridate", "writexl", "devtools", 
+                   "boot", "class", "car", "MASS", 
+                   "ISLR", "DAAG", "mice", "sf"), 
                  dependencies = TRUE)
 ```
 
@@ -112,12 +110,11 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 
 - Part A: Introduction
     - [Lecture A](Contents/Material/Part A - Introduction/Lecture_A.html){target="_blank"}
-    - [Practical A](Contents/Material/Part A - Introduction/Practical_A_walkthrough.html){target="_blank"}
+    - [Practical A](Contents/Material/Part A - Introduction/Practical_A.html){target="_blank"}
     - [`notebook.R`](Contents/Material/Part A - Introduction/notebook.R){target="_blank"}
     - [`markdown.Rmd`](Contents/Material/Part A - Introduction/markdown.Rmd){target="_blank"}
 
-- Part B: How is `R` organized?
-    <!-- - [Lecture B](Contents/Material/Part B - How is R organized/Lecture_B.html){target="_blank"} -->
+- Part B: Basics of R
     - [Lecture B](Contents/Material/Part B - How is R organized/Lecture-B_november.html){target="_blank"}
     - [Practical B](Contents/Material/Part B - How is R organized/Practical_B.html){target="_blank"}
     - [Practical B with solutions](Contents/Material/Part B - How is R organized/Practical_B_walkthrough.html){target="_blank"}
@@ -227,13 +224,11 @@ All lectures are in `html` format. Practicals are are provided both as naked que
 <!-- - [`magrittr`](https://magrittr.tidyverse.org) -->
 <!-- - [`R` for Data Science](http://r4ds.had.co.nz) - [Chapter 18 on pipes](http://r4ds.had.co.nz/pipes.html) -->
 
-
-
-# Thursday
+# Additional material
 
 ## Column 1
 
-### Thursday's materials
+### Additional material
 Today we will see what is still outstanding and what else we can cover and not. Probably do the data visualiztion lectures
 
 
@@ -276,6 +271,63 @@ The `sf` setup for `R` is relatively new, and a lot of material about spatial da
 - [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 
 
+
+# CPI
+
+## Column 1
+
+### CPI materials
+On Thursday and Friday the CPI team will specifically focus on the R code for the CPI.
+
+
+- CPI R code
+    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
+
+
+
+
+## Column 2
+
+### Schedule
+| Day         | Hours       | Topic                               | 
+|:------------|:------------|:------------------------------------|
+| *Thursday*  |  9.00 - 12.00  | ... |
+|   |  13.00 - 16.30  | ... |
+| *Friday*  |     9.00 - 12.00       | ... |
+|   |  13.00 - 16.30  | ... |
+
+
+
+
+# Trade
+
+## Column 1
+
+### CPI materials
+On Thursday and Friday the Trade team will specifically focus on the R code for trade data.
+
+
+- Introduction to Trade data
+    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
+    - 
+- ICUMS data 
+  - Lecture?
+  - Reformatting
+- Cleaning and analyzing the ICUMS data
+    
+
+
+
+## Column 2
+
+### Schedule
+| Day         | Hours       | Topic                               | 
+|:------------|:------------|:------------------------------------|
+| *Thursday*  |  9.00 - 12.00  | Introduction to trade data |
+|   |  13.00 - 16.30  | ICUMS data, reformatting |
+| *Friday*  |    9.00 - 12.00  | Cleaning and analyzing ICUMS data |
+|   |  13.00 - 16.30  | Working with the data! |
+
 # GSS
 
 ## column 1
@@ -314,7 +366,7 @@ Example code and data:
 
 ## Column 1
 
-### What to do after the course
+### Additional material
 
 The following references are currently available for free, either as pdfs or as extensive webpages (written with [RMarkdown](https://rmarkdown.rstudio.com/) and [bookdown](https://bookdown.org/)). They are all very useful and we highly recommend them. 
 

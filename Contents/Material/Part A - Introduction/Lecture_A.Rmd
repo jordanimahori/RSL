@@ -35,47 +35,18 @@ output:
 
 # Overview of this course
 ## Program
-
-
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Monday*    | 09.00-12.00 | Installation of R and RStudio       |
-|             | 12.30-16.00 | Introduction to R and Rstudio (A+B) |
-| *Tuesday*   | 09.00-12.00 | Data manipulation (C)               |
-|             | 13.30-16.30 |  Data manipulation (C)                   |
-| *Wednesday* | 09.00-12.00 | Analyzing data (D)             |
-|             | 13.30-16.30 | Data visualization  (E)          |
-| *Thursday*  | 09.00-11.30 | Outstanding issues, Q and A         |
+| *Monday*    | 9.00-12.30 | Introduction to R and RStudio  (A)   |
+|             | 13.30-17.00 | Basics of R (B) |
+| *Tuesday*   | 9.00-12.30 | Data manipulation (C)               |
+|             | 13.30-17.00 | Analyzing data (D)            |
+| *Wednesday* | 9.00-12.30 | Loops and functions (E)       |
+|             | 13.30-17.00 | Visualizations (F)              |
+| *Thursday*  | 9.00- 17.00 | Specific sessions: CPI / Trade  |
+| *Friday*  |   9.00-17.00  | Specific sessions: CPI / Trade |
 
 
-
-<!-- |  Time       | Topic                                           | -->
-<!-- |:------------|:------------------------------------------------| -->
-<!-- | *Monday*    |                                                 | -->
-<!-- | 10.00-12.00 | Installation of R and RStudio                   | -->
-<!-- | 13.30-16.00 | Introduction to R and Rstudio (A+B)             | -->
-<!-- | *Tuesday*   |                                                 | -->
-<!-- | 09.00-12.00 | Data manipulation (C)                           | -->
-<!-- | 13.30-16.30 | Analyzing data (D)                              | -->
-<!-- | *Wednesday* |                                                 | -->
-<!-- | 09.00-12.00 | Data visualization  (E)                         |                                         | -->
-<!-- | 13.30-16.30 | Loops and functions (F)                         | -->
-<!-- | *Thursday*  |                                                 | -->
-<!-- | 09.00-11.30 | Outstanding issues, Q and A                     | -->
-
-
-
-<!-- <center> -->
-<!-- <img src="figures/schedule.png" alt="HTML5 Icon" width = 90%> -->
-<!-- </center> -->
-
-<!-- # Goal of this course -->
-<!-- ## Learn to keep your *cool* -->
-<!-- <center> -->
-<!--   <img src="figures/state_programming.png" alt="HTML5 Icon" width = 100%> -->
-<!-- </center> -->
-
-<!-- and build the foundation for a succesfull scripting career -->
 
 # What is R?
 
@@ -109,6 +80,8 @@ output:
 - Gives extra functionality (Shiny, knitr, markdown, LaTeX)
 - Allows for integration with version control routines, such as Git.
 
+# Installing R and RStudio
+
 # How does R work
 
 ## Objects and elements
@@ -121,8 +94,8 @@ output:
 
 ## The help
 - Everything that is published on the Comprehensive `R` Archive Network (CRAN) and is aimed at `R` users, must be accompanied by a help file. 
-- If you know the name of the function that performs an operation, e.g. `anova()`, then you just type `?anova` or `help(anova)` in the console. 
-- If you do not know the name of the function: type `??` followed by your search criterion. For example `??anova` returns a list of all help pages that contain the word 'anova'
+- If you know the name of the function that performs an operation, e.g. `read_excel()``, then you just type `?read_excel` or `help(read_excel)` in the console and press enter.
+- If you do not know the name of the function: type `??` followed by your search criterion. For example `??excel` returns a list of all help pages that contain the word 'excel'
 
 - Alternatively, the internet will tell you almost everything you'd like to know (and then some)
 
@@ -134,10 +107,10 @@ output:
 
     - you just use `<-`
 
-- For example, if you assign the value `100` (an element) to object `a`, you would type
+- For example, if you assign the value `100` (an element) to object `trotro_fare`, you would type
 
 ```{r}
-a <- 100
+trotro_fare <- 100
 ```
 
 - Life hack: In RStudio learn to use the shortcut "alt + -" (hyphen) to produce the left arrow `<-` in an R file
@@ -148,10 +121,10 @@ a <- 100
 
     - you just use type the name you have given to the object
 
-- For example, we assigned the value `100` to object `a`. To call object `a`, we would type
+- For example, we assigned the value `100` to object `trotro_fare`. To call object `trotro_fare`, we would type
 
 ```{r}
-a
+trotro_fare
 ```
 
 ## Writing code

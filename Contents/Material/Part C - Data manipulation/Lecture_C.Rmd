@@ -32,7 +32,6 @@ library(dplyr)    # data manipulation
 library(magrittr) # for pipes
 ```
 
-<img src="pipe.jpg" style="display:block;width:500px;margin-left:auto;margin-right:auto"></img>
 
 
 ## New functions
@@ -47,9 +46,6 @@ library(magrittr) # for pipes
 - `order()`: data entries in increasing order
 - `dplyr::arrange()`: sorting
 - `haven::read_sav()`: import SPSS data
-- `cor()`: bivariate correlation
-- `sample()`: drawing a sample
-- `t.test()`: t-test 
 
 ## The cats data
 ```{r}
@@ -129,41 +125,6 @@ head(cats.numbers)
 ```{r}
 rbind(cats[1:3, ], cats[1:5, ])
 ```
-
-# Basic plots and analysis
-
-## Correlation
-
-```{r fig.height=5, fig.width=5, dev.args = list(bg = 'transparent'), fig.align='center'}
-plot(cats$Bwt, cats$Hwt)
-```
-
-## Correlation
-Let's compute the correlation with the `cor` function. According to the help file (`?cor`), we can use just `cats[,-1]` as input
-
-```{r}
-cor(cats[, -1])
-```
-With `[, -1]` we exclude the first column
-
-## Correlation
-
-```{r}
-cor.test(cats$Bwt, cats$Hwt)
-```
-
-## T-test
-Test the null hypothesis that the difference in mean heart weight between male and female cats is 0
-```{r}
-t.test(formula = Hwt ~ Sex, data = cats)
-```
-
-## T-test
-```{r fig.height=5, fig.width=5, dev.args = list(bg = 'transparent'), fig.align='center'}
-plot(formula = Hwt ~ Sex, data = cats)
-```
-
-
 
 # Pipes
 
@@ -287,106 +248,6 @@ set.seed(123)
   sample(3) %>%
   paste(., LETTERS[.])
 ```
-
-# More pipe stuff
-
-## The standard `%>%` pipe
-<center>
-<img src="flow_pipe.png" alt="HTML5 Icon" width = 75%>
-</center>
-
-## The `%$%` pipe
-<center>
-<img src="flow_$_pipe.png" alt="HTML5 Icon" width = 75%>
-</center>
-
-## The `%T>%` pipe
-<center>
-<img src="flow_T_pipe.png" alt="HTML5 Icon" width = 100%>
-</center>
-
-<!-- ## The role of `.` in a pipe -->
-<!-- In `a %>% b(arg1, arg2, arg3)`, `a` will become `arg1`. With `.` we can change this. -->
-<!-- ```{r error=TRUE} -->
-<!-- set.seed(123) -->
-<!-- 1:5 %>% -->
-<!--   mean() %>% -->
-<!--   rnorm(10) -->
-<!-- ``` -->
-<!-- VS -->
-<!-- ```{r} -->
-<!-- set.seed(123) -->
-<!-- 1:5 %>% -->
-<!--   mean() %>% -->
-<!--   rnorm(n = 10, mean = .) -->
-<!-- ``` -->
-<!-- The `.` can be used as a placeholder in the pipe. -->
-
-<!-- ## Placeholder example -->
-<!-- Remember: `sample()` takes a random sample from a vector -->
-<!-- ```{r} -->
-<!-- sample(x = c(1, 1, 2, 3, 5, 8), size = 2) -->
-<!-- ``` -->
-
-<!-- Sample 3 positions from the alphabet and show the position and the letter -->
-<!-- ```{r} -->
-<!-- set.seed(123) -->
-<!-- 1:26 %>% -->
-<!--   sample(3) %>% -->
-<!--   paste(., LETTERS[.]) -->
-<!-- ``` -->
-
-<!-- ## Debugging pipelines -->
-<!-- If you don't know what's going on, run each statement separately! -->
-<!-- ```{r} -->
-<!-- set.seed(123) -->
-<!-- 1:26 -->
-
-<!-- set.seed(123) -->
-<!-- 1:26 %>% -->
-<!--   sample(3) -->
-
-<!-- set.seed(123) -->
-<!-- 1:26 %>% -->
-<!--   sample(3) %>% -->
-<!--   paste(., LETTERS[.]) -->
-<!-- ``` -->
-
-## Performing a t-test in a pipe
-```{r message=FALSE}
-cats %$%
-  t.test(Hwt ~ Sex)
-```
-is the same as 
-```{r eval=FALSE}
-t.test(Hwt ~ Sex, data = cats)
-```
-
-## Storing a t-test from a pipe
-```{r}
-cats.test <- 
-  cats %$%
-  t.test(Bwt ~ Sex)
-
-cats.test
-```
-
-## New pipe in town 
-
-<font size="18">|></font>
-
-Native pipe (|>) vs Magrittr pipe (%>%):
-
-* Differences in placeholder syntax
-  - In R 4.1, there was no placeholder syntax for the native pipe
-  - In R 4.2, the native pipe can use _ as a placeholder but only with named arguments.
-* Some other differences, but mostly the same 
-
-```{r}
-3 %>% rnorm(5, .) 
-3 |> rnorm(5, mean = _)
-```
-
 
 
 
