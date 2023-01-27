@@ -17,8 +17,6 @@ output:
 
 - Data manipulation
 
-- Basic plots and analysis (correlation & t-test)
-
 - Pipes
 
 <!-- - Tidy data -->
