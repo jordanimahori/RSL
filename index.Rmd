@@ -18,7 +18,7 @@ output:
 
 # Intro {.sidebar}
 
-This dashboard covers the materials for the course introducing R. Course held in Ghana, December 12 - December 15, 2022.
+This dashboard covers the materials for the course introducing R, and using it for CPI and trade statistics at GSS. The course is held from January 30 until February 3, 2023.
 
 ---
 
@@ -117,12 +117,8 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 - Part B: Basics of R
     - [Lecture B](Contents/Material/Part B - How is R organized/Lecture-B_november.html){target="_blank"}
     - [Practical B](Contents/Material/Part B - How is R organized/Practical_B.html){target="_blank"}
-    - [Practical B with solutions](Contents/Material/Part B - How is R organized/Practical_B_walkthrough.html){target="_blank"}
     - [`boys.RData`](Contents/Material/Part B - How is R organized/boys.RData)
 
-All lectures are in `html` format. Practicals are are provided both as naked questions but also with ample explanations and solutions - choose according to your taste!
-
-<!-- All lectures are in `html` format. Practicals are walkthrough files that guide you through the exercises. `Impractical` files contain the exercises, without walkthrough, explanations and solutions.  -->
 
 ## Column 2
 
@@ -133,18 +129,6 @@ All lectures are in `html` format. Practicals are are provided both as naked que
 The above links are useful references that connect to today's materials. 
 
 ### About `rmarkdown`
-
-
-<!-- ```{r, echo=FALSE} -->
-<!-- knitr::opts_chunk$set(echo = TRUE) -->
-<!-- library(vembedr) -->
-
-<!-- knitr::include_url("https://player.vimeo.com/video/178485416?color=428bca&title=0&byline=0&portrait=0", height="360px") -->
-<!-- ``` -->
-
-
-<!-- <iframe src="https://player.vimeo.com/video/178485416?color=428bca&title=0&byline=0&portrait=0" data-external= "1" -->
-<!-- height = "315" width="500" frameborder="0"> </iframe> -->
 
 <iframe src="https://player.vimeo.com/video/178485416?color=428bca&title=0&byline=0&portrait=0" data-external= "1"
 height = "300" width="450" frameborder="0"> </iframe>
@@ -163,15 +147,13 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 
 - Part C: Data manipulation
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
-    - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C_webex.html)
+    - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C.html)
+    - [`cpi_sample.RData`](Contents/Material/Part C - Data manipulation/cpi_sample.RData)
 
-- Part D: Analyzing data (start) 
+- Part D: Analyzing data
     - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
     - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_november.html)
-    - [Practical D with solutions](Contents/Material/Part D - Analyzing data/Practical_D_walkthrough_november.html)
 
-    
-All lectures are in `html` format. Practicals are are provided both as naked questions but also with ample explanations and solutions - choose according to your taste!
 
 ## Column 2
 
@@ -194,70 +176,22 @@ The above links are useful references that connect to today's materials.
 We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
 
-- Part D: Analyzing data (continued) 
-    - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
-    - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_november.html)
-    - [Practical D with solutions](Contents/Material/Part D - Analyzing data/Practical_D_walkthrough_november.html)
+- Part E: Data visualization
+    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
+    - [Practical E with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
+    - [Practical E with base R](Contents/Material/Part E - Data visualization/Practical_E_webex.html){target="_blank"}
+
 - Part F: Loops and functions
     - [Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F.html){target="_blank"}
     - [Practical F](Contents/Material/Part F - Loops and functions/Practical_F.html){target="_blank"}
-    - [Practical F with solutions](Contents/Material/Part F - Loops and functions/Practical_F_walkthrough.html){target="_blank"}
-    - [New Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F_new.html){target="_blank"}
-    - [New Practical F](Contents/Material/Part F - Loops and functions/Practical_F_new.html){target="_blank"}
-    - [New Practical F with solutions](Contents/Material/Part F - Loops and functions/Practical_F_walkthrough_new.html){target="_blank"}
-<!-- - Part F: Loops and functions -->
-<!--     - [Lecture E](Contents/Material/Part E - Functions apply and looping/Lecture_E.html){target="_blank"} -->
-<!--     - [Lecture E Handout](Contents/Material/Part E - Functions apply and looping/Lecture_E_handout.html){target="_blank"} -->
-<!--     - [Practical E](Contents/Material/Part E - Functions apply and looping/Practical_E_barebone.html){target="_blank"} -->
-<!--     - [Practical E with solutions](Contents/Material/Part E - Functions apply and looping/Practical_E_walkthrough.html){target="_blank"} -->
+  
 
-
-All lectures are in `html` format. Practicals are are provided both as naked questions but also with ample explanations and solutions - choose according to your taste!
-
-
-<!-- All lectures are in `html` format. Practicals are walkthrough files that guide you through the exercises. `Impractical` files contain the exercises, without walkthrough, explanations and solutions. -->
-
-## Column 2
-
-### Useful references
-
-<!-- - [`magrittr`](https://magrittr.tidyverse.org) -->
-<!-- - [`R` for Data Science](http://r4ds.had.co.nz) - [Chapter 18 on pipes](http://r4ds.had.co.nz/pipes.html) -->
-
-# Additional material
-
-## Column 1
-
-### Additional material
-Today we will see what is still outstanding and what else we can cover and not. Probably do the data visualiztion lectures
-
-
-- Part E: Data visualization
-    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
-    - [Practical E with base R](Contents/Material/Part E - Data visualization/Practical_E_webex.html){target="_blank"}
-    - [Practical E with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
-    <!-- - [Practical E](Contents/Material/Part E - Data visualization/Practical_E.html){target="_blank"} -->
-    <!-- - [Practical E with solutions](Contents/Material/Part E - Data visualization/Practical_E_walkthrough.html){target="_blank"} -->
-    <!-- - [Practical E with solutions - using ggplot](Contents/Material/Part E - Data visualization/Practical_E_walkthrough_ggplot.html){target="_blank"} -->
-    - [`DK_map.shp`](Contents/Material/Part E - Data visualization/DK_map.shp), [`DK_map.shx`](Contents/Material/Part E - Data visualization/DK_map.shx), [`DK_map.dbf`](Contents/Material/Part E - Data visualization/DK_map.dbf) shapefiles for mapping data on Danish municipalities
-
-    
-
-- Part G: R Markdown
-    - [Lecture G](Contents/Material/Part G - R Markdown/Lecture_G.html){target="_blank"}
-    - [Practical G](Contents/Material/Part G - R Markdown/Practical_G_webex.html){target="_blank"}
-    - [Ideas for practical](Contents/Material/Part G - R Markdown/Some_graphs.html){target="_blank"}
-    - [`Some_graphs.Rmd`](Contents/Material/Part G - R Markdown/Some_graphs.Rmd) Corresponding Rmd file for the Ideas.
-    
-All lectures are in `html` format. Practicals are are provided both as naked questions but also with ample explanations and solutions - choose according to your taste!
 
 
 ## Column 2
 
 ### Useful references
 
-<!-- - [`magrittr`](https://magrittr.tidyverse.org) -->
-<!-- - [`R` for Data Science](http://r4ds.had.co.nz) - [Chapter 18 on pipes](http://r4ds.had.co.nz/pipes.html) -->
 - [The `ggplot2` reference page](https://ggplot2.tidyverse.org/reference/)
 
 The above link details pretty much all you can do with package `ggplot2`.
@@ -268,7 +202,6 @@ The `sf` setup for `R` is relatively new, and a lot of material about spatial da
 
 - [Create awesome HTML tables with `knitr::kable` and `kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
 
-- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 
 
 
@@ -278,10 +211,6 @@ The `sf` setup for `R` is relatively new, and a lot of material about spatial da
 
 ### CPI materials
 On Thursday and Friday the CPI team will specifically focus on the R code for the CPI.
-
-
-- CPI R code
-    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
 
 
 
@@ -328,39 +257,6 @@ On Thursday and Friday the Trade team will specifically focus on the R code for 
 | *Friday*  |    9.00 - 12.00  | Cleaning and analyzing ICUMS data |
 |   |  13.00 - 16.30  | Working with the data! |
 
-# GSS
-
-## column 1
-
-### Example with data from GSS
-
-In the example we
-
-- Read and write data in different formats
-- Learn about file paths
-- Learn to find and set working directory
-- Make a two-way table
-- Make a scatter plot in ggplot
-- Draw a sample
-- Make a scatter plot with regression line
-
-Example code and data:
-
-- [`Example_GSS.R`](Contents/Material/GSS/Example_GSS.R){target="_blank"}  R file!
-- [`00_GHA_BASICINFO.dta`](Contents/Material/GSS/00_GHA_BASICINFO.dta){target="_blank"}  GSS Stata file
-- [`01_GHA_EXPFOOD.dta`](Contents/Material/GSS/01_GHA_EXPFOOD.dta){target="_blank"} GSS Stata file
-- [`glss7.csv`](Contents/Material/GSS/glss7.csv){target="_blank"} GSS csv file
-- [`glss7.xlsx`](Contents/Material/GSS/glss7.xlsx){target="_blank"} GSS Excel file
-
-
-<!-- - Part A: Introduction -->
-<!--     - [Lecture A](Contents/Material/Part A - Introduction/Lecture_A.html){target="_blank"} -->
-<!--     - [Practical A](Contents/Material/Part A - Introduction/Practical_A_walkthrough.html){target="_blank"} -->
-<!--     - [`notebook.R`](Contents/Material/Part A - Introduction/notebook.R){target="_blank"} -->
-<!--     - [`markdown.Rmd`](Contents/Material/Part A - Introduction/markdown.Rmd){target="_blank"} -->
-
-
-
 
 # Further studies
 
@@ -377,8 +273,4 @@ The following references are currently available for free, either as pdfs or as 
 - [Data Analysis and Graphics Using R](http://www.pindex.com/uploads/post_docs/Maindonald%20Data%20Analysis%20and%20Graphics(PINDEX-DOC-6953).pdf): a detailed book that covers a lot about categorical data analysis and fitting `glm`s in `R`.
 - [Happy Git and GitHub for the useR ](https://happygitwithr.com/index.html): a great introduction to version control using Git and GitHub together with RStudio. Written by Jenny Bryan in a very concise style. Highly recommended!
 
-<!-- ## Column 2 -->
 
-<!-- ### For fun -->
-<!-- <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">My wife asked me what machine learning is and I said: remember when we ordered the hot plate for the boat and amazon suggested buying all the equipment needed to make a full meth lab?</p>&mdash; (((Kane Baccigalupi))) (@rubyghetto) <a href="https://twitter.com/rubyghetto/status/1058220004301127680?ref_src=twsrc%5Etfw">November 2, 2018</a></blockquote> -->
-<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->

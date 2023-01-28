@@ -3223,7 +3223,6 @@ line-height: 1.9;
 
 <ul>
 <li><p>Data manipulation</p></li>
-<li><p>Basic plots and analysis (correlation &amp; t-test)</p></li>
 <li><p>Pipes</p></li>
 </ul>
 
@@ -3234,8 +3233,7 @@ line-height: 1.9;
 <pre class = 'prettyprint lang-r'>library(MASS)     # for the cats data
 library(haven)    # in/exporting data
 library(dplyr)    # data manipulation
-library(magrittr) # for pipes
-#&lt;img src=&quot;pipe.jpg&quot; style=&quot;display:block;width:500px;margin-left:auto;margin-right:auto&quot;&gt;&lt;/img&gt;</pre>
+library(magrittr) # for pipes</pre>
 
 </article></slide><slide class=""><hgroup><h2>New functions</h2></hgroup><article  id="new-functions" class="smaller ">
 
@@ -3250,9 +3248,6 @@ library(magrittr) # for pipes
 <li><code>order()</code>: data entries in increasing order</li>
 <li><code>dplyr::arrange()</code>: sorting</li>
 <li><code>haven::read_sav()</code>: import SPSS data</li>
-<li><code>cor()</code>: bivariate correlation</li>
-<li><code>sample()</code>: drawing a sample</li>
-<li><code>t.test()</code>: t-test</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>The cats data</h2></hgroup><article  id="the-cats-data" class="smaller ">
@@ -3479,7 +3474,7 @@ boys4 &lt;- subset(boys3, select = c(hgt, wgt, bmi))</pre>
 
 <pre class = 'prettyprint lang-r'>rnorm(10) %&gt;% mean()</pre>
 
-<pre >## [1] -0.567132</pre>
+<pre >## [1] 0.0897948</pre>
 
 <ul>
 <li><code>f(x, y)</code> becomes <code>x %&gt;% f(y)</code></li>

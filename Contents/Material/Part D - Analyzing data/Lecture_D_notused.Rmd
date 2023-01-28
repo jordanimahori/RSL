@@ -1,0 +1,84 @@
+---
+title: 'Analyzing data'
+author: "Statistical Programming with R"
+date: ""
+output:
+  ioslides_presentation:
+    fig_height: 5
+    fig_width: 8
+    logo: logo_en.png
+    transition: faster
+    smaller: true
+  beamer_presentation: default
+---
+
+```{r, show = FALSE}
+load("Contents/Material/Part C - Data manipulation/cpi_sample.RData")
+
+```
+
+# Packages we use
+
+```{r}
+library(dplyr)
+library(magrittr)
+library(tidyselect)
+library(tidyverse)
+library(datasets)
+```
+
+
+# This lecture
+- Renaming data
+- Selecting variables
+- Aggregating data
+- Joins
+
+# Renaming data
+
+## Simplest way
+```{r}
+var1 <- c(1,2,4,6,8,10)
+var1
+var2 <- var1
+var2
+
+```
+We will return a bit to renaming later.
+
+# Selections
+
+## Selecting variables with [*] (Part 1)
+Basic R comes with the [] operator, which can be used to select elements in vectors and lists, and columns rows from dataframes or matrices.
+
+- For a vector `my_vect`, the command `my_vect[n]` returns the n’th element.
+
+- For a dataframe `my_df`, the command `my_df[n,m]` returns the n’th element of the m’th column
+
+- Writing `df[n,]` returns the n’th row
+
+- What do you think the command `my_df[,m]` returns?
+
+## Selecting with [*] (Part 2)
+- It is possible to select by using names, too:
+`my_df[c("rowname 1", "rowname 2"), c("columnname 1", "columnname 2", "columnname 3")]`
+
+will return a subset of the dataframe `my_df` consisting of the intersection of the 2 rows named `rowname 1` and `rowname 2` and the 3 columns named `columnname 1`, `columnname 2` and `columnname 3`.
+
+- which dimensions would that subset have?
+
+- for lists, we use double brackets: [[]]
+
+
+## More than one element
+- Several elements of the same type, e.g. the integers from 1 to 5, can be concatenated into a vector
+```{r}
+a <- c(1, 2, 3, 4, 5)
+a
+```
+
+- As is typical for `R` there a several ways to accomplish this
+```{r}
+b <- 1:5
+b
+```
