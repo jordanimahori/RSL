@@ -1,0 +1,89 @@
+---
+title: "Practical D"
+author: "Statistical Programming in R"
+date: ""
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+#### Exercises
+In this practical we are going to use sample CPI data to practice with analysing and summarising data. This builds on the work you have done in Practical C.
+
+---
+
+1. **Open the workspace icums_22_sample.RData. You need to download this file and put it in the project folder.**
+
+
+---
+
+2. **piping**
+
+<!-- Using the standard `%>%` and the `%$%` pipes: -->
+```{r, echo = F}
+boys %>%
+  transform(hgt = hgt / 100) %$%
+  mean(hgt, na.rm = TRUE)
+```
+
+---
+
+3. **summarise**
+
+<!-- Using the standard `%>%` and the `%$%` pipes: -->
+```{r, echo = F}
+boys %>%
+  transform(hgt = hgt / 100) %$%
+  mean(hgt, na.rm = TRUE)
+```
+
+---
+
+4. **More summarising**
+
+<!-- Using the standard `%>%` and the `%$%` pipes: -->
+```{r, echo = F}
+boys %>%
+  transform(hgt = hgt / 100) %$%
+  mean(hgt, na.rm = TRUE)
+```
+
+---
+
+5. **merge hs codes**
+
+<!-- Using the standard `%>%` and the `%$%` pipes: -->
+```{r, echo = F}
+boys %>%
+  transform(hgt = hgt / 100) %$%
+  mean(hgt, na.rm = TRUE)
+```
+
+---
+
+6. **something else**
+
+<!-- Using the standard `%>%` and the `%$%` pipes: -->
+```{r, echo = F}
+boys %>%
+  transform(hgt = hgt / 100) %$%
+  mean(hgt, na.rm = TRUE)
+```
+
+---
+
+End of Practical
+
+---
