@@ -249,10 +249,10 @@ On Thursday and Friday the Trade team will specifically focus on the R code for 
 ### Schedule
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Thursday*  |  9.00 - 12.00  | Introduction to trade data |
-|   |  13.00 - 16.30  | ICUMS data, reformatting |
-| *Friday*  |    9.00 - 12.00  | Cleaning and analyzing ICUMS data |
-|   |  13.00 - 16.30  | Working with the data! |
+| *Thursday*  |  9.00 - 13.00  | Introduction to trade data |
+|   |  13.45 - 17.00 | ICUMS data, reformatting |
+| *Friday*  |    9.00 - 13.00  | Cleaning and analyzing ICUMS data |
+|   |  13.45 - 17.00  | Working with the data! |
 
 
 # Further studies
