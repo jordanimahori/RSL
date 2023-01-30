@@ -152,7 +152,9 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 
 - Part D: Analyzing data
     - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
-    - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_november.html)
+    - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_new.html)
+    - [`icums_22_sample.RData`](Contents/Material/Part D - Analyzing data/icums_22_sample.RData)
+    - [`hs_codes.RData`](Contents/Material/Part D - Analyzing data/hs_codes.RData)
 
 
 ## Column 2

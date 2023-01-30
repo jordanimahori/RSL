@@ -29,58 +29,45 @@ In this practical we are going to use sample CPI data to practice with analysing
 
 ---
 
-2. **piping**
-
-<!-- Using the standard `%>%` and the `%$%` pipes: -->
-```{r, echo = F}
-boys %>%
-  transform(hgt = hgt / 100) %$%
-  mean(hgt, na.rm = TRUE)
-```
+2. **Inspect the data, what does this data set show? What can this data be used for?**
 
 ---
 
-3. **summarise**
-
-<!-- Using the standard `%>%` and the `%$%` pipes: -->
-```{r, echo = F}
-boys %>%
-  transform(hgt = hgt / 100) %$%
-  mean(hgt, na.rm = TRUE)
-```
+3. **Select a specific subset of the data, for example only the columns: tradeflow, month_name, hs_code, and cif.**
 
 ---
 
-4. **More summarising**
-
-<!-- Using the standard `%>%` and the `%$%` pipes: -->
-```{r, echo = F}
-boys %>%
-  transform(hgt = hgt / 100) %$%
-  mean(hgt, na.rm = TRUE)
-```
+4. **Now repeat question 3, but use a different method to do it. Which method do you think is better to use, and why? Bonus: would you be able to find a third method to do this? **
 
 ---
 
-5. **merge hs codes**
-
-<!-- Using the standard `%>%` and the `%$%` pipes: -->
-```{r, echo = F}
-boys %>%
-  transform(hgt = hgt / 100) %$%
-  mean(hgt, na.rm = TRUE)
-```
+5. **Select only the columns in which the values are numeric.**
 
 ---
 
-6. **something else**
+6. **Get more information on the data by creating a table of how many observations there are for each month.**
 
-<!-- Using the standard `%>%` and the `%$%` pipes: -->
-```{r, echo = F}
-boys %>%
-  transform(hgt = hgt / 100) %$%
-  mean(hgt, na.rm = TRUE)
-```
+---
+
+7. **Use the function "aggregate" to find the average imports for every month.**
+
+---
+
+
+8. **Repeat question 7, now using a pipe.**
+
+---
+
+
+9. **Add a new column "quarter" which shows which quarter of the year every observation is from.**
+
+---
+
+10. **Load the new dataframe hs_codes.RData into R, and merge this to the icums_22_sample data. Carefully decide on which method you use for this.**
+
+---
+
+11. **If you have time left, try to see what other interesting insights you can create using this data. (Or look at the CPI data again and see if you can apply what we learned this afternoon to the CPI data).**
 
 ---
 
