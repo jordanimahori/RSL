@@ -1,0 +1,140 @@
+---
+title: "Practical C"
+author: "Statistical Programming in R"
+date: ""
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+#### Exercises
+In this practical we are going to use sample CPI data to practice with data manipulation.
+
+
+---
+
+
+1.**Open the workspace cpi_sample.RData. You need to download this file and put it in the project folder.**
+```{r}
+getwd()
+load("cpi_sample.rdata")
+
+```
+---
+
+2. **Inspect the data, how many rows and columns are there in the data? What does that mean?**
+```{r}
+nrow(cpi_sample)
+ncol(cpi_sample)
+dim(cpi_sample)
+
+```
+---
+
+3. **Further inspect the data, what does this data set show? What can this data be used for?**
+```{r}
+glimpse(cpi_sample)
+str(cpi_sample)
+head(cpi_sample, 10)
+tail(cpi_sample, 10)
+cpi_sample
+View(cpi_sample)
+
+```
+
+---
+4. **In the `cpi_sample` data set, use a pipe and the select function to get prices and quantities from January to March.**
+```{r}
+a <- cpi_sample%>%
+  subset(select = c(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321)) %>% 
+  dim()
+  
+b <- cpi_sample%>%
+  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %>% 
+  dim()
+```
+---
+5. **Following from question 4,  Use a pipe to generate a new variable `PR_0121_new`, which is twice the old variable `PR_0121`.**
+
+```{r}
+cpi_sample%>%
+  subset(select = c(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321))%>%
+  mutate(PR_0121_new=PR_0121*2)%>%
+  head()
+```
+
+---
+6. **Following from question 4, also use the transform function to transform the column `PR_0121` into half of it.**
+```{r}
+cpi_sample%>%
+  subset(select = c(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321))%>%
+  transform(PR_0121_new = PR_0121/2) %>% 
+  head()
+  
+```
+
+---
+
+7. **Filter the data for only `Greater Accra` region. Also filter out the missing responses in `outlet_type` variable**
+
+```{r}
+c <- cpi_sample%>%
+  filter(!is.na(Outlet_type), 
+         Region_Name=="Greater Accra") %>% 
+        head()
+```
+---
+
+8. **Filter the data for prices in January greater than 5**
+
+```{r}  
+
+cpi <- cpi_sample%>%
+    filter(PR_0121>5)
+``` 
+--- 
+
+9. **Rename `PR_0121` as price_jan_21**
+
+```{r} 
+
+z <- cpi_sample %>%
+    rename(price_jan_21=PR_0121)
+
+```
+--- 
+
+10. **Arrange the data by PR_0121 **
+
+```{r} 
+cpi_sample %>%
+  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %>% 
+  arrange(PR_0121)
+```
+--- 
+11. **Arrange the data by PR_0121 in descending order **
+
+```{r} 
+cpi_sample %>%
+  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %>% 
+  arrange( desc(PR_0121))
+
+```
+--- 
+
+
+
+End of Practical
+
+---
