@@ -147,7 +147,7 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 
 - Part C: Data manipulation
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
-    - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C.html)
+    - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C_final.html)
     - [`cpi_sample.RData`](Contents/Material/Part C - Data manipulation/cpi_sample.RData)
 
 - Part D: Analyzing data
