@@ -65,7 +65,7 @@ output:
 
 ## Step 2: Reformatting ICUMS data
 
-- ICUMS: many multiple sheets
+- ICUMS: many different sheets
 - We want to append the sheets to each other
   - While making sure that we do not have more than 65,000 rows per sheet
 - Using R Code 
@@ -74,7 +74,26 @@ output:
 
 Now let us discuss the R Code to do this.
 
+# Discuss the reformatting of the ICUMS data R code
+
+# Next step
+
 ## Step 5: Cleaning and analysing ICUMS data
 
+- We do not want to have to rely on Eurotrace to export our trade data
+  - If Eurotrace is slow
+  - If Eurotrace is suddenly down
+  - We want to know what exactly happens to the data
+    - Possibly some HS codes are not recognized by Eurotrace, causing issues
+- If Eurotrace works perfectly:
+  - Then our outcomes should be exactly the same as the Eurotrace output
+    - For example the total imports, and total exports
+    - Even when split up in HS codes or countries
+    - These are things we need to check!! = work in progress
 
+# Discuss the cleaning and analysing of the ICUMS data
+
+  
+  
+  
 

@@ -3179,7 +3179,7 @@ line-height: 1.9;
 <tr class="odd">
 <td align="left"><em>Friday</em></td>
 <td align="left">9.00 - 13.00</td>
-<td align="left">Cleaning and analyzing ICUMS data</td>
+<td align="left">Cleaning and analysing ICUMS data</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
@@ -3324,13 +3324,54 @@ NEW: We could reformat the raw ICUMS data ourselves, to not have to rely on Euro
 </article></slide><slide class=""><hgroup><h2>Step 2: Reformatting ICUMS data</h2></hgroup><article  id="step-2-reformatting-icums-data" class="smaller ">
 
 <ul>
-<li>ICUMS: many multiple sheets</li>
+<li>ICUMS: many different sheets</li>
 <li>We want to append the sheets to each other
 
 <ul>
 <li>While making sure that we do not have more than 65,000 rows per sheet</li>
 </ul></li>
-</ul></article></slide>
+<li>Using R Code
+
+<ul>
+<li>Prevents us from making manual errors!</li>
+<li>Saves a lot of time as well :)</li>
+</ul></li>
+</ul>
+
+<p>Now let us discuss the R Code to do this.</p>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Discuss the reformatting of the ICUMS data R code</h2></hgroup><article  id="discuss-the-reformatting-of-the-icums-data-r-code" class="smaller ">
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Next step</h2></hgroup><article  id="next-step" class="smaller ">
+
+</article></slide><slide class=""><hgroup><h2>Step 5: Cleaning and analysing ICUMS data</h2></hgroup><article  id="step-5-cleaning-and-analysing-icums-data" class="smaller ">
+
+<ul>
+<li>We do not want to have to rely on Eurotrace to export our trade data
+
+<ul>
+<li>If Eurotrace is slow</li>
+<li>If Eurotrace is suddenly down</li>
+<li>We want to know what exactly happens to the data
+
+<ul>
+<li>Possibly some HS codes are not recognized by Eurotrace, causing issues</li>
+</ul></li>
+</ul></li>
+<li>If Eurotrace works perfectly:
+
+<ul>
+<li>Then our outcomes should be exactly the same as the Eurotrace output
+
+<ul>
+<li>For example the total imports, and total exports</li>
+<li>Even when split up in HS codes or countries</li>
+<li>These are things we need to check!! = work in progress</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Discuss the cleaning and analysing of the ICUMS data</h2></hgroup><article  id="discuss-the-cleaning-and-analysing-of-the-icums-data" class="smaller "></article></slide>
 
 
   <slide class="backdrop"></slide>

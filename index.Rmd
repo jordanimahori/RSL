@@ -234,15 +234,24 @@ On Thursday and Friday the CPI team will specifically focus on the R code for th
 
 ## Column 1
 
-### CPI materials
+### Trade materials
 On Thursday and Friday the Trade team will specifically focus on the R code for trade data.
 
 
 - Introduction to Trade data
+    - [Lecture Trade](Contents/Material/Trade/Lecture_Trade.html){target="_blank"}
 - ICUMS data 
   - Reformatting
-- Cleaning and analyzing the ICUMS data
-    
+  - Cleaning and analyzing
+
+We are using the following R scripts:
+- [Reformatting Code Exports](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
+- [Reformatting Code Imports](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
+- [Analyzing ICUMS data]
+
+We are using the following data sets:
+- [Merchandised Exports 2022](Contents/Material/Trade/01. Merchandised Export (10)_DEC.xlsx){target="_blank"}
+- [Merchandised Exports 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
 
 
 
