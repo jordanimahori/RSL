@@ -222,10 +222,10 @@ On Thursday and Friday the CPI team will specifically focus on the R code for th
 ### Schedule
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Thursday*  |  9.00 - 13.00  | ... |
-|   |  13.45 - 16.30  | ... |
-| *Friday*  |     9.00 - 13.00       | ... |
-|   |  13.45 - 16.30  | ... |
+| *Thursday*  |  9.30 - 13.30  | ... |
+|   |  14.15 - 17.00  | ... |
+| *Friday*  |     9.00 - 13.30       | ... |
+|   |  14.15 - 17.00 | ... |
 
 
 
@@ -244,14 +244,19 @@ On Thursday and Friday the Trade team will specifically focus on the R code for 
   - Reformatting
   - Cleaning and analyzing
 
+
 We are using the following R scripts:
+<ol>
 - [Reformatting Code Exports](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
 - [Reformatting Code Imports](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
-- [Analyzing ICUMS data]
+</ol>
+
 
 We are using the following data sets:
+<ol>
 - [Merchandised Exports 2022](Contents/Material/Trade/01. Merchandised Export (10)_DEC.xlsx){target="_blank"}
-- [Merchandised Exports 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
+- [Merchandised Imports 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
+</ol>
 
 
 
@@ -260,10 +265,12 @@ We are using the following data sets:
 ### Schedule
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Thursday*  |  9.00 - 13.00  | Introduction to trade data |
-|   |  13.45 - 17.00 | ICUMS data, reformatting |
-| *Friday*  |    9.00 - 13.00  | Cleaning and analyzing ICUMS data |
-|   |  13.45 - 17.00  | Working with the data! |
+| *Thursday*  |  9.30 - 13.30  | Introduction to trade data |
+|   |  14.15 - 17.00 | ICUMS data, reformatting |
+| *Friday*  |    9.30 - 13.30  | Cleaning and analysing ICUMS data |
+|   |  14.15 - 17.00  | Working with the data! |
+
+
 
 
 # Further studies
