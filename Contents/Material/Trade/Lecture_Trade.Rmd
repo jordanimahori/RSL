@@ -16,10 +16,10 @@ output:
 ## Schedule 
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Thursday*  |  9.00 - 13.00  | Introduction to trade data |
-|   |  13.45 - 17.00 | ICUMS data, reformatting |
-| *Friday*  |    9.00 - 13.00  | Cleaning and analysing ICUMS data |
-|   |  13.45 - 17.00  | Working with the data! |
+| *Thursday*  |  9.30 - 13.30  | Introduction to trade data |
+|   |  14.15 - 17.00 | ICUMS data, reformatting |
+| *Friday*  |    9.30 - 13.30  | Cleaning and analysing ICUMS data |
+|   |  14.15 - 17.00  | Working with the data! |
 
 
 # Trade Data
