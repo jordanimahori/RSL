@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 ---
 
 #### Exercises
-In this practical we are going to use sample CPI data to practice with analysing and summarising data. This builds on the work you have done in Practical C.
+In this practical we are going to use sample trade data to practice with analysing and summarising data. This builds on the work you have done in Practical C.
 
 ---
 
