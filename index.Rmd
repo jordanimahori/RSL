@@ -247,8 +247,8 @@ On Thursday and Friday the Trade team will specifically focus on the R code for 
 
 We are using the following R scripts:
 <ol>
-- [Reformatting Code Exports](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
-- [Reformatting Code Imports](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
+- [Reformatting Code Exports.Rmd](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
+- [Reformatting Code Imports.Rmd](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
 </ol>
 
 
