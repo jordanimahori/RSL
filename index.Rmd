@@ -257,7 +257,6 @@ We are using the following data sets:
 <ol>
 - [Merchandised Exports 2022](Contents/Material/Trade/01. Merchandised Export (10)_DEC.xlsx){target="_blank"}
 - [Merchandised Imports 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
-- [Raw ICUMS 2022](Contents/Material/Trade/raw_icums_22.RData){target="_blank"}
 </ol>
 
 
