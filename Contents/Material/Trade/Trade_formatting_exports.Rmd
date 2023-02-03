@@ -5,7 +5,7 @@
 ```{r}
 input_data_path <- "export/input/01. Merchandised Export (10)_DEC.xlsx"
 
-ouput_data_path <-"export/output/output_Merchandised_Exports_December_2022.xlsx"
+output_data_path <-"export/output/output_Merchandised_Exports_December_2022.xls"
 ```
 
 ### Loading Required R Packages
@@ -71,9 +71,7 @@ df_data_clean <- df_data_clean %>%
     # Add day, month, year
     DAY = format(HEAD_TIME_PROC, format = "%d"),
     MONTH = format(HEAD_TIME_PROC, format = "%m"),
-    YEAR = format(HEAD_TIME_PROC, format = "%Y"),
-    # Creating an empty column (Column U in excel)
-    COLUMN_U = NA) %>%
+    YEAR = format(HEAD_TIME_PROC, format = "%Y")) %>%
   # Arrange by year, month, day
   arrange(YEAR, MONTH, DAY) %>% 
   # Getting columns in required order, and selecting which ones we want
@@ -82,9 +80,7 @@ df_data_clean <- df_data_clean %>%
          HEAD_CTRY_NAT_VESSEL, ITEMS_CPC_CODE, ITEMS_HS_CODE, 
          HEAD_COUNTRY_ORIG_DEST, ITEMS_NET_MASS, ITEMS_GROSS_MASS, ITEMS_QTY, 
          COUNTRY_OF_CONSIGNMENT, ITEMS_FOB_GHC, ITEMS_INSURE_GHC, 
-         ITEMS_FREIGHT_GHC, COLUMN_U, ITEMS_CIF_GHC, ITEMS_SUPPLEMENTARY1, 
-         ITEMS_GOODS_DESC, HEAD_DECLARANT_NAME, HEAD_DECLARANT_ADDRESS, 
-         HEAD_EXPORTER_NAME, HEAD_EXPORTER_ADDRESS)
+         ITEMS_FREIGHT_GHC)
   
 ```
 
@@ -97,11 +93,7 @@ colnames(df_data_clean) <- c("DAY", "MONTH", "YEAR", "CUSTOM", "DECNUM",
                              "NATIONALITY", "CPC", "PRODUCT", "PARTNER", 
                              "NETWEIGHT", "GROSSWEIGHT", "QUANTITY", 
                              "COUNTRYF/L", "CUSTOMVALUE", "INSURANCE", 
-                             "FREIGHT","EMPTY", "ITEMS_CIF_GHC",
-                             "ITEMS_SUPPLEMENTARY1", 
-                             "ITEMS_GOODS_DESC", "HEAD_DECLARANT_NAME",
-                             "HEAD_DECLARANT_ADDRESS", "HEAD_EXPORTER_NAME", 
-                             "HEAD_EXPORTER_ADDRESS")
+                             "FREIGHT")
 
 ```
 
@@ -137,6 +129,6 @@ for (i in 1:length(output)) {
 }
 
 # Save data to your output path
-saveWorkbook(wb, ouput_data_path, overwrite = TRUE)
+saveWorkbook(wb, output_data_path, overwrite = TRUE)
 
 ```
