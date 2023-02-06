@@ -177,6 +177,8 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
     - [`icums_22_sample.RData`](Contents/Material/Part D - Analyzing data/icums_22_sample.RData)
     - [`hs_codes.RData`](Contents/Material/Part D - Analyzing data/hs_codes.RData)
 
+On Thursday February 2, we started the day with a lecture on tidyverse, focused on wrangling data with dplyr. The following lecture was used for that.
+  - [Lecture on dplyr](Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html)
 
 ## Column 2
 
@@ -205,12 +207,13 @@ On Thursday and Friday (2-3 Feb) the CPI team has specifically focused on the R 
 From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and apply this to the CPI data as well.
 
 - Introduction to data visualization:
-  - [Lecture Data Visualisation](Contents/Material/Part E - Data visualization/Lecture_E_new.html){target="_blank"}
-  - [Practical with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
+  - [Lecture Data Visualization](Contents/Material/happy_scientist-master/ggplot2/intro_to_tidyverse_ggplot2.html){target="_blank"}
+  - [Practical ggplot - 1](Contents/Material/happy_scientist-master/ggplot2/exercises.Rmd){target="_blank"}
+  - [diabetes.csv](Contents/Material/happy_scientist-master/ggplot2/diabetes.csv)
 
 - Recap: Data visualization
     - [Recap Lecture ggplot](Contents/Material/Part E - Data visualization/Lecture_E_new.html){target="_blank"}
-
+    - [Practical ggplot - 2](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
 
 
 ## Column 2
