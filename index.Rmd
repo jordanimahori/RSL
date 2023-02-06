@@ -178,6 +178,7 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
     - [`hs_codes.RData`](Contents/Material/Part D - Analyzing data/hs_codes.RData)
 
 On Thursday February 2, we started the day with a lecture on tidyverse, focused on wrangling data with dplyr. The following lecture was used for that.
+
   - [Lecture on dplyr](Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html)
 
 ## Column 2
@@ -223,9 +224,9 @@ From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and ap
 |:--------------|:------------|:------------------------------------|
 | *Tuesday*  |  9.30 - 13.30  | Data visualization - Lecture |
 |   |  14.15 - 17.00  | Data visualization - Practical |
-| *Wednesday*  |   9.30 - 13.30  | CPI data visualizations |
+| *Wednesday*  |   9.30 - 13.30  | Data visualization - Practical |
 |   |  14.15 - 17.00 | CPI data visualizations |
-| *Thursday*  |   9.30 - 13.30    | More practicing |
+| *Thursday*  |   9.30 - 13.30    | CPI data visualizations |
 |   |  14.15 - 17.00 | Q&A and specific CPI questions |
 
 
@@ -318,8 +319,8 @@ Solutions to assignments:
 ## Column 2
 ### Schedule
 | Week         | Meeting day + time     | Topic         | 
-|:---------|:----------------|:------------------------------------|
-| *6-10 Feb*  |  Wednesday 13.00-15.00  | Recap of training + First assignment |
+|:-----------|:----------------|:------------------------------------|
+| *6-10 Feb*  |  Wednesday 13.00-15.00  | Recap of training + Assignment 1 |
 | *13-17 Feb*  |    ...  | Discuss Assignment 1|
 | *20-24 Feb*  |    ...  | Analyzing ICUMS data - go through code, part 1 |
 | *27-3 Feb/Mar*  |    ...  | Discuss Assignment 2 |
