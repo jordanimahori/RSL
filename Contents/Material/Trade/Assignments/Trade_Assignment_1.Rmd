@@ -1,0 +1,63 @@
+---
+title: "Assignment 1"
+author: "Reformatting ICUMS data"
+date: "Deadline: Monday 13-02-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you are reformatting ICUMS data into the format we need to upload the data into Eurotrace. This is both a recap of what was discussed in the training week, as well as an exercise to solve potential problems.
+
+
+---
+
+1. **Open your Trade R project from your Trade R folder on your computer. And now open the reformatting export and import codes. Before starting on the assignment, make sure you clean your environment.**
+
+---
+
+2. **Go through the reformatting code for both import and export again, and check if you still understand everyhting. If you have forgotten what a certain part of the code is for, try to find it out again. Use the help function, Google, and trying to run parts of the code yourself. Or ask your colleagues to help you. If you really cannot solve a problem, then feel free to reach out to Femke.**
+
+---
+
+3. **Download the Excel files for Re-Imports and Re-Exports of December 2022, which can be found under `data` on this page. Make sure you download it and then put it in the correct folder on your computer! Then use the reformatting codes to create the output files for Re-Imports and Re-Exports that will be used to load the data into Eurotrace. Check to make sure it has worked!**
+
+*Hint: Change the input and output paths in the R codes and then run the code.*
+
+---
+
+4. **Now download the Regime 9 and the Warehousing Excel files for December 2022, again remember to put it into the correct folders. If you now try to run the formatting code for these files, you will get error messages. Try to find out at which point you receive an error message, and discover what causes this.**
+
+---
+
+5. **If you have found out what causes the errors, it is now time to do some coding yourself to solve these issues!! Create a new R Markdown file called Trade_formatting_warehousing.Rmd. Copy and paste the code for reformatting imports in this R markdown file, and now try to change the code in such a way that you can format the warehousing Excel sheet into the format we need for Eurotrace.**
+
+*Hint: Check the difference between the input files for imports and warehousing, just open the Excel files in Excel and try to find out what is different. How can you solve that?*
+
+*If you cannot figure out what causes the error, or how to solve it, ask you colleagues, work together, or just ask Femke if you really cannot figure it out. Do not get stuck on it too long, as then it is easier to just ask for help!*
+
+---
+
+6. **We run into a very similar issue when we try to reformat the Regime 9 data. Hence, create another R markdown file called Trad_formatting_reg9.Rmd in which you also copy and paste the reformatting import code and change the code slightly to make it applicable to the Regime 9 data.**
+
+---
+
+End of Assignment
+
+If you have been successful, you have now understood the reformatting R codes and you are now able to reformat raw ICUMS data into the format that we need to upload it to Eurotrace. You have also learned how to solve error messages you might get, and how to adjust a code based on changes in the input document. This is an essential skill! Now you should be able to download all the ICUMS data and reformat every months data into the Eurotrace format. If you want to experiment a bit more, try to just use another month or year and see if you can indeed create the output data in the right format again.
+
+In next assignments we will discuss how we can really use the trade data for analysis instead of simply reformatting it.
+
+---

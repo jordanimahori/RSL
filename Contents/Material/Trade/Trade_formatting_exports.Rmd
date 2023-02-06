@@ -3,7 +3,7 @@
 ### Setting paths
 
 ```{r}
-input_data_path <- "export/input/01. Merchandised Export (10)_DEC.xlsx"
+input_data_path <- "export/input/01. Merchandised Export (10)_DEC"
 
 output_data_path <-"export/output/output_Merchandised_Exports_December_2022.xls"
 ```
@@ -63,10 +63,10 @@ df_data_raw <- multiplesheets(input_data_path)
 
 ```{r}
 # Create new clean data frame
-df_data_clean <- df_data_raw
+df_data_clean_copy <- df_data_raw
 
 # Change dataframe to clean version
-df_data_clean <- df_data_clean %>%
+df_data_clean <- df_data_clean_copy %>%
   mutate(
     # Add day, month, year
     DAY = format(HEAD_TIME_PROC, format = "%d"),
@@ -101,8 +101,7 @@ colnames(df_data_clean) <- c("DAY", "MONTH", "YEAR", "CUSTOM", "DECNUM",
 
 ```{r}
 # Define maximum number of rows per sheet
-# NOTE: In the final R script this has to be changed to 45000
-max_rows <- 10000
+max_rows <- 45000
 
 # Make new column which specifies the row category, so which sheet it should be on
 df_data_clean <- df_data_clean %>% 

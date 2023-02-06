@@ -297,3 +297,52 @@ The following references are currently available for free, either as pdfs or as 
 - [Happy Git and GitHub for the useR ](https://happygitwithr.com/index.html): a great introduction to version control using Git and GitHub together with RStudio. Written by Jenny Bryan in a very concise style. Highly recommended!
 
 
+
+# After the training: Trade
+
+## Column 1
+
+### Introduction
+As discussed at the end of the R training (30 Jan - 3 Feb) we agreed on a longer term plan to improve the R skills of the trade team. We will have weekly 2 hour long meetings to learn more in R, as well as to discuss assignments and practical issues you have while using R. Besides that, I am available for any questions, so always feel free to come by my office (332), or to text/call me to schedule a meeting.
+
+It must be noted that your own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments and discussions based on that.
+
+### Material to use
+Remember to always work from your Trade R folder and project on your computer. Below please find the R scripts we will work with, as well as the assignments and their solutions. 
+
+R scripts:
+
+- [Reformatting Code Exports](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
+- [Reformatting Code Imports](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
+- [Trade vulnerability ICUMS](Contents/Material/Trade/Trade vulnerability ICUMS.R){target="_blank"}
+
+Data:
+
+- [Merchandised Exports - Dec 2022](Contents/Material/Trade/01. Merchandised Export (10)_DEC.xlsx){target="_blank"}
+- [Merchandised Imports - Dec 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
+- [Re-Exports - Dec 2022](Contents/Material/Trade/03. Merchandised Re-Export (2)_DEC_2022.xlsx){target="_blank"}
+- [Re-Imports - Dec 2022](Contents/Material/Trade/04. Merchandised Re-Import (3)_DEC_2022.xlsx){target="_blank"}
+- [Warehousing - Dec 2022](Contents/Material/Trade/11. Warehousing (6)_DEC_2022.xlsx){target="_blank"}
+- [Regime 9 - Dec 2022](Contents/Material/Trade/12.Import Data Report (41)DECEMBER 2022_REGIME 9.xlsx){target="_blank"}
+
+
+### Assignments + solutions
+Assignments:
+
+- [Assignment 1 (Deadline: 13-02)](Contents/Material/Trade/Assignments/Trade_Assignment_1.html){target="_blank"}
+
+Solutions to assignments:
+
+## Column 2
+### Schedule
+| Week         | Meeting day + time     | Topic         | 
+|:---------|:----------------|:------------------------------------|
+| *6-10 Feb*  |  Wednesday 13.00-15.00  | Recap of training + First assignment |
+| *13-17 Feb*  |    ...  | Discuss Assignment 1|
+| *20-24 Feb*  |    ...  | Analyzing ICUMS data - go through code, part 1 |
+| *27-3 Feb/Mar*  |    ...  | Discuss Assignment 2 |
+| *6-10 Mar*  |    ...  | Analyzing ICUMS data - go through code, part 2 |
+| *13-17 Mar*  |    ...  | Discuss Assignment 3 |
+
+
+
