@@ -204,15 +204,12 @@ On Thursday and Friday (2-3 Feb) the CPI team has specifically focused on the R 
 
 From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and apply this to the CPI data as well.
 
-- Part E: Data visualization
-    - [Lecture E](Contents/Material/Part E - Data visualization/Lecture_E.html){target="_blank"}
-    - [Practical E with base R](Contents/Material/Part E - Data visualization/Practical_E_webex.html){target="_blank"}
-    - [Practical E with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
+- Introduction to data visualization:
+  - [Lecture Data Visualisation](Contents/Material/Part E - Data visualization/Lecture_E_new.html){target="_blank"}
+  - [Practical with ggplot](Contents/Material/Part E - Data visualization/Practical_E_webex_ggplot.html){target="_blank"}
 
-- Part F: Loops and functions
-    - [Lecture F](Contents/Material/Part F - Loops and functions/Lecture_F.html){target="_blank"}
-    - [Practical F](Contents/Material/Part F - Loops and functions/Practical_F.html){target="_blank"}
-  
+- Recap: Data visualization
+    - [Recap Lecture ggplot](Contents/Material/Part E - Data visualization/Lecture_E_new.html){target="_blank"}
 
 
 
@@ -220,12 +217,12 @@ From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and ap
 
 ### Schedule
 | Day         | Hours       | Topic                               | 
-|:------------|:------------|:------------------------------------|
+|:--------------|:------------|:------------------------------------|
 | *Tuesday*  |  9.30 - 13.30  | Data visualization - Lecture |
 |   |  14.15 - 17.00  | Data visualization - Practical |
-| *Wednesday*  |     9.00 - 13.30       | CPI data visualizations |
+| *Wednesday*  |   9.30 - 13.30  | CPI data visualizations |
 |   |  14.15 - 17.00 | CPI data visualizations |
-| *Thursday*  |     9.00 - 13.30       | More practicing |
+| *Thursday*  |   9.30 - 13.30    | More practicing |
 |   |  14.15 - 17.00 | Q&A and specific CPI questions |
 
 
@@ -236,7 +233,6 @@ From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and ap
 
 ### Trade materials
 On Thursday and Friday the Trade team will specifically focus on the R code for trade data.
-
 
 - Introduction to Trade data
     - [Lecture Trade](Contents/Material/Trade/Lecture_Trade.html){target="_blank"}
@@ -251,14 +247,6 @@ We are using the following R scripts:
 - [Reformatting Code Imports.Rmd](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
 - [Trade vulnerability ICUMS.R](Contents/Material/Trade/Trade vulnerability ICUMS.R){target="_blank"}
 </ol>
-
-
-We are using the following data sets:
-<ol>
-- [Merchandised Exports 2022](Contents/Material/Trade/01. Merchandised Export (10)_DEC.xlsx){target="_blank"}
-- [Merchandised Imports 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
-</ol>
-
 
 
 ## Column 2
@@ -315,15 +303,6 @@ R scripts:
 - [Reformatting Code Exports](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
 - [Reformatting Code Imports](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
 - [Trade vulnerability ICUMS](Contents/Material/Trade/Trade vulnerability ICUMS.R){target="_blank"}
-
-Data:
-
-- [Merchandised Exports - Dec 2022](Contents/Material/Trade/01. Merchandised Export (10)_DEC.xlsx){target="_blank"}
-- [Merchandised Imports - Dec 2022](Contents/Material/Trade/02. Merchandised Import (7)_DEC.xlsx){target="_blank"}
-- [Re-Exports - Dec 2022](Contents/Material/Trade/03. Merchandised Re-Export (2)_DEC_2022.xlsx){target="_blank"}
-- [Re-Imports - Dec 2022](Contents/Material/Trade/04. Merchandised Re-Import (3)_DEC_2022.xlsx){target="_blank"}
-- [Warehousing - Dec 2022](Contents/Material/Trade/11. Warehousing (6)_DEC_2022.xlsx){target="_blank"}
-- [Regime 9 - Dec 2022](Contents/Material/Trade/12.Import Data Report (41)DECEMBER 2022_REGIME 9.xlsx){target="_blank"}
 
 
 ### Assignments + solutions
