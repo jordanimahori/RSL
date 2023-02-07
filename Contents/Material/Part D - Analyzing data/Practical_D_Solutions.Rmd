@@ -43,7 +43,7 @@ There are differnt ways of inspecting the data. The following are some of them. 
   str(icums_22_sample)
   head(icums_22_sample, 10)
   tail(icums_22_sample, 10)
-  summarise(icums_22_sample)
+  summary(icums_22_sample)
 ```
 
 **QUESTION 3: Select a specific subset of the data, for example only the columns: tradeflow, month_name, hs_code, and cif**

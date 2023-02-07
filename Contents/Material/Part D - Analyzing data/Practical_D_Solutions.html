@@ -249,8 +249,55 @@ data in different ways.</p>
 ## #   head_decl_no &lt;chr&gt;, head_declarant_id &lt;chr&gt;, head_declarant_name &lt;chr&gt;,
 ## #   head_porter_code &lt;chr&gt;, head_porter_name &lt;chr&gt;, and abbreviated variable
 ## #   names ¹​month_name, ²​country_abb, ³​country_cons</code></pre>
-<pre class="r"><code>  summarise(icums_22_sample)</code></pre>
-<pre><code>## # A tibble: 1 × 0</code></pre>
+<pre class="r"><code>  summary(icums_22_sample)</code></pre>
+<pre><code>##   tradeflow              date                 year          month      
+##  Length:10000       Min.   :2022-01-01   Min.   :2022   Min.   : 1.00  
+##  Class :character   1st Qu.:2022-03-30   1st Qu.:2022   1st Qu.: 3.00  
+##  Mode  :character   Median :2022-06-29   Median :2022   Median : 6.00  
+##                     Mean   :2022-06-29   Mean   :2022   Mean   : 6.42  
+##                     3rd Qu.:2022-09-28   3rd Qu.:2022   3rd Qu.: 9.00  
+##                     Max.   :2022-12-31   Max.   :2022   Max.   :12.00  
+##                                                                        
+##   month_name             day          hs_code          country_abb       
+##  Length:10000       Min.   : 1.00   Length:10000       Length:10000      
+##  Class :character   1st Qu.: 9.00   Class :character   Class :character  
+##  Mode  :character   Median :16.00   Mode  :character   Mode  :character  
+##                     Mean   :16.09                                        
+##                     3rd Qu.:24.00                                        
+##                     Max.   :31.00                                        
+##                                                                          
+##  country_cons            cif                fob              net_mass        
+##  Length:10000       Min.   :       0   Min.   :       0   Min.   :      0.0  
+##  Class :character   1st Qu.:     544   1st Qu.:     328   1st Qu.:     12.5  
+##  Mode  :character   Median :    1976   Median :    1367   Median :    108.8  
+##                     Mean   :   67359   Mean   :   60203   Mean   :   5245.7  
+##                     3rd Qu.:    8479   3rd Qu.:    6432   3rd Qu.:    680.0  
+##                     Max.   :73983870   Max.   :73983870   Max.   :1004500.0  
+##                                                           NA&#39;s   :5019       
+##    gross_mass           desc             warehouse            re        
+##  Min.   :       0   Length:10000       Min.   :0.0000   Min.   :0.0000  
+##  1st Qu.:      13   Class :character   1st Qu.:0.0000   1st Qu.:0.0000  
+##  Median :     116   Mode  :character   Median :0.0000   Median :1.0000  
+##  Mean   :    7988                      Mean   :0.0064   Mean   :0.5099  
+##  3rd Qu.:     780                      3rd Qu.:0.0000   3rd Qu.:1.0000  
+##  Max.   :14900000                      Max.   :1.0000   Max.   :1.0000  
+##                                                                         
+##       reg9        head_cust_off      head_decl_no       head_declarant_id 
+##  Min.   :0.0000   Length:10000       Length:10000       Length:10000      
+##  1st Qu.:0.0000   Class :character   Class :character   Class :character  
+##  Median :1.0000   Mode  :character   Mode  :character   Mode  :character  
+##  Mean   :0.5019                                                           
+##  3rd Qu.:1.0000                                                           
+##  Max.   :1.0000                                                           
+##                                                                           
+##  head_declarant_name head_porter_code   head_porter_name  
+##  Length:10000        Length:10000       Length:10000      
+##  Class :character    Class :character   Class :character  
+##  Mode  :character    Mode  :character   Mode  :character  
+##                                                           
+##                                                           
+##                                                           
+## </code></pre>
 <p><strong>QUESTION 3: Select a specific subset of the data, for example
 only the columns: tradeflow, month_name, hs_code, and cif</strong></p>
 <p>There are a number of ways to select columns of the data. First, we
