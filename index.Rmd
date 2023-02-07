@@ -318,6 +318,7 @@ Solutions to assignments:
 | Week         | Meeting day + time     | Topic         | 
 |:-----------|:---------------------|:----------------------------------|
 | *6-10 Feb*  |  Wednesday 13.00-15.00  | Recap of training + Assignment 1 |
+|  |  OR Friday 10.00-12.00  |  |
 | *13-17 Feb*  |    ...  | Discuss Assignment 1|
 | *20-24 Feb*  |    ...  | Analyzing ICUMS data - go through code, part 1 |
 | *27-3 Feb/Mar*  |    ...  | Discuss Assignment 2 |
