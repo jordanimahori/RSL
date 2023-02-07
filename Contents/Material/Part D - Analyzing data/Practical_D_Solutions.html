@@ -14,7 +14,7 @@
 
 <title>Practical D - solutions</title>
 
-<script src="libs/header-attrs-2.17/header-attrs.js"></script>
+<script src="libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -172,15 +172,19 @@ pre code {
 <h4>Exercises</h4>
 <hr />
 <p>The following packages are required for this practical:</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## Warning in Sys.timezone(): unable to identify current timezone &#39;C&#39;:
-## please set environment variable &#39;TZ&#39;</code></pre>
-<pre class="r"><code>library(lubridate)</code></pre>
-<p><strong>QUESTION 1: Open the workspace icums_22_sample.RData. You need to download this file and put it in the project folder.</strong></p>
-<p>Since the data is in .RData format, we load the data into R using the <em>load</em> function as shown below</p>
+<pre class="r"><code>library(tidyverse)
+library(lubridate)</code></pre>
+<p><strong>QUESTION 1: Open the workspace icums_22_sample.RData. You
+need to download this file and put it in the project
+folder.</strong></p>
+<p>Since the data is in .RData format, we load the data into R using the
+<em>load</em> function as shown below</p>
 <pre class="r"><code> load(&quot;icums_22_sample.RData&quot;)</code></pre>
-<p><strong>QUESTION 2: Inspect the data, what does this data set show? What can this data be used for?</strong></p>
-<p>There are differnt ways of inspecting the data. The following are some of them. Each of these functions helps us see see portions of the data in different ways.</p>
+<p><strong>QUESTION 2: Inspect the data, what does this data set show?
+What can this data be used for?</strong></p>
+<p>There are differnt ways of inspecting the data. The following are
+some of them. Each of these functions helps us see see portions of the
+data in different ways.</p>
 <pre class="r"><code>  View(icums_22_sample)
   str(icums_22_sample)</code></pre>
 <pre><code>## tibble [10,000 × 23] (S3: tbl_df/tbl/data.frame)
@@ -247,12 +251,17 @@ pre code {
 ## #   names ¹​month_name, ²​country_abb, ³​country_cons</code></pre>
 <pre class="r"><code>  summarise(icums_22_sample)</code></pre>
 <pre><code>## # A tibble: 1 × 0</code></pre>
-<p><strong>QUESTION 3: Select a specific subset of the data, for example only the columns: tradeflow, month_name, hs_code, and cif</strong></p>
-<p>There are a number of ways to select columns of the data. First, we do this by using the square bracket method.</p>
+<p><strong>QUESTION 3: Select a specific subset of the data, for example
+only the columns: tradeflow, month_name, hs_code, and cif</strong></p>
+<p>There are a number of ways to select columns of the data. First, we
+do this by using the square bracket method.</p>
 <pre class="r"><code>  # Method 1
   trade_data_subset_1 &lt;- icums_22_sample[, c(&quot;tradeflow&quot;, &quot;month_name&quot;, &quot;hs_code&quot;, &quot;cif&quot;)]</code></pre>
-<p><strong>QUESTION 4: Now repeat question 3, but use a different method to do it. Which method do you think is better to use, and why? Bonus: would you be able to find a third method to do this?</strong></p>
-<p>The selection done in question 3 can also be done using each of the following three (3) methods.</p>
+<p><strong>QUESTION 4: Now repeat question 3, but use a different method
+to do it. Which method do you think is better to use, and why? Bonus:
+would you be able to find a third method to do this?</strong></p>
+<p>The selection done in question 3 can also be done using each of the
+following three (3) methods.</p>
 <pre class="r"><code>  # Method 2
   trade_data_subset_2 &lt;- subset(icums_22_sample, select = c(tradeflow, month_name, hs_code, cif))
   # Method 3
@@ -260,29 +269,59 @@ pre code {
   # Method 4
   trade_data_subset_4 &lt;- icums_22_sample %&gt;% 
     select(tradeflow, month_name, hs_code, cif)</code></pre>
-<p><strong>QUESTION 5: Select only the columns in which the values are numeric.</strong></p>
-<p>Since the aim is to select variables of a particular type, the <em>where</em> function is very useful in this case. This is demonstrated below.</p>
+<p><strong>QUESTION 5: Select only the columns in which the values are
+numeric.</strong></p>
+<p>Since the aim is to select variables of a particular type, the
+<em>where</em> function is very useful in this case. This is
+demonstrated below.</p>
 <pre class="r"><code>  trade_data_numeric &lt;- icums_22_sample %&gt;% 
     select(where(is.numeric))</code></pre>
-<p><strong>QUESTION 6: Get more information on the data by creating a table of how many observations there are for each month.</strong></p>
-<p>As was thought in class, data aggregation is very useful to understanding data and making analysis for deeper insights. There are different ways of aggregating data. Here the <em>summaise</em> fubction is used. Since we want information (i.e. number of observations) per month (group), the <em>group_by</em> function is applied before the <em>summarise</em> function.</p>
+<p><strong>QUESTION 6: Get more information on the data by creating a
+table of how many observations there are for each month.</strong></p>
+<p>As was thought in class, data aggregation is very useful to
+understanding data and making analysis for deeper insights. There are
+different ways of aggregating data. Here the <em>summaise</em> fubction
+is used. Since we want information (i.e. number of observations) per
+month (group), the <em>group_by</em> function is applied before the
+<em>summarise</em> function.</p>
 <pre class="r"><code>  trade_data_obs_per_month &lt;- icums_22_sample %&gt;% 
     group_by(month_name) %&gt;% 
     summarise(count = n())</code></pre>
-<p><strong>QUESTION 7: Use the function “aggregate” to find the total imports for every month.</strong></p>
-<p>Besides the method used in question 6, the <em>aggregate</em> function is also used to get certain information from the data per group. Below is how this is done. Note that, in <em>R</em> and other programmes, the <em>tilde (~)</em> is used when doing some estimations. Here, the variable at the left handside of the <em>~</em> (cif, which stands for imports) assumes the role of the dependent variable while the variable at the right handside (month_name) assumes the role of the independent variable. In other words, we want estimates of imports for different months. The last arguement within the aggregate function determines the estimate to be provided. Since this particular question demands for total imports, the <em>sum</em> function is used.</p>
+<p><strong>QUESTION 7: Use the function “aggregate” to find the total
+imports for every month.</strong></p>
+<p>Besides the method used in question 6, the <em>aggregate</em>
+function is also used to get certain information from the data per
+group. Below is how this is done. Note that, in <em>R</em> and other
+programmes, the <em>tilde (~)</em> is used when doing some estimations.
+Here, the variable at the left handside of the <em>~</em> (cif, which
+stands for imports) assumes the role of the dependent variable while the
+variable at the right handside (month_name) assumes the role of the
+independent variable. In other words, we want estimates of imports for
+different months. The last arguement within the aggregate function
+determines the estimate to be provided. Since this particular question
+demands for total imports, the <em>sum</em> function is used.</p>
 <pre class="r"><code>  trade_data_avg_imports_per_month_1 &lt;- aggregate(icums_22_sample, cif ~ month_name, sum)</code></pre>
 <p><strong>QUESTION 8: Repeat question 7, now using a pipe.</strong></p>
-<p>What is done in question 7 can also be done using the <em>pipe</em> in the following way.</p>
+<p>What is done in question 7 can also be done using the <em>pipe</em>
+in the following way.</p>
 <pre class="r"><code>  trade_data_avg_imports_per_month_2 &lt;- icums_22_sample %&gt;% 
     group_by(month_name) %&gt;% 
     summarise(avg_imports = mean(cif, na.rm = TRUE))</code></pre>
-<p><strong>QUESTION 9: Add a new column “quarter” which shows which quarter of the year every observation is from.</strong></p>
-<p>Here, we use the <em>quarter</em> function in the lubridate package.</p>
+<p><strong>QUESTION 9: Add a new column “quarter” which shows which
+quarter of the year every observation is from.</strong></p>
+<p>Here, we use the <em>quarter</em> function in the lubridate
+package.</p>
 <pre class="r"><code>  trade_data_add_quarter_1 &lt;- icums_22_sample %&gt;% 
     mutate(quarter = quarter(month))</code></pre>
-<p><strong>QUESTION 10: Load the new dataframe hs_codes.RData into R, and merge this to the icums_22_sample data. Carefully decide on which method you use for this.</strong></p>
-<p>As was though in class, there are different ways of merging or joining data. Below are six ways of doing this. Remember that, to be able to merge datafiles, all the individual data files must be loaded into the R Environment. Go through each of the six methods carefully and identify the differences in the codes and what each component of the codes do.</p>
+<p><strong>QUESTION 10: Load the new dataframe hs_codes.RData into R,
+and merge this to the icums_22_sample data. Carefully decide on which
+method you use for this.</strong></p>
+<p>As was though in class, there are different ways of merging or
+joining data. Below are six ways of doing this. Remember that, to be
+able to merge datafiles, all the individual data files must be loaded
+into the R Environment. Go through each of the six methods carefully and
+identify the differences in the codes and what each component of the
+codes do.</p>
 <pre class="r"><code>  # Load the hs_codes.RData data
   load(&quot;hs_codes.RData&quot;)
   # Method 1
