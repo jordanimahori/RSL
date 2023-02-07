@@ -144,12 +144,9 @@ See also [this `rmarkdown` cheat sheet](Contents/Material/Part A - Introduction/
 ### Tuesday's materials
 We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
-
-
 - Part C: Data manipulation
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
     - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C_final.html)
-    - [`cpi_sample.RData`](Contents/Material/Part C - Data manipulation/cpi_sample.RData)
 
 ## Column 2
 
@@ -175,7 +172,6 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
     - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
     - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_new.html)
     - [Solutions to Practical D](Contents/Material/Part D - Analyzing data/Practical_D_Solutions.html)
-    - [`icums_22_sample.RData`](Contents/Material/Part D - Analyzing data/icums_22_sample.RData)
     - [`hs_codes.RData`](Contents/Material/Part D - Analyzing data/hs_codes.RData)
 
 On Thursday February 2, we started the day with a lecture on tidyverse, focused on wrangling data with dplyr. The following lecture was used for that.
@@ -320,7 +316,7 @@ Solutions to assignments:
 ## Column 2
 ### Schedule
 | Week         | Meeting day + time     | Topic         | 
-|:-----------|:------------------|:------------------------------------|
+|:-----------|:---------------------|:----------------------------------|
 | *6-10 Feb*  |  Wednesday 13.00-15.00  | Recap of training + Assignment 1 |
 | *13-17 Feb*  |    ...  | Discuss Assignment 1|
 | *20-24 Feb*  |    ...  | Analyzing ICUMS data - go through code, part 1 |
