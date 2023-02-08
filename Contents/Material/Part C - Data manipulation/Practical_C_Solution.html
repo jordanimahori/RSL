@@ -361,17 +361,11 @@ display: none;
 <p>In this practical we are going to use sample CPI data to practice
 with data manipulation.</p>
 <hr />
-<p>The following packages are required for this practical:</p>
-<pre class="r"><code>library(dplyr)
-library(magrittr)
-library(mice)
-library(reshape)</code></pre>
-<pre class="r"><code>set.seed(123)</code></pre>
-<hr />
 <p>1.<strong>Open the workspace cpi_sample.RData. You need to download
 this file and put it in the project folder.</strong></p>
 <pre class="r"><code>getwd()
-load(&quot;cpi_sample.rdata&quot;)</code></pre>
+load(&quot;cpi_sample.rdata&quot;)
+summary(cpi_sample)</code></pre>
 <hr />
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Inspect the data, how many rows and columns are there in the
@@ -443,37 +437,26 @@ variable</strong></li>
 <ol start="9" style="list-style-type: decimal">
 <li><strong>Rename <code>PR_0121</code> as price_jan_21</strong></li>
 </ol>
-<pre class="r"><code>cpi_sample1 &lt;- cpi_sample %&gt;%
+<pre class="r"><code>library(tidyverse)
+
+z &lt;- cpi_sample %&gt;%
     rename(price_jan_21=PR_0121)</code></pre>
 <hr />
 <ol start="10" style="list-style-type: decimal">
 <li><strong>Arrange the data by PR_0121 </strong></li>
 </ol>
 <pre class="r"><code>cpi_sample %&gt;%
-  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %&gt;% 
   arrange(PR_0121)</code></pre>
-<table style="width:7%;">
-<colgroup>
-<col width="6%" />
-</colgroup>
+<table>
 <tbody>
 <tr class="odd">
 <td>11. <strong>Arrange the data by PR_0121 in descending order
 </strong></td>
 </tr>
-<tr class="even">
-<td><code>r cpi_sample %&gt;% select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %&gt;% arrange( desc(PR_0121))</code></td>
-</tr>
 </tbody>
 </table>
-<ol start="6" style="list-style-type: decimal">
-<li><strong>Order the region variable and Create a table for Market
-name`</strong></li>
-</ol>
-<pre class="r"><code>cpi_sample[order(cpi_sample$PR_0121),]
-
-
-xtabs(~Region_Name+Market_Name, cpi_sample)</code></pre>
+<pre class="r"><code>cpi_sample %&gt;%
+  arrange( desc(PR_0121))</code></pre>
 <hr />
 <p>End of Practical</p>
 <hr />
