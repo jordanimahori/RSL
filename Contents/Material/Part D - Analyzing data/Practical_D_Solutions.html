@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Statistical Programming in R" />
+
+
+<title>Practical D - solutions</title>
+
+<script src="libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Practical D - solutions</h1>
+<h4 class="author">Statistical Programming in R</h4>
+
+</div>
+
+
+<hr />
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<hr />
+<p>The following packages are required for this practical:</p>
+<pre class="r"><code>library(tidyverse)
+library(lubridate)</code></pre>
+<p><strong>QUESTION 1: Open the workspace icums_22_sample.RData. You
+need to download this file and put it in the project
+folder.</strong></p>
+<p>Since the data is in .RData format, we load the data into R using the
+<em>load</em> function as shown below</p>
+<pre class="r"><code> load(&quot;icums_22_sample.RData&quot;)</code></pre>
+<p><strong>QUESTION 2: Inspect the data, what does this data set show?
+What can this data be used for?</strong></p>
+<p>There are differnt ways of inspecting the data. The following are
+some of them. Each of these functions helps us see see portions of the
+data in different ways.</p>
+<pre class="r"><code>  View(icums_22_sample)
+  str(icums_22_sample)</code></pre>
+<pre><code>## tibble [10,000 × 23] (S3: tbl_df/tbl/data.frame)
+##  $ tradeflow          : chr [1:10000] &quot;Import&quot; &quot;Import&quot; &quot;Import&quot; &quot;Import&quot; ...
+##  $ date               : Date[1:10000], format: &quot;2022-02-11&quot; &quot;2022-10-12&quot; ...
+##  $ year               : num [1:10000] 2022 2022 2022 2022 2022 ...
+##  $ month              : num [1:10000] 2 10 3 5 3 11 3 11 10 1 ...
+##  $ month_name         : chr [1:10000] &quot;February&quot; &quot;October&quot; &quot;March&quot; &quot;May&quot; ...
+##  $ day                : num [1:10000] 11 12 8 4 11 4 17 23 26 14 ...
+##  $ hs_code            : chr [1:10000] &quot;1806310000&quot; &quot;6115960000&quot; &quot;8704311910&quot; &quot;8429520000&quot; ...
+##  $ country_abb        : chr [1:10000] &quot;FR&quot; &quot;ZA&quot; &quot;China&quot; &quot;CN&quot; ...
+##  $ country_cons       : chr [1:10000] &quot;FR&quot; &quot;ZA&quot; &quot;China&quot; &quot;CN&quot; ...
+##  $ cif                : num [1:10000] 345 382 3400 307411 459 ...
+##  $ fob                : num [1:10000] 314 342 2847 298872 444 ...
+##  $ net_mass           : num [1:10000] 10 13.8 NA 25525 160 ...
+##  $ gross_mass         : num [1:10000] 11.2 13.8 396.9 25525 160 ...
+##  $ desc               : chr [1:10000] &quot;LINDT  EXCELLENCE MILK CHOCOLATE 55% TAB. 100GX20&quot; &quot;SOCKS MENS 3PK ANKLET BASICS CHARC OSFA   4   PCS X   12   PACKS&quot; &quot;NEW APSONIC TRICYCLE AP150ZH-20 IN CKD CONDITION AGE :2021 CC:150 CHASSIS NO:LLCLHJL05MP302381&quot; &quot;1 UNIT OF LIUGONG CLG925E EXCAVATOR  WITH TOOL BOX MACHINE NO: CLG925EZKNE706776 CHASSIS 926L22WJ00053 CC:5.9L YEAR:2022&quot; ...
+##  $ warehouse          : num [1:10000] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ re                 : num [1:10000] 0 0 1 0 0 0 1 0 0 1 ...
+##  $ reg9               : num [1:10000] 0 0 1 0 0 0 1 0 0 1 ...
+##  $ head_cust_off      : chr [1:10000] &quot;TMA1&quot; &quot;TMA1&quot; &quot;TMA1&quot; &quot;TMA1&quot; ...
+##  $ head_decl_no       : chr [1:10000] &quot;40222067121&quot; &quot;40922455469&quot; NA &quot;40422211948&quot; ...
+##  $ head_declarant_id  : chr [1:10000] &quot;SD000053&quot; &quot;CH000136&quot; NA &quot;CH000230&quot; ...
+##  $ head_declarant_name: chr [1:10000] &quot;KWATSONS GHANA LIMITED&quot; &quot;COMEXAS GHANA LIMITED&quot; NA &quot;TRANSGLOBAL LOGISTICS LIMITED&quot; ...
+##  $ head_porter_code   : chr [1:10000] &quot;C0004212738&quot; &quot;C0002788322&quot; &quot;C0061066168&quot; &quot;C0001905473&quot; ...
+##  $ head_porter_name   : chr [1:10000] &quot;KWATSONS WEST AFRICA LIMITED&quot; &quot;SHOPRITE GHANA (PTY) LIMITED&quot; &quot;GOODMAN ENGINEERING LTD&quot; &quot;ZONDA TEC GHANA LIMITED&quot; ...</code></pre>
+<pre class="r"><code>  head(icums_22_sample, 10)</code></pre>
+<pre><code>## # A tibble: 10 × 23
+##    tradeflow date        year month month…¹   day hs_code count…² count…³    cif
+##    &lt;chr&gt;     &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt;
+##  1 Import    2022-02-11  2022     2 Februa…    11 180631… FR      FR      3.45e2
+##  2 Import    2022-10-12  2022    10 October    12 611596… ZA      ZA      3.82e2
+##  3 Import    2022-03-08  2022     3 March       8 870431… China   China   3.40e3
+##  4 Import    2022-05-04  2022     5 May         4 842952… CN      CN      3.07e5
+##  5 Import    2022-03-11  2022     3 March      11 100630… CA      CA      4.59e2
+##  6 Import    2022-11-04  2022    11 Novemb…     4 300420… BE      NL      3.49e5
+##  7 Import    2022-03-17  2022     3 March      17 050400… Brazil  Brazil  1.76e5
+##  8 Import    2022-11-23  2022    11 Novemb…    23 870323… US      US      1.18e5
+##  9 Import    2022-10-26  2022    10 October    26 871110… CN      CN      1.20e3
+## 10 Import    2022-01-14  2022     1 January    14 844110… Spain   Spain   2.10e3
+## # … with 13 more variables: fob &lt;dbl&gt;, net_mass &lt;dbl&gt;, gross_mass &lt;dbl&gt;,
+## #   desc &lt;chr&gt;, warehouse &lt;dbl&gt;, re &lt;dbl&gt;, reg9 &lt;dbl&gt;, head_cust_off &lt;chr&gt;,
+## #   head_decl_no &lt;chr&gt;, head_declarant_id &lt;chr&gt;, head_declarant_name &lt;chr&gt;,
+## #   head_porter_code &lt;chr&gt;, head_porter_name &lt;chr&gt;, and abbreviated variable
+## #   names ¹​month_name, ²​country_abb, ³​country_cons</code></pre>
+<pre class="r"><code>  tail(icums_22_sample, 10)</code></pre>
+<pre><code>## # A tibble: 10 × 23
+##    tradeflow date        year month month…¹   day hs_code count…² count…³    cif
+##    &lt;chr&gt;     &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt;
+##  1 Import    2022-09-28  2022     9 Septem…    28 851770… Republ… &lt;NA&gt;    1.09e4
+##  2 Import    2022-10-14  2022    10 October    14 870322… Japan   Japan   3.91e4
+##  3 Import    2022-04-11  2022     4 April      11 850940… CN      CN      2.22e3
+##  4 Import    2022-01-06  2022     1 January     6 851650… United… United… 8.54e2
+##  5 Import    2022-06-03  2022     6 June        3 010290… &lt;NA&gt;    BF      2.30e3
+##  6 Import    2022-01-24  2022     1 January    24 870321… India   India   8.64e3
+##  7 Import    2022-10-11  2022    10 October    11 252310… Egypt   Egypt   7.51e6
+##  8 Import    2022-03-23  2022     3 March      23 871120… China   China   2.71e3
+##  9 Import    2022-04-12  2022     4 April      12 220421… Ghana   &lt;NA&gt;    5.88e1
+## 10 Import    2022-06-17  2022     6 June       17 853649… ES      ES      8.94e3
+## # … with 13 more variables: fob &lt;dbl&gt;, net_mass &lt;dbl&gt;, gross_mass &lt;dbl&gt;,
+## #   desc &lt;chr&gt;, warehouse &lt;dbl&gt;, re &lt;dbl&gt;, reg9 &lt;dbl&gt;, head_cust_off &lt;chr&gt;,
+## #   head_decl_no &lt;chr&gt;, head_declarant_id &lt;chr&gt;, head_declarant_name &lt;chr&gt;,
+## #   head_porter_code &lt;chr&gt;, head_porter_name &lt;chr&gt;, and abbreviated variable
+## #   names ¹​month_name, ²​country_abb, ³​country_cons</code></pre>
+<pre class="r"><code>  summary(icums_22_sample)</code></pre>
+<pre><code>##   tradeflow              date                 year          month      
+##  Length:10000       Min.   :2022-01-01   Min.   :2022   Min.   : 1.00  
+##  Class :character   1st Qu.:2022-03-30   1st Qu.:2022   1st Qu.: 3.00  
+##  Mode  :character   Median :2022-06-29   Median :2022   Median : 6.00  
+##                     Mean   :2022-06-29   Mean   :2022   Mean   : 6.42  
+##                     3rd Qu.:2022-09-28   3rd Qu.:2022   3rd Qu.: 9.00  
+##                     Max.   :2022-12-31   Max.   :2022   Max.   :12.00  
+##                                                                        
+##   month_name             day          hs_code          country_abb       
+##  Length:10000       Min.   : 1.00   Length:10000       Length:10000      
+##  Class :character   1st Qu.: 9.00   Class :character   Class :character  
+##  Mode  :character   Median :16.00   Mode  :character   Mode  :character  
+##                     Mean   :16.09                                        
+##                     3rd Qu.:24.00                                        
+##                     Max.   :31.00                                        
+##                                                                          
+##  country_cons            cif                fob              net_mass        
+##  Length:10000       Min.   :       0   Min.   :       0   Min.   :      0.0  
+##  Class :character   1st Qu.:     544   1st Qu.:     328   1st Qu.:     12.5  
+##  Mode  :character   Median :    1976   Median :    1367   Median :    108.8  
+##                     Mean   :   67359   Mean   :   60203   Mean   :   5245.7  
+##                     3rd Qu.:    8479   3rd Qu.:    6432   3rd Qu.:    680.0  
+##                     Max.   :73983870   Max.   :73983870   Max.   :1004500.0  
+##                                                           NA&#39;s   :5019       
+##    gross_mass           desc             warehouse            re        
+##  Min.   :       0   Length:10000       Min.   :0.0000   Min.   :0.0000  
+##  1st Qu.:      13   Class :character   1st Qu.:0.0000   1st Qu.:0.0000  
+##  Median :     116   Mode  :character   Median :0.0000   Median :1.0000  
+##  Mean   :    7988                      Mean   :0.0064   Mean   :0.5099  
+##  3rd Qu.:     780                      3rd Qu.:0.0000   3rd Qu.:1.0000  
+##  Max.   :14900000                      Max.   :1.0000   Max.   :1.0000  
+##                                                                         
+##       reg9        head_cust_off      head_decl_no       head_declarant_id 
+##  Min.   :0.0000   Length:10000       Length:10000       Length:10000      
+##  1st Qu.:0.0000   Class :character   Class :character   Class :character  
+##  Median :1.0000   Mode  :character   Mode  :character   Mode  :character  
+##  Mean   :0.5019                                                           
+##  3rd Qu.:1.0000                                                           
+##  Max.   :1.0000                                                           
+##                                                                           
+##  head_declarant_name head_porter_code   head_porter_name  
+##  Length:10000        Length:10000       Length:10000      
+##  Class :character    Class :character   Class :character  
+##  Mode  :character    Mode  :character   Mode  :character  
+##                                                           
+##                                                           
+##                                                           
+## </code></pre>
+<p><strong>QUESTION 3: Select a specific subset of the data, for example
+only the columns: tradeflow, month_name, hs_code, and cif</strong></p>
+<p>There are a number of ways to select columns of the data. First, we
+do this by using the square bracket method.</p>
+<pre class="r"><code>  # Method 1
+  trade_data_subset_1 &lt;- icums_22_sample[, c(&quot;tradeflow&quot;, &quot;month_name&quot;, &quot;hs_code&quot;, &quot;cif&quot;)]</code></pre>
+<p><strong>QUESTION 4: Now repeat question 3, but use a different method
+to do it. Which method do you think is better to use, and why? Bonus:
+would you be able to find a third method to do this?</strong></p>
+<p>The selection done in question 3 can also be done using each of the
+following three (3) methods.</p>
+<pre class="r"><code>  # Method 2
+  trade_data_subset_2 &lt;- subset(icums_22_sample, select = c(tradeflow, month_name, hs_code, cif))
+  # Method 3
+  trade_data_subset_3 &lt;- select(icums_22_sample, c(tradeflow, month_name, hs_code, cif))
+  # Method 4
+  trade_data_subset_4 &lt;- icums_22_sample %&gt;% 
+    select(tradeflow, month_name, hs_code, cif)</code></pre>
+<p><strong>QUESTION 5: Select only the columns in which the values are
+numeric.</strong></p>
+<p>Since the aim is to select variables of a particular type, the
+<em>where</em> function is very useful in this case. This is
+demonstrated below.</p>
+<pre class="r"><code>  trade_data_numeric &lt;- icums_22_sample %&gt;% 
+    select(where(is.numeric))</code></pre>
+<p><strong>QUESTION 6: Get more information on the data by creating a
+table of how many observations there are for each month.</strong></p>
+<p>As was thought in class, data aggregation is very useful to
+understanding data and making analysis for deeper insights. There are
+different ways of aggregating data. Here the <em>summaise</em> fubction
+is used. Since we want information (i.e. number of observations) per
+month (group), the <em>group_by</em> function is applied before the
+<em>summarise</em> function.</p>
+<pre class="r"><code>  trade_data_obs_per_month &lt;- icums_22_sample %&gt;% 
+    group_by(month_name) %&gt;% 
+    summarise(count = n())</code></pre>
+<p><strong>QUESTION 7: Use the function “aggregate” to find the total
+imports for every month.</strong></p>
+<p>Besides the method used in question 6, the <em>aggregate</em>
+function is also used to get certain information from the data per
+group. Below is how this is done. Note that, in <em>R</em> and other
+programmes, the <em>tilde (~)</em> is used when doing some estimations.
+Here, the variable at the left handside of the <em>~</em> (cif, which
+stands for imports) assumes the role of the dependent variable while the
+variable at the right handside (month_name) assumes the role of the
+independent variable. In other words, we want estimates of imports for
+different months. The last arguement within the aggregate function
+determines the estimate to be provided. Since this particular question
+demands for total imports, the <em>sum</em> function is used.</p>
+<pre class="r"><code>  trade_data_avg_imports_per_month_1 &lt;- aggregate(icums_22_sample, cif ~ month_name, sum)</code></pre>
+<p><strong>QUESTION 8: Repeat question 7, now using a pipe.</strong></p>
+<p>What is done in question 7 can also be done using the <em>pipe</em>
+in the following way.</p>
+<pre class="r"><code>  trade_data_avg_imports_per_month_2 &lt;- icums_22_sample %&gt;% 
+    group_by(month_name) %&gt;% 
+    summarise(avg_imports = mean(cif, na.rm = TRUE))</code></pre>
+<p><strong>QUESTION 9: Add a new column “quarter” which shows which
+quarter of the year every observation is from.</strong></p>
+<p>Here, we use the <em>quarter</em> function in the lubridate
+package.</p>
+<pre class="r"><code>  trade_data_add_quarter_1 &lt;- icums_22_sample %&gt;% 
+    mutate(quarter = quarter(month))</code></pre>
+<p><strong>QUESTION 10: Load the new dataframe hs_codes.RData into R,
+and merge this to the icums_22_sample data. Carefully decide on which
+method you use for this.</strong></p>
+<p>As was though in class, there are different ways of merging or
+joining data. Below are six ways of doing this. Remember that, to be
+able to merge datafiles, all the individual data files must be loaded
+into the R Environment. Go through each of the six methods carefully and
+identify the differences in the codes and what each component of the
+codes do.</p>
+<pre class="r"><code>  # Load the hs_codes.RData data
+  load(&quot;hs_codes.RData&quot;)
+  # Method 1
+  merged_data_1 &lt;- merge(icums_22_sample, hs_codes, by = &quot;hs_code&quot;)
+  # Method 2
+  merged_data_2 &lt;- merge(icums_22_sample, hs_codes, by = &quot;hs_code&quot;, all.x = TRUE)
+  # Method 3
+  merged_data_3 &lt;- merge(hs_codes, icums_22_sample, by = &quot;hs_code&quot;, all.y = TRUE)
+  # Method 4
+  merged_data_4 &lt;- icums_22_sample %&gt;% 
+    merge(hs_codes, by = &quot;hs_code&quot;)
+  # Method 5
+  merged_data_5 &lt;- left_join(icums_22_sample, hs_codes, by = &quot;hs_code&quot;)
+  # Method 6
+  merged_data_6 &lt;- icums_22_sample %&gt;% 
+    left_join(hs_codes, by = &quot;hs_code&quot;)</code></pre>
+<hr />
+<p>End of Practical</p>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

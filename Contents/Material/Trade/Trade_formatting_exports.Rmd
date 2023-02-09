@@ -1,0 +1,133 @@
+## GETTING DATA INTO DESIRED FORMAT
+
+### Setting paths
+
+```{r}
+input_data_path <- "export/input/01. Merchandised Export (10)_DEC"
+
+output_data_path <-"export/output/output_Merchandised_Exports_December_2022.xls"
+```
+
+### Loading Required R Packages
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+library(readxl)    
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(writexl)
+library(ggplot2)
+library(hrbrthemes)
+library(plotly)
+library(openxlsx)
+# Need to do this do NOT have scientific notation
+options(scipen = 10)
+
+```
+
+### Function to Read all Excel Sheets into R
+
+```{r}
+# Create the function to read multiple files
+multiplesheets <- function(fname) {
+   
+#### getting info about all excel sheets and reading them into R
+  sheets <- readxl::excel_sheets(fname)
+  
+  data <- lapply(sheets, function(x){
+    readxl::read_excel(fname, sheet = x, col_names = TRUE, skip = 4)
+  }
+  )
+
+### Appending the Data Files into a Single Data Frame
+df_data <- data.table::rbindlist(data)
+
+#### print data frame
+return(df_data)
+
+}
+
+```
+  
+
+### Applying the Function on the Excel Data
+
+```{r}
+# Read all the sheets of the input data
+df_data_raw <- multiplesheets(input_data_path)
+
+```
+
+### Getting the data in right format
+
+```{r}
+# Create new clean data frame
+df_data_clean_copy <- df_data_raw
+
+# Change dataframe to clean version
+df_data_clean <- df_data_clean_copy %>%
+  mutate(
+    # Add day, month, year
+    DAY = format(HEAD_TIME_PROC, format = "%d"),
+    MONTH = format(HEAD_TIME_PROC, format = "%m"),
+    YEAR = format(HEAD_TIME_PROC, format = "%Y")) %>%
+  # Arrange by year, month, day
+  arrange(YEAR, MONTH, DAY) %>% 
+  # Getting columns in required order, and selecting which ones we want
+  select(DAY, MONTH, YEAR, HEAD_CUST_OFF_CODE, HEAD_DECL_NO, ITEMS_NO,	
+         HEAD_DECLARANT_ID, HEAD_EXPORTER_CODE, HEAD_MODE_TRANS_CODE, 
+         HEAD_CTRY_NAT_VESSEL, ITEMS_CPC_CODE, ITEMS_HS_CODE, 
+         HEAD_COUNTRY_ORIG_DEST, ITEMS_NET_MASS, ITEMS_GROSS_MASS, ITEMS_QTY, 
+         COUNTRY_OF_CONSIGNMENT, ITEMS_FOB_GHC, ITEMS_INSURE_GHC, 
+         ITEMS_FREIGHT_GHC)
+  
+```
+
+### Changing the column names
+
+```{r}
+# Make vector of new names and change the column names
+colnames(df_data_clean) <- c("DAY", "MONTH", "YEAR", "CUSTOM", "DECNUM", 
+                             "ITEMNUM", "AGENT", "TRADER", "MOT",
+                             "NATIONALITY", "CPC", "PRODUCT", "PARTNER", 
+                             "NETWEIGHT", "GROSSWEIGHT", "QUANTITY", 
+                             "COUNTRYF/L", "CUSTOMVALUE", "INSURANCE", 
+                             "FREIGHT")
+
+```
+
+### Subsetting data into data frames of not more than 45,000 rows and assigning them to workbook sheets
+
+```{r}
+# Define maximum number of rows per sheet
+max_rows <- 45000
+
+# Make new column which specifies the row category, so which sheet it should be on
+df_data_clean <- df_data_clean %>% 
+  mutate(row_cat = row_number(),
+         row_cat = cut(row_cat, 
+                       breaks = c(0, max_rows*c(1:ceiling(nrow(df_data_clean)/max_rows))))
+         )
+
+# Now split the data based on this row category
+output <- split(df_data_clean, df_data_clean$row_cat)
+
+```
+
+### Exporting the data to Excel
+
+```{r}
+# Create empty workbook
+wb <- createWorkbook()
+
+# For every data frame in the output list, create a new worksheet, and write the data to the worksheet
+for (i in 1:length(output)) {
+  addWorksheet(wb, sheetName = names(output[i]))
+  writeData(wb, sheet = names(output[i]), x = output[[i]])
+}
+
+# Save data to your output path
+saveWorkbook(wb, output_data_path, overwrite = TRUE)
+
+```

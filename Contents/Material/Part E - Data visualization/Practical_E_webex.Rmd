@@ -31,7 +31,7 @@ set.seed(123)
 ```
 ---
 
-#### Exercise 0 
+#### Exercise 1 
 
 Function `plot()` is the core plotting function in `R`. Find out more about `plot()`: Try both the help in the help-pane and `?plot` in the console. Look at the examples by running `example(plot)`.
 
@@ -47,7 +47,7 @@ There are many more functions that can plot specific types of plots. For example
 `r unhide()`
 ---
 
-#### Exercise 1 
+#### Exercise 2 
 
 Create a scatterplot between `age` and `bmi` in the `mice::boys` data set.
 
@@ -62,7 +62,7 @@ plot( boys$bmi ~ boys$age )
 
 ---
 
-#### Exercise 2
+#### Exercise 3
 
 Now recreate the plot with the following specifications:
 
@@ -112,7 +112,7 @@ points(bmi ~ age, subset = class == "obese", col = "red", data = boys2)
 `r unhide()`
 ---
 
-#### Exercise 3
+#### Exercise 4
 
 Create a histogram for `age` in the `boys` data set.
 
@@ -140,7 +140,7 @@ hist(boys$age, breaks = 50, xlab = "Age", main = "Histogram")
 `r unhide()`
 ---
 
-#### Exercise 4
+#### Exercise 5
 
 Create a bar chart for `reg` in the boys data set.
 
@@ -156,7 +156,7 @@ boys %$%
 `r unhide()`
 ---
 
-#### Exercise 5
+#### Exercise 6
 
 Create a box plot for `hgt` with different boxes for `reg` in the `boys` data set.
 
@@ -172,7 +172,7 @@ boys %$%
 `r unhide()`
 ---
 
-#### Exercise 6
+#### Exercise 7
 
 Create a density plot for `age` with different curves for boys from the `city` and boys from rural areas (`!city`).
 
@@ -204,7 +204,7 @@ lines(density(boys$age[!is.na(boys$reg) & boys$reg != "city"]),
 `r unhide()` 
 ---
 
-##### Exercise 7
+##### Exercise 8
 
 Create a diverging bar chart for `hgt` in the `boys` data set, that displays for every `age` year that year's mean height in deviations from the overall average `hgt`.
 

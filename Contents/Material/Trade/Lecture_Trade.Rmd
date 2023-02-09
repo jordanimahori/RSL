@@ -1,0 +1,99 @@
+---
+title: 'R for Trade Data'
+author: "Statistical Programming with R"
+date: ""
+output:
+  ioslides_presentation:
+    fig_height: 5
+    fig_width: 8
+    logo: logo_en.png
+    transition: faster
+    smaller: true
+  beamer_presentation: default
+---
+
+# Overview 
+## Schedule 
+| Day         | Hours       | Topic                               | 
+|:------------|:------------|:------------------------------------|
+| *Thursday*  |  9.30 - 13.30  | Introduction to trade data |
+|   |  14.15 - 17.00 | ICUMS data, reformatting |
+| *Friday*  |    9.30 - 13.30  | Cleaning and analysing ICUMS data |
+|   |  14.15 - 17.00  | Working with the data! |
+
+
+# Trade Data
+## Which data do we have?
+
+- Before 2013:
+  - ...
+- Since 2020 (Complete data from June onwards)
+  - ICUMS: Integrated Customs Management System
+
+## How do we use this data? (Part 1)
+<ol>
+<li> Extract data from ICUMS
+    <ul>
+    <li> Issue = Many different sheets in Excel </li>
+    </ul>
+<li> Make new Excel files where we merge the sheets together
+    <ul>
+    <li> Either manually add Excel sheets together </li>
+    <li> Manual errors!! We do not want to do this </li>
+    <li> Now we also use a Stata code for this </li>
+    <li> Peter has written an R code for this </li>
+    <li> Which we will discuss!! </li>
+    </ul>
+</ol>
+    
+## How do we use this data? (Part 2)
+<ol start=3>
+<li> We load the Excel files into Eurotrace
+    <ul>
+    <li> Issue = maximum number of rows, could drop data (65,000) </li>
+    <li> Maybe other issues </li>
+    <li> We are working on comparing what we put into Eurotrace and what we retrieve from it </li>
+    <li>For example check total imports and total exports, as well as specific commodities </li>
+    </ul>
+<li> Now currently you extract our trade data from Eurotrace, and send it to external (or internal) parties 
+   <ul>
+   <li> Issue = We are fully reliant on Eurotrace </li>
+   </ul>
+<li> NEW: We could reformat the raw ICUMS data ourselves, to not have to rely on Eurotrace and fully understand every step we take in manipulating the data.
+</ol>
+# A lot to discuss these two days!
+
+## Step 2: Reformatting ICUMS data
+
+- ICUMS: many different sheets
+- We want to append the sheets to each other
+  - While making sure that we do not have more than 65,000 rows per sheet
+- Using R Code 
+  - Prevents us from making manual errors!
+  - Saves a lot of time as well :)
+
+Now let us discuss the R Code to do this.
+
+# Discuss the reformatting of the ICUMS data R code
+
+# Next step
+
+## Step 5: Cleaning and analysing ICUMS data
+
+- We do not want to have to rely on Eurotrace to export our trade data
+  - If Eurotrace is slow
+  - If Eurotrace is suddenly down
+  - We want to know what exactly happens to the data
+    - Possibly some HS codes are not recognized by Eurotrace, causing issues
+- If Eurotrace works perfectly:
+  - Then our outcomes should be exactly the same as the Eurotrace output
+    - For example the total imports, and total exports
+    - Even when split up in HS codes or countries
+    - These are things we need to check!! = work in progress
+
+# Discuss the cleaning and analysing of the ICUMS data
+
+  
+  
+  
+

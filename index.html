@@ -2045,11 +2045,6 @@ previous experience with R is required.</p>
 <div id="course-schedule" class="section level3">
 <h3>Course schedule</h3>
 <table>
-<colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="58%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Day</th>
@@ -2060,42 +2055,42 @@ previous experience with R is required.</p>
 <tbody>
 <tr class="odd">
 <td align="left"><em>Monday</em></td>
-<td align="left">9.00-13.00</td>
+<td align="left">9.30-13.30</td>
 <td align="left">Introduction to R and RStudio (A)</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45-17.00</td>
+<td align="left">14.15-17.00</td>
 <td align="left">Basics of R (B)</td>
 </tr>
 <tr class="odd">
 <td align="left"><em>Tuesday</em></td>
-<td align="left">9.00-13.00</td>
+<td align="left">9.30-13.30</td>
 <td align="left">Data manipulation (C)</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45-17.00</td>
-<td align="left">Analyzing data (D)</td>
+<td align="left">14.15-17.00</td>
+<td align="left">Data manipulation (C)</td>
 </tr>
 <tr class="odd">
 <td align="left"><em>Wednesday</em></td>
-<td align="left">9.00-13.00</td>
-<td align="left">Visualizations (E)</td>
+<td align="left">9.30-13.30</td>
+<td align="left">Analyzing data (D)</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45-17.00</td>
-<td align="left">Q&amp;A / Experimenting / Loops and functions (F)</td>
+<td align="left">14.15-17.00</td>
+<td align="left">Analyzing data (D)</td>
 </tr>
 <tr class="odd">
 <td align="left"><em>Thursday</em></td>
-<td align="left">9.00- 17.00</td>
+<td align="left">9.30- 17.00</td>
 <td align="left">Specific sessions: CPI / Trade</td>
 </tr>
 <tr class="even">
 <td align="left"><em>Friday</em></td>
-<td align="left">9.00-17.00</td>
+<td align="left">9.30-17.00</td>
 <td align="left">Specific sessions: CPI / Trade</td>
 </tr>
 </tbody>
@@ -2169,6 +2164,7 @@ access the materials online.</p>
 <ul>
 <li><a href="Contents/Material/Part%20B%20-%20How%20is%20R%20organized/Lecture-B_november.html" target="_blank">Lecture B</a></li>
 <li><a href="Contents/Material/Part%20B%20-%20How%20is%20R%20organized/Practical_B.html" target="_blank">Practical B</a></li>
+<li><a href="Contents/Material/Part%20B%20-%20How%20is%20R%20organized/Practical_B_walkthrough.html" target="_blank">Solutions to Practical B</a></li>
 <li><a href="Contents/Material/Part%20B%20-%20How%20is%20R%20organized/boys.RData"><code>boys.RData</code></a></li>
 </ul></li>
 </ul>
@@ -2212,7 +2208,6 @@ C</a></p></li>
 C</a></p></li>
 <li><p><a href="Contents/Material/Part%20C%20-%20Data%20manipulation/Practical_C_Solution.html">Practical
 C Solution</a></p></li>
-<li><p><a href="Contents/Material/Part%20C%20-%20Data%20manipulation/cpi_sample.RData"><code>cpi_sample.RData</code></a></p></li>
 </ul></li>
 </ul>
 </div>
@@ -2247,17 +2242,23 @@ materials.</p>
 iteration of the course materials, we advice all course participants to
 access the materials online.</p>
 <ul>
-<li>Part E: Data visualization
+<li>Part D: Analyzing data
 <ul>
-<li><a href="Contents/Material/Part%20E%20-%20Data%20visualization/Lecture_E.html" target="_blank">Lecture E</a></li>
-<li><a href="Contents/Material/Part%20E%20-%20Data%20visualization/Practical_E_webex_ggplot.html" target="_blank">Practical E with ggplot</a></li>
-<li><a href="Contents/Material/Part%20E%20-%20Data%20visualization/Practical_E_webex.html" target="_blank">Practical E with base R</a></li>
+<li><a href="Contents/Material/Part%20D%20-%20Analyzing%20data/Lecture_D.html">Lecture
+D</a></li>
+<li><a href="Contents/Material/Part%20D%20-%20Analyzing%20data/Practical_D_new.html">Practical
+D</a></li>
+<li><a href="Contents/Material/Part%20D%20-%20Analyzing%20data/Practical_D_Solutions.html">Solutions
+to Practical D</a></li>
+<li><a href="Contents/Material/Part%20D%20-%20Analyzing%20data/hs_codes.RData"><code>hs_codes.RData</code></a></li>
 </ul></li>
-<li>Part F: Loops and functions
+</ul>
+<p>On Thursday February 2, we started the day with a lecture on
+tidyverse, focused on wrangling data with dplyr. The following lecture
+was used for that.</p>
 <ul>
-<li><a href="Contents/Material/Part%20F%20-%20Loops%20and%20functions/Lecture_F.html" target="_blank">Lecture F</a></li>
-<li><a href="Contents/Material/Part%20F%20-%20Loops%20and%20functions/Practical_F.html" target="_blank">Practical F</a></li>
-</ul></li>
+<li><a href="Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html">Lecture
+on dplyr</a></li>
 </ul>
 </div>
 </div>
@@ -2293,8 +2294,23 @@ awesome HTML tables with <code>knitr::kable</code> and
 <h2>Column 1</h2>
 <div id="cpi-materials" class="section level3">
 <h3>CPI materials</h3>
-<p>On Thursday and Friday the CPI team will specifically focus on the R
-code for the CPI.</p>
+<p>On Thursday and Friday (2-3 Feb) the CPI team has specifically
+focused on the R code for the CPI.</p>
+<p>From Tuesday until Thursday (7-9 Feb) we will focus on data
+visualization and apply this to the CPI data as well.</p>
+<ul>
+<li>Introduction to data visualization:
+<ul>
+<li><a href="Contents/Material/happy_scientist-master/ggplot2/intro_to_tidyverse_ggplot2.html" target="_blank">Lecture Data Visualization</a></li>
+<li><a href="Contents/Material/happy_scientist-master/ggplot2/exercises.Rmd" target="_blank">Practical ggplot - 1</a></li>
+<li><a href="Contents/Material/happy_scientist-master/ggplot2/diabetes.csv">diabetes.csv</a></li>
+</ul></li>
+<li>Recap: Data visualization
+<ul>
+<li><a href="Contents/Material/Part%20E%20-%20Data%20visualization/Lecture_E_new.html" target="_blank">Recap Lecture ggplot</a></li>
+<li><a href="Contents/Material/Part%20E%20-%20Data%20visualization/Practical_E_webex_ggplot.html" target="_blank">Practical ggplot - 2</a></li>
+</ul></li>
+</ul>
 </div>
 </div>
 <div id="column-2-4" class="section level2">
@@ -2311,24 +2327,34 @@ code for the CPI.</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><em>Thursday</em></td>
-<td align="left">9.00 - 13.00</td>
-<td align="left">…</td>
+<td align="left"><em>Tuesday</em></td>
+<td align="left">9.30 - 13.30</td>
+<td align="left">Data visualization - Lecture</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45 - 16.30</td>
-<td align="left">…</td>
+<td align="left">14.15 - 17.00</td>
+<td align="left">Data visualization - Practical</td>
 </tr>
 <tr class="odd">
-<td align="left"><em>Friday</em></td>
-<td align="left">9.00 - 13.00</td>
-<td align="left">…</td>
+<td align="left"><em>Wednesday</em></td>
+<td align="left">9.30 - 13.30</td>
+<td align="left">Data visualization - Practical</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45 - 16.30</td>
-<td align="left">…</td>
+<td align="left">14.15 - 17.00</td>
+<td align="left">CPI data visualizations</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>Thursday</em></td>
+<td align="left">9.30 - 13.30</td>
+<td align="left">CPI data visualizations</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">14.15 - 17.00</td>
+<td align="left">Q&amp;A and specific CPI questions</td>
 </tr>
 </tbody>
 </table>
@@ -2339,18 +2365,29 @@ code for the CPI.</p>
 <h1>Trade</h1>
 <div id="column-1-6" class="section level2">
 <h2>Column 1</h2>
-<div id="cpi-materials-1" class="section level3">
-<h3>CPI materials</h3>
+<div id="trade-materials" class="section level3">
+<h3>Trade materials</h3>
 <p>On Thursday and Friday the Trade team will specifically focus on the
 R code for trade data.</p>
 <ul>
-<li>Introduction to Trade data</li>
+<li>Introduction to Trade data
+<ul>
+<li><a href="Contents/Material/Trade/Lecture_Trade.html" target="_blank">Lecture Trade</a></li>
+</ul></li>
 <li>ICUMS data
 <ul>
 <li>Reformatting</li>
+<li>Cleaning and analyzing</li>
 </ul></li>
-<li>Cleaning and analyzing the ICUMS data</li>
 </ul>
+We are using the following R scripts:
+<ol>
+<ul>
+<li><a href="Contents/Material/Trade/Trade_formatting_exports.Rmd" target="_blank">Reformatting Code Exports.Rmd</a></li>
+<li><a href="Contents/Material/Trade/Trade_formatting_imports.Rmd" target="_blank">Reformatting Code Imports.Rmd</a></li>
+<li><a href="Contents/Material/Trade/Trade%20vulnerability%20ICUMS.R" target="_blank">Trade vulnerability ICUMS.R</a></li>
+</ul>
+</ol>
 </div>
 </div>
 <div id="column-2-5" class="section level2">
@@ -2368,22 +2405,22 @@ R code for trade data.</p>
 <tbody>
 <tr class="odd">
 <td align="left"><em>Thursday</em></td>
-<td align="left">9.00 - 13.00</td>
+<td align="left">9.30 - 13.30</td>
 <td align="left">Introduction to trade data</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45 - 17.00</td>
+<td align="left">14.15 - 17.00</td>
 <td align="left">ICUMS data, reformatting</td>
 </tr>
 <tr class="odd">
 <td align="left"><em>Friday</em></td>
-<td align="left">9.00 - 13.00</td>
-<td align="left">Cleaning and analyzing ICUMS data</td>
+<td align="left">9.30 - 13.30</td>
+<td align="left">Cleaning and analysing ICUMS data</td>
 </tr>
 <tr class="even">
 <td align="left"></td>
-<td align="left">13.45 - 17.00</td>
+<td align="left">14.15 - 17.00</td>
 <td align="left">Working with the data!</td>
 </tr>
 </tbody>
@@ -2395,6 +2432,14 @@ R code for trade data.</p>
 <h1>Further studies</h1>
 <div id="column-1-7" class="section level2">
 <h2>Column 1</h2>
+<div id="tips-and-tricks" class="section level3">
+<h3>Tips and tricks</h3>
+<p>The final tips and tricks that were discussed on Wednesday afternoon
+can be found here.</p>
+<ul>
+<li><a href="Contents/Material/Final%20tips%20and%20tricks.pdf" target="_blank">Final tips and tricks</a></li>
+</ul>
+</div>
 <div id="additional-material" class="section level3">
 <h3>Additional material</h3>
 <p>The following references are currently available for free, either as
@@ -2427,6 +2472,104 @@ for the useR</a>: a great introduction to version control using Git and
 GitHub together with RStudio. Written by Jenny Bryan in a very concise
 style. Highly recommended!</li>
 </ul>
+</div>
+</div>
+</div>
+<div id="after-the-training-trade" class="section level1">
+<h1>After the training: Trade</h1>
+<div id="column-1-8" class="section level2">
+<h2>Column 1</h2>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>As discussed at the end of the R training (30 Jan - 3 Feb) we agreed
+on a longer term plan to improve the R skills of the trade team. We will
+have weekly 2 hour long meetings to learn more in R, as well as to
+discuss assignments and practical issues you have while using R. Besides
+that, I am available for any questions, so always feel free to come by
+my office (332), or to text/call me to schedule a meeting.</p>
+<p>It must be noted that your own motivation and dedication will
+determine how much progress you make. The more time you invest in
+learning R, the better you will get of course! Therefore, I would like
+this progress to be very much driven by what you want to learn, so
+please come up with topics to discuss yourself as well and I will adjust
+the assignments and discussions based on that.</p>
+</div>
+<div id="material-to-use" class="section level3">
+<h3>Material to use</h3>
+<p>Remember to always work from your Trade R folder and project on your
+computer. Below please find the R scripts we will work with, as well as
+the assignments and their solutions.</p>
+<p>R scripts:</p>
+<ul>
+<li><a href="Contents/Material/Trade/Trade_formatting_exports.Rmd" target="_blank">Reformatting Code Exports</a></li>
+<li><a href="Contents/Material/Trade/Trade_formatting_imports.Rmd" target="_blank">Reformatting Code Imports</a></li>
+<li><a href="Contents/Material/Trade/Trade%20vulnerability%20ICUMS.R" target="_blank">Trade vulnerability ICUMS</a></li>
+</ul>
+</div>
+<div id="assignments-solutions" class="section level3">
+<h3>Assignments + solutions</h3>
+<p>Assignments:</p>
+<ul>
+<li><a href="Contents/Material/Trade/Assignments/Trade_Assignment_1.html" target="_blank">Assignment 1 (Deadline: 13-02)</a></li>
+</ul>
+<p>Solutions to assignments:</p>
+</div>
+</div>
+<div id="column-2-6" class="section level2">
+<h2>Column 2</h2>
+<div id="schedule-2" class="section level3">
+<h3>Schedule</h3>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="31%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Week</th>
+<th align="left">Meeting day + time</th>
+<th align="left">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><em>6-10 Feb</em></td>
+<td align="left">Wednesday 13.00-15.00</td>
+<td align="left">Recap of training + Assignment 1</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">OR Friday 10.00-12.00</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><em>13-17 Feb</em></td>
+<td align="left">…</td>
+<td align="left">Discuss Assignment 1</td>
+</tr>
+<tr class="even">
+<td align="left"><em>20-24 Feb</em></td>
+<td align="left">…</td>
+<td align="left">Analyzing ICUMS data - go through code, part 1</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>27-3 Feb/Mar</em></td>
+<td align="left">…</td>
+<td align="left">Discuss Assignment 2</td>
+</tr>
+<tr class="even">
+<td align="left"><em>6-10 Mar</em></td>
+<td align="left">…</td>
+<td align="left">Analyzing ICUMS data - go through code, part 2</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>13-17 Mar</em></td>
+<td align="left">…</td>
+<td align="left">Discuss Assignment 3</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
