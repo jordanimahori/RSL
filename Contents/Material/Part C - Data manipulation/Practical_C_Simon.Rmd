@@ -29,7 +29,7 @@ In this practical we are going to use sample CPI data to practice with data mani
 ```{r}
 getwd()
 load("cpi_sample.rdata")
-
+summary(cpi_sample)
 ```
 ---
 
@@ -108,6 +108,7 @@ cpi <- cpi_sample%>%
 9. **Rename `PR_0121` as price_jan_21**
 
 ```{r} 
+library(tidyverse)
 
 z <- cpi_sample %>%
     rename(price_jan_21=PR_0121)
@@ -119,15 +120,13 @@ z <- cpi_sample %>%
 
 ```{r} 
 cpi_sample %>%
-  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %>% 
   arrange(PR_0121)
 ```
 --- 
 11. **Arrange the data by PR_0121 in descending order **
-
+---
 ```{r} 
 cpi_sample %>%
-  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %>% 
   arrange( desc(PR_0121))
 
 ```
