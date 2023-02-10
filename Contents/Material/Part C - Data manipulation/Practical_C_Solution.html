@@ -356,6 +356,9 @@ display: none;
 
 
 <hr />
+<p>The following package is required for this practical:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<hr />
 <div id="exercises" class="section level4">
 <h4>Exercises</h4>
 <p>In this practical we are going to use sample CPI data to practice
@@ -385,28 +388,27 @@ head(cpi_sample, 10)
 tail(cpi_sample, 10)
 cpi_sample
 View(cpi_sample)</code></pre>
-<table style="width:6%;">
-<colgroup>
-<col width="5%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>4. <strong>In the <code>cpi_sample</code> data set, use a pipe and
-the select function to get prices and quantities from January to
-March.</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>5. <strong>Following from question 4, Use a pipe to generate a new
+<hr />
+<ol start="4" style="list-style-type: decimal">
+<li><strong>In the <code>cpi_sample</code> data set, use a pipe and the
+select function to get prices and quantities from January to
+March.</strong></li>
+</ol>
+<pre class="r"><code>a &lt;- cpi_sample %&gt;%
+  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) 
+  
+b &lt;- cpi_sample %&gt;%
+  subset(select = c(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321))</code></pre>
+<hr />
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Following from question 4, Use a pipe to generate a new
 variable <code>PR_0121_new</code>, which is twice the old variable
-<code>PR_0121</code>.</strong></td>
-</tr>
-<tr class="even">
-<td><code>r cpi_sample%&gt;% subset(select = c(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321))%&gt;% mutate(PR_0121_new=PR_0121*2)%&gt;% head()</code></td>
-</tr>
-</tbody>
-</table>
+<code>PR_0121</code>.</strong></li>
+</ol>
+<pre class="r"><code>cpi_sample %&gt;%
+  select(PR_0121, QTY_0121, PR_0221, QTY_0221, PR_0321, QTY_0321) %&gt;%
+  mutate(PR_0121_new = PR_0121*2) </code></pre>
+<hr />
 <ol start="6" style="list-style-type: decimal">
 <li><strong>Following from question 4, also use the transform function
 to transform the column <code>PR_0121</code> into half of
@@ -422,41 +424,38 @@ it.</strong></li>
 Also filter out the missing responses in <code>outlet_type</code>
 variable</strong></li>
 </ol>
-<pre class="r"><code>c &lt;- cpi_sample%&gt;%
+<pre class="r"><code>c &lt;- cpi_sample %&gt;%
   filter(!is.na(Outlet_type), 
-         Region_Name==&quot;Greater Accra&quot;) %&gt;% 
-        head()</code></pre>
+         Region_Name==&quot;Greater Accra&quot;) </code></pre>
 <hr />
 <ol start="8" style="list-style-type: decimal">
 <li><strong>Filter the data for prices in January greater than
 5</strong></li>
 </ol>
-<pre class="r"><code>cpi &lt;- cpi_sample%&gt;%
+<pre class="r"><code>cpi &lt;- cpi_sample %&gt;%
     filter(PR_0121&gt;5)</code></pre>
 <hr />
 <ol start="9" style="list-style-type: decimal">
 <li><strong>Rename <code>PR_0121</code> as price_jan_21</strong></li>
 </ol>
-<pre class="r"><code>library(tidyverse)
-
-z &lt;- cpi_sample %&gt;%
-    rename(price_jan_21=PR_0121)</code></pre>
+<pre class="r"><code>z &lt;- cpi_sample %&gt;%
+    rename(price_jan_21 = PR_0121)</code></pre>
 <hr />
 <ol start="10" style="list-style-type: decimal">
 <li><strong>Arrange the data by PR_0121 </strong></li>
 </ol>
 <pre class="r"><code>cpi_sample %&gt;%
   arrange(PR_0121)</code></pre>
-<table>
-<tbody>
-<tr class="odd">
-<td>11. <strong>Arrange the data by PR_0121 in descending order
-</strong></td>
-</tr>
-</tbody>
-</table>
+<hr />
+<ol start="11" style="list-style-type: decimal">
+<li><strong>Arrange the data by PR_0121 in descending order
+</strong></li>
+</ol>
 <pre class="r"><code>cpi_sample %&gt;%
-  arrange( desc(PR_0121))</code></pre>
+  arrange(desc(PR_0121))
+
+cpi_sample %&gt;%
+  arrange(-PR_0121)</code></pre>
 <hr />
 <p>End of Practical</p>
 <hr />
