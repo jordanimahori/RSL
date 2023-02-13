@@ -1,0 +1,77 @@
+---
+title: "Assignment 2"
+author: "Analyzing ICUMS data - 1"
+date: "Deadline: Monday 27-02-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you are using raw ICUMS data to check the data for outliers, and to make some visualizations.
+
+Note: This is not an easy assignment. It requires you to look at a lot of code, with many new functions in it as well. Do not be scared away by how much code it is, as their is a lot of repetition in the code. Really try to just run the code step by step and see if you can understand for every step what the input was and what the output is, as that will often make it much easier to understand what happens. Also do not be hesitant to reach out to your colleagues or to Femke (or Peter) for help, as that is the best way to learn! We will together discover if you will be able to solve these exercises, or if we need to spend more time on it together, that is all part of the process!
+
+
+---
+
+1. **Create a new folder in your Trade R folder, called total, and in the folder total, add a folder input and a folder output. Now download the Trade vulnerability ICUMS.R file and put it in the Trade R folder, if you already had this one in your folder, please delete the old one and download it again from the website (I made some changes). Then ask Femke for the data you need for this assignment, she will give it to you using a USB, this is necessary to be able to do this assignment.**
+
+---
+
+2. **In this assignment we are looking at the Trade vulnerability ICUMS code, and focusing on 2022. Open the R script Trade vulnerability ICUMS code.R, and look at the part: # Read 2022 Icums data - OR LOAD DATA DIRECTLY FROM R WORKSPACE!!!, under 2022. IMPORTANT NOTE: you can NOT run this part of the code yourself, as you do NOT have the raw ICUMS data on your computer in your Trade R folder. Just go through this part of the code, and try to understand a bit of what happens there. It is okay to not fully understand every part of it, as we will discuss this together, but at least look at it and try t guess what might happen in the code. What is the input? What is the output?**
+
+---
+
+3. **Now go to line 284: # ALTERNATIVE = READ RAW FROM WORKSPACE!. Run the load command in this code chunk. This allows you to read the raw data into your environment directly.**
+
+---
+
+4. **Try to understand the code under: # Rename columns and select, same format for every type of input. This means line 189 until 376. Also run this code to create the clean versions of the raw data.**
+
+*Hint: This looks like a lot of code, but actually a very similar thing is done separately for import, re-import, warehousing, regime 9, export, and re-export. Just some mutating, renaming, and selecting.*
+
+---
+
+5. **If you have ran this code up to line 376, you see another chunk of code, again labelled: # ALTERNATIVE = READ CLEAN FROM WORKSPACE!, at line 377. Instead of running the code like we just did, we could have also just started by running line 379, and we would have gotten the same data in our environment. That is, because I just saved my environment after running the code up to line 376 as raw_icums_22_clean.RData, and gave that to you. Try for yourself to see if indeed running the code up to 376 gives you the same objects in your environment as cleaning your environment and then running line 379.**
+
+---
+
+6. **The data you have in your environment now is the raw ICUMS data for 2022, but cleaned up a bit by renaming columns, adding some additional columns, and deleting some columns. This can be used to check for outliers. This is done in the code under: # First sanity checks, line 382-849. Again, a very similar code is just repeated for import, re-import, warehousing, regime 9, export, and re-export. Let us focus on imports, line 384-437. Run lines 386-421, and understand what happens there.**
+
+**What is `yearly_sum_imp` showing? What is `monthly_sum_imp` showing? And what are `top10_cif_month_import` and `cif_0_import`?**
+
+---
+
+7. **Run the code under # Make plot. This creates a plot called `imp_top10_plot`, run that plot and see what it looks like. What do you think it shows?**
+
+**To really understand how to make plots, you need more information about data visualization. We will spend time on this together, but if you have time left, you can already try to go through the lectures and practicals supplied under "Additional lectures + practicals" on the after the training: trade page. This is if you want to improve your visualization skills in R yourself. If you spend time on this and have questions, feel free to reach out to me. (But I do think it would be best if we spend more time on R together that I can just go through these lectures with all of you together as well)**
+
+---
+
+8. **What you have ran for imports can also be done for the other types of trade data we have, so try to run all checks under # First sanity checks. Now you can also run the code under:   ### Save checks into Excel - top 10 per month ###, and   ### Save checks into Excel - zero cif and fob values ###, to save these checks into Excel sheets. Run this code and check whether it was successful.**
+
+---
+
+9. **Finally, you can run the code under: # Remove outliers from data --> for now best option, need to consult with ICUMS (GhanaLink or customs?) # And make monthly datasets, line 852-1012. Run this code and try to understand what happens.**
+
+---
+
+End of Assignment
+
+If you have been successful, you have now already understood a very large part of the code which allows us to really use ICUMS data for analyzing our trade data. The code you have analyzed and ran in this assignment is to import the data into R, to add extra columns, to do checks on the data, and to remove outliers as well. After this, more visualizations can be made, and the data can be reformatted for specific data requests. That will be the focus on future assignments.
+
+Note: This has been a long and extensive assignment. It is totally okay if you did not understand every part of it, or if you ran into problems at certain parts, do not worry about that. Do try to use the help of your colleagues to understand as much as possible, and make use of Femke (and Peter) to ask questions and learn as much as possible about R! 
+
+---

@@ -1,0 +1,74 @@
+---
+title: "Assignment 1"
+author: "Creating CPI Indices file + visualizations"
+date: "Deadline: Monday 27-02-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you are creating the CPI indices file from the input CPI data. This is what you have discussed with Laurent on the Thursday and Friday of the R training. You will now independently go through that code again and check whether you still fully understand it. Afterwards you will try to apply what you learned about visualization as well.
+
+The data you need to use for this assignment is sent in the R training Whatsapp group. If you cannot find it, please ask Femke about it.
+
+---
+
+1. **We need a folder on our computer for CPI R codes. If you do not have such a folder yet, start with creating a new folder called CPI R (or any similar name you would find useful). Then create a R Project in this folder. All the assignments you will make should have their own new R script which will be saved in this same folder, such that it will be under the same project.**
+
+*It is very important to have this set-up for all future assignments, so if you are unsure about whether you did this correctly, please ask for help!*
+
+---
+
+---
+
+2. **Download the Excel files sent in the Whatsapp group and save them in your CPI R folder on your computer. Also download the CPI_indices_code_nocomments.R file from the website, it can be found under "After the training: CPI", R scripts. Also put this in your CPI R folder. Now open your CPI R project from your CPI R folder on your computer, and open the CPI_indices_code_nocomments.R file. Before starting on the assignment, make sure you clean your environment.**
+
+---
+
+3. **Go through the code to create the CPI indices again, and check if you still understand everything. If you have forgotten what a certain part of the code is for, try to find it out again. Use the help function, Google, and trying to run parts of the code yourself. Or ask your colleagues to help you. If you really cannot solve a problem, then feel free to reach out to Femke.**
+
+---
+
+4. **To confirm that you understand the code, add comments to every part of the code yourself. The comments should be such that it is easy to understand what is going on in the code in every step. If you are able to add comments to the code to describe what happens in every part, you have shown that you really understand the code.**
+
+---
+
+5. **Run the entire code and check whether you indeed get the output file you wanted to create. Check: what should be the output of the code? How and where should it be saved? Can you open the output file and check if that is indeed what it should look like?**
+
+---
+
+6. **If you managed to understand and run the code, you should now have an output document with CPI indices. We are now going to use this to make some visualizations. This is a very open exercise, you should just make two different plots using the CPI output data you created in the previous exercises. Decide for yourself what would be interesting to visualize and try to figure out how to do that.**
+
+*Note: For those who were not present during the visualization lectures, please go to the CPI page on the website, and go through the lectures and practicals yourself to try to learn about visualizations using ggplot in R. If you have questions about this, please reach out to Femke.*
+
+*Hint 1: First create a new R script (called CPI visualizations, or something like that). Start with running the libraries of important packages, then load the data, and then start with your visualizations.*
+
+*Hint 2: Reproduce the visualizations you created during the R training first. Then make new figures to really see if you can apply what you learned.*
+
+*Suggestion: It might be interesting to first calculate the inflation based on the indices, and then make figures on the inflation instead of on the CPI.*
+
+---
+
+7. **If you managed to create two interesting figures using the data, try to make these figures look better now. Change the theme, change the colours, add a title, change the axis labels etc., such that you create a good looking plot.**
+
+*Hint: Get help from Google!*
+
+---
+
+End of Assignment
+
+If you have been successful, you have now understood the code to use CPI data to create the CPI indices. Moreover, you have been able to create figures based on the CPI indices. In the future assignments we will build on this to make more complicated figures, and to further analyse the data. 
+
+---

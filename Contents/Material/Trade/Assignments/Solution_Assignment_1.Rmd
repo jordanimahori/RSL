@@ -1,0 +1,119 @@
+---
+title: "Solution - Assignment 1"
+author: "Reformatting ICUMS data"
+date: 
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Solutions
+This document will guide you through the solutions of the 1st assignment.
+
+---
+
+### Important note!
+I have changed the Trade_formatting_exports.Rmd and the Trade_formatting_imports.Rmd files to improve the code. Please rename your current .Rmd files for reformatting to OLD_Trade_formatting_exports (similar for imports), and now download the new files from this website, under R-scripts on this page. Now check if you can see the differences and if you understand the new code. To help you understand it, I have listed the changes here. The changes are:
+
+- Instead of renaming the columns by using colnames() and assigning a vector of names to it, I have now used the function rename(). Try to think of why this is a better method to use, and see if you understand how this works.
+- To save the output as an Excel file, I now use `write_xlsx` instead of the workbook. This is an easier method, but does require us to rename the lists in the output list. Check which lines of code I have added and if you understand how that works.
+
+---
+
+1. **Open your Trade R project from your Trade R folder on your computer. Now re-download the reformatting export and import codes, and replace the old files by these new ones in your folder. Then open the project and get ready to start the assignment. Before starting on the assignment, make sure you clean your environment.**
+
+You should have just done this yourself, if you are not sure about how to do this anymore, check with Femke.
+
+---
+
+2. **Go through the reformatting code for both import and export again, and check if you still understand everything. If you have forgotten what a certain part of the code is for, try to find it out again. Use the help function, Google, and trying to run parts of the code yourself. Or ask your colleagues to help you. If you really cannot solve a problem, then feel free to reach out to Femke.**
+
+Same here, I cannot check this for you, but just let me know if you have any remaining questions.
+
+---
+
+3. **Download the Excel files for Re-Imports and Re-Exports of December 2022, which have been sent in the Whatsapp group. Make sure you download it and then put it in the correct folder on your computer! Then use the reformatting codes to create the output files for Re-Imports and Re-Exports that will be used to load the data into Eurotrace. Check to make sure it has worked!**
+
+*Hint: Change the input and output paths in the R codes and then run the code.*
+
+You should have just used the `Trade_formatting_exports.Rmd` code for Re-Exports, and the `Trade_formatting_imports.Rmd` code for Re-Imports. You should **not** have created new files, but you should have just changed the input and output data paths like this:
+
+```{r}
+# For Re-Exports, change the paths in the `Trade_formatting_exports.Rmd` file to this:
+input_data_path <- "export/input/03. Merchandised Re-Export (2)_DEC_2022.xlsx"
+output_data_path <-"export/output/output_Re_Exports_December_2022.xls"
+
+# For Re-Imports, change the paths in the `Trade_formatting_exports.Rmd` file to this:
+input_data_path <- "import/input/04. Merchandised Re-Import (3)_DEC_2022.xlsx"
+output_data_path <-"import/output/output_Re_Imports_December_2022.xls"
+```
+
+---
+
+4. **Now download the Regime 9 and the Warehousing Excel files for December 2022, again remember to put it into the correct folders. If you now try to run the formatting code for these files, you will get error messages. Try to find out at which point you receive an error message, and discover what causes this.**
+
+You should have gotten an error message when running the code under: # Change dataframe to clean version. That is because the column names in the Regime 9 and Warehousing Excel files are different, so we cannot refer to column names that do not exist in these new datasets. Hence, we need to adjust the code based on the other column names in the original Excel files.
+
+For warehousing:
+
+- The column `HEAD_TIME_PROC` is called `BOE_ISSUE_DATE` in warehousing
+- `HEAD_CUST_OFF_CODE` does not exist in warehousing
+- `HEAD_DECL_NO` is called `BOE_NUMBER` in warehousing
+- `ITEMS_NO` is called `ITEM_NO` in warehousing
+- `HEAD_IMPORTER_CODE` does not exist in warehousing
+- `HEAD_COUNTRY_NAT_VESSEL`, `HEAD_CTRY_NAT_VESSEL`, and `HEAD_COUNTRY_ORIG_DEST` do not exist in warehousing, we will use `COUNTRY_OF_SHIPMENT` for all of them
+
+For Regime 9:
+
+- The data starts on line 6, so we should use skip = 5 instead of 4
+- The column `HEAD_TIME_PROC` is missing, we use `BOE_DECLARATION_DATE` as date column
+- `HEAD_CUST_OFF_CODE` does not exist in regime 9
+- `HEAD_DECL_NO` is called `BOE_NUMBER` in regime 9
+- `ITEMS_NO` is called `ITEM_NUMBER` in regime 9
+- `HEAD_DECLARANT_ID` does not exist in regime 9
+- `HEAD_IMPORTER_CODE` is `IMPORTER_TIN` in regime 9
+- `HEAD_MODE_TRANS_CODE` does not exist in regime 9
+- `HEAD_CTRY_NAT_VESSEL` does not exist in regime 9
+- `HEAD_COUNTRY_ORIG_DEST` is replaced by `COUNTRY_OF_ORIGIN` in regime 9
+- `ITEMS_CPC_CODE` is `ITEM_CPC`
+- `ITEMS_QTY` is `ITEM_QUANTITY`
+- `ITEMS_HS_CODE` is `ITEM_HS_CODE`
+- There is no net weight column, and the gross weight column is called `ITEM_GROSS_WEIGHT_KG`
+- `ITEMS_CIF_GHC` is `ITEM_CIF_GHS`
+- `ITEMS_INSURE_GHC` is `ITEM_INSURANCE_GHS`
+- `ITEMS_FREIGHT_GHC` is `ITEM_FREIGHT_GHS`
+
+---
+
+5. **If you have found out what causes the errors, it is now time to do some coding yourself to solve these issues!! Create a new R Markdown file called Trade_formatting_warehousing.Rmd. Copy and paste the code for reformatting imports in this R markdown file, and now try to change the code in such a way that you can format the warehousing Excel sheet into the format we need for Eurotrace.**
+
+*Hint: Check the difference between the input files for imports and warehousing, just open the Excel files in Excel and try to find out what is different. How can you solve that?*
+
+*If you cannot figure out what causes the error, or how to solve it, ask you colleagues, work together, or just ask Femke if you really cannot figure it out. Do not get stuck on it too long, as then it is easier to just ask for help!*
+
+Because the column names are different, we should now simply adjust the code using these new column names. This means that we have to change the mutate command under # Change dataframe to clean version. Besides that, this means we might also need to adjust the ### Changing the column names code, this is important to not forget to check!! Or, in the new code, this means that we might need to change the rename part of the code, check if that is necessary or not. Please see the Trade_formatting_warehousing.Rmd file for the solution to this exercise. Note: I used the updated reformatting code to create this, so I just copy-pasted the new reformatting import code and made the necessary changes for Warehousing in that markdown file.
+
+---
+
+6. **We run into a very similar issue when we try to reformat the Regime 9 data. Hence, create another R markdown file called Trad_formatting_reg9.Rmd in which you also copy and paste the reformatting import code and change the code slightly to make it applicable to the Regime 9 data.**
+
+Very similarly, we change the Regime 9 code based on the new column names. Please see the Trade_formatting_regime9.Rmd file for the solution to this exercise. Note: I used the updated reformatting code to create this, so I just copy-pasted the new reformatting import code and made the necessary changes for Regime 9 in that markdown file.
+
+---
+
+End of Assignment
+
+Please let me know if you have any questions about these solutions.
+
+---

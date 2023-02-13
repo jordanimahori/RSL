@@ -3,7 +3,7 @@
 ### Setting paths
 
 ```{r}
-input_data_path <- "export/input/01. Merchandised Export (10)_DEC"
+input_data_path <- "export/input/01. Merchandised Export (10)_DEC.xlsx"
 
 output_data_path <-"export/output/output_Merchandised_Exports_December_2022.xls"
 ```
@@ -21,6 +21,7 @@ library(ggplot2)
 library(hrbrthemes)
 library(plotly)
 library(openxlsx)
+library(xlsx)
 # Need to do this do NOT have scientific notation
 options(scipen = 10)
 
@@ -80,21 +81,25 @@ df_data_clean <- df_data_clean_copy %>%
          HEAD_CTRY_NAT_VESSEL, ITEMS_CPC_CODE, ITEMS_HS_CODE, 
          HEAD_COUNTRY_ORIG_DEST, ITEMS_NET_MASS, ITEMS_GROSS_MASS, ITEMS_QTY, 
          COUNTRY_OF_CONSIGNMENT, ITEMS_FOB_GHC, ITEMS_INSURE_GHC, 
-         ITEMS_FREIGHT_GHC)
+         ITEMS_FREIGHT_GHC) # Change column names
+  rename(CUSTOM = HEAD_CUST_OFF_CODE, 
+         DECNUM = HEAD_DECL_NO, 
+         ITEMNUM = ITEMS_NO, 
+         AGENT = HEAD_DECLARANT_ID, 
+         TRADER = HEAD_EXPORTER_CODE, 
+         MOT = HEAD_MODE_TRANS_CODE,
+         NATIONALITY = HEAD_CTRY_NAT_VESSEL, 
+         CPC = ITEMS_CPC_CODE, 
+         PRODUCT = ITEMS_HS_CODE, 
+         PARTNER = HEAD_COUNTRY_ORIG_DEST, 
+         NETWEIGHT = ITEMS_NET_MASS, 
+         GROSSWEIGHT = ITEMS_GROSS_MASS, 
+         QUANTITY = ITEMS_QTY, 
+         "COUNTRYF/L" = COUNTRY_OF_CONSIGNMENT, 
+         CUSTOMVALUE = ITEMS_FOB_GHC, 
+         INSURANCE = ITEMS_INSURE_GHC, 
+         FREIGHT = ITEMS_FREIGHT_GHC)
   
-```
-
-### Changing the column names
-
-```{r}
-# Make vector of new names and change the column names
-colnames(df_data_clean) <- c("DAY", "MONTH", "YEAR", "CUSTOM", "DECNUM", 
-                             "ITEMNUM", "AGENT", "TRADER", "MOT",
-                             "NATIONALITY", "CPC", "PRODUCT", "PARTNER", 
-                             "NETWEIGHT", "GROSSWEIGHT", "QUANTITY", 
-                             "COUNTRYF/L", "CUSTOMVALUE", "INSURANCE", 
-                             "FREIGHT")
-
 ```
 
 ### Subsetting data into data frames of not more than 45,000 rows and assigning them to workbook sheets
@@ -113,21 +118,18 @@ df_data_clean <- df_data_clean %>%
 # Now split the data based on this row category
 output <- split(df_data_clean, df_data_clean$row_cat)
 
+# Rename the sheets of the output file to 1 until the final number of sheets
+names(output) <- c(1:length(output))
+
+# Drop the row_cat column in every item in the list
+output_final <- lapply(output, function(x){x[,1:(ncol(x)-1)]})
+
 ```
 
 ### Exporting the data to Excel
 
 ```{r}
-# Create empty workbook
-wb <- createWorkbook()
-
-# For every data frame in the output list, create a new worksheet, and write the data to the worksheet
-for (i in 1:length(output)) {
-  addWorksheet(wb, sheetName = names(output[i]))
-  writeData(wb, sheet = names(output[i]), x = output[[i]])
-}
-
-# Save data to your output path
-saveWorkbook(wb, output_data_path, overwrite = TRUE)
+# Save to excel
+write_xlsx(output_final, output_data_path)
 
 ```
