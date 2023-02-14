@@ -324,6 +324,7 @@ Assignments:
 - [Assignment 2 (Deadline: 27-02)](Contents/Material/Trade/Assignments/Trade_Assignment_2.html){target="_blank"}
 
 Solutions to assignments:
+- [Solution to Assignment 1](Contents/Material/Trade/Assignments/Solution_Assignment_1.html){target="_blank"}
 
 
 ## Column 2
