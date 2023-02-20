@@ -336,7 +336,7 @@ Solutions to assignments:
 |  |  OR Friday 10.00-12.00  |  |
 | *13-17 Feb*  |    Wednesday 13.00-15.00  | Discuss Assignment 1 |
 |              |                         | + Intro to analyzing ICUMS |
-| *20-24 Feb*  |    ...  | Analyzing ICUMS data - go through code, part 1 |
+| *20-24 Feb*  |    Wednesday 13.00-15.00  | Analyzing ICUMS data - go through code, part 1 |
 | *27-3 Feb/Mar*  |    ...  | Discuss Assignment 2 |
 | *6-10 Mar*  |    ...  | Analyzing ICUMS data - go through code, part 2 |
 | *13-17 Mar*  |    ...  | Discuss Assignment 3 |
