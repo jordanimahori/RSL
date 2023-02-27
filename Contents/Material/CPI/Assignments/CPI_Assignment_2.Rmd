@@ -1,0 +1,84 @@
+---
+title: "Assignment 2"
+author: "Calculating inflation + more visualizations"
+date: "Deadline: Monday 13-03-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you are using your CPI indices file from the last assignment to calculate inflation. This assignment will step by step let you calculate the inflation and in the end you should be able to also create visualizations based on the inflation numbers.
+
+---
+
+1. **Open your CPI R project on your computer and create a new script called inflation_calculations (or something like that), clean your environment, and get ready to start.**
+
+*This should become your usual way to start working on a new R script, so make this a habit, just to help you I added it as part of the assignment now.*
+
+---
+
+2. **In your new script, start by making some comments to include a title, what the script is about, and the date you have last edited the script. Then set up an initial part of the script in which you run some libraries you will need.**
+
+*Hint: Just copy and paste libraries from another script you used, as probably you will need the same ones now*
+
+---
+
+3. **Now you can start with the actual assignment! The goal of this assignment is to use the CPI indices to calculate the inflation. Therefore, the first step is to load the CPI indices file into R, so write some code to load your "Indices_Jan2021_toNov2022.xlsx" (or a similar name) file into R, this is the file you created in Assignment 1. With these indices you should now be able to calculate year-on-year inflation, as well as month-on-month inflation. Let's start with the national inflation numbers. Calculate the month-on-month national inflation for every month in 2022.**
+
+*Hint 1: First load the national CPI sheet into R, and get it into a nice format in R.*
+
+*Hint 2: Think about how month-on-month inflation should be calculated using the indices.*
+
+*Hint 3: The function `lag` might be useful! Create an extra variable that is the lagged CPI, and based on that create a new variable which represents the inflation.*
+
+*Hint 4: You can also start by just calculating it for November 2022, if you are able to do that, you should be able to do it for all months.*
+
+---
+
+4. **If you were able to calculate the inflation numbers, use them to make some visualisations of the month-on-month inflation in 2022.**
+
+*Hint 1: First take a step back and decide on what your figure should look like, draw it on a piece of paper, and only then start to write the code for it in R.*
+
+*Hint 2: Make sure the data is in the right format before making your figures.*
+
+---
+
+5. **We are also interested in the year-on-year inflation. Hence, calculate the year-on-year inflation for every month in 2022. Also create figures of this.**
+
+---
+
+6. **So far we have only looked at the national inflation figures. However, we are also interested in more specific inflation numbers. Therefore, now calculate the month-on-month, as well as the year-on-year inflation numbers per different COICOP2 division in November 2022. Again, also make some visualizations.**
+
+*Hint: This means that you have to load a different CPI indices sheet into R, and then use group_by() when calculating the inflation*
+
+---
+
+7. **Also calculate the month-on-month, as well as year-on-year, inflation per region in November 2022. And create some visualizations.**
+
+---
+
+8. **It is great if you have been able to calculate all of this. However, have you actually checked if you have not made any mistakes, or if there have been any mistakes/strange values in the data? Or if there were mistakes in the original CPI indices code? All of this is extremely important!! Thus, it is time to carefully check the output you created. Are the inflation numbers you calculated in line with everything that has been published by the CPI team in previous CPI releases? (Check very carefully, the numbers should be EXACTLY the same) This is essential, as you can not suddenly publish a new graph next month, in which the number of the inflation of last month is suddenly different. If you find any differences, try to discover what could have caused this, and if you can solve it as well. Discuss this with the CPI team together as well, as these are very important things to discuss!**
+
+---
+
+BONUS: **If you have time left, you can similarly calcalate the inflation for all the other sheets in the CPI Indices excel file. So choose some other sheets, load them into R, calculate the inflation, and make some visualizations.**
+
+---
+
+End of Assignment
+
+If you have been successful, you have now been able to use the CPI Indices Excel file to calculate the month-on-month, as well as year-on-year inflation. You should be able to extend this to calculate inflation from all the different groupings we have made in the indices file (such as food non-food, urban rural, or local important, and all these combinations). Moreover, you are able to create visualizations showing the inflation numbers as well!
+
+---

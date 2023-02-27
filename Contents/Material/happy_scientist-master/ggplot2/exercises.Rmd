@@ -41,7 +41,7 @@ ggplot(data = diabetes, mapping = aes(x = weight, y = hip)) +
 
 ## Your Turn 3
 
-Replace this scatterplot with one that draws boxplots. Try typing "geom_" and hitting the tab button to see the functions that start with "geom_". Try to guess which one to use. If you need help, there's a copy of the cheatsheet in this folder.
+Replace this scatterplot with one that draws boxplots. Try typing "geom_" and hitting the tab button to see the functions that start with "geom_". Try to guess which one to use.
 
 ```{r}
 ggplot(diabetes, aes(gender, chol)) + geom_point()

@@ -1,0 +1,53 @@
+---
+title: "Assignment 3"
+author: "Visualizations"
+date: "Deadline: Monday 13-03-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+```
+
+---
+
+### Introduction
+In this assignment you will practice with visualizations, which is a very important part of being able to analyse, understand, and present data. This assignment is based on some lectures and practicals. We take a step back from our trade data, and focus on learning more about ggplot, the package we use for visualizations. Afterwards, we will be able to use this for our trade data as well.
+
+---
+
+1. **Before being able to do this assignment, we will need to go through some lecture material. We start by going through the lecture "Recap Lecture ggplot", which can be found on the website under: After the training trade - Material to use - Additional lectures + practicals. I will present this lecture in our weekly R session in the week of 27-02 till 03-03. If you are not there, or if you already want to start, go through this lecture yourself.**
+
+*Bonus: Try to run some of the code from these slides yourself, such that you see if you can recreate the figures.*
+
+---
+
+2. **If you have been through these slides, you should not be able to do "Practical ggplot - 2", which is on the website under: After the training trade - Material to use - Additional lectures + practicals. There are already hints and solutions in that document. Try to do the exercises yourself first, use the hint, and only afterwards look at the solutions.**
+
+*Hint: Work together with your colleagues to understand this practical.*
+
+---
+
+3. **If you were succesful in understanding the "Recap Lecture ggplot" lecture, and if you managed to solve the practical, it is now time to go to a more extensive lecture. Please go through the "Lecture Data Visualization", which is on the website under: After the training trade - Material to use - Additional lectures + practicals. Try to go through the slides yourself and to understand them. I might be able to present a part of it, but that depends a bit on our schedule in the meetings. Thus, try to go through the lecture slides yourself and learn more about ggplot. There is quite some repetition from the previous lecture, to hopefully help you understand it even better.**
+
+---
+
+4. **Along this set of slides, there is a practical as well. This is the "Practical ggplot - 1" practical, which is on the website under: After the training trade - Material to use - Additional lectures + practicals. This is an R Markdown file which you should download, and you can just make the exercises in that document. This practical accompanies the lecture, so go through the lecture slides again, while simultaneously making the practical**
+
+---
+
+BONUS: **Now you have learned a lot about visualizations using ggplot! I hope this makes you excited to start making your own visualizations as well. As a bonus exercise, you can therefore try to use any data you have, load it into R, and make a nice visualization of it. Be creative, and really think about what would be interesting to visualize!! :)**
+
+---
+
+End of Assignment
+
+If you have been successful, you have now learned a lot about visualizations. You are now able to create many beautiful figures, which will be extremely useful for both understanding your data, as well as to present it to others.
+
+---
