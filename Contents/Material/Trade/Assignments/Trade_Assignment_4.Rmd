@@ -1,0 +1,104 @@
+---
+title: "Assignment 4"
+author: "Writing code for your daily work!"
+date: "Deadline: Monday 03-04-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you are going to write code which will be useful for your daily work as a member of the trade team at GSS! This means that we start by importing raw ICUMS data into R. Then we will rename and select the columns we want to use. After that we will perform checks on the data, to see if there are no problems with the data. If all of that is done, we can do any extraction we want, and we can also make visualizations for publications. In this assignment we will practice with all of that.
+
+We will just use merchandised imports of 2021, to keep it all a bit more structured. However, you could of course apply everything we will learn today to other data as well.
+
+**Hint:** For this entire assignment, it is very useful to use the "Trade vulnerability ICUMS.R" file as a resource! You can copy parts of the code from there, or use the code when you are not entirely sure how to do something. Often it is very useful to copy parts of other codes to do the task you want to do.
+
+
+---
+
+1. **Before you can start this assingment, Femke (or some other Trade team member who already has the data), needs to give you the necessary data. Get the raw ICUMS data for Merchandised Imports in 2021 (12 separate Excel files) and save them in your Trade R folder, in the folder import, input, and then in a new folder called "ICUMS 2021 - Import".**
+
+---
+
+2. **If you have the data, download the initial R Script which will serve as the starting point of this assignment. You can find this under "R scripts:", and it is called "Assignment 4 -initial script". Download this file to your R trade folder. Make sure it is just in the general folder (the same place as where the project is, and NOT in a subfolder).**
+
+---
+
+3. **Open the R project and then open the "Assignment 4 - initial script" script, then you will see that I have made a start for you! To help you get started, I have provided you with some setup code, code to read the ICUMS data into R, and code to rename and create some columns. This is the code up to line 84. Read the comments I provided and run this code. Make sure that you understand what happens in this code.**
+
+*Important note: Reading the data takes a very long time (1 hour). Carefully read my comments and run that code once, then save your environment such that you do not have to run that code again.*
+
+*Hint: This is all very similar to the "Trade vulnerability ICUMS" code you analysed in Assignment 2.*
+
+---
+
+4. **Now it is time to start writing code yourself!! Use the initial script and the comments I provided and extend the script by doing these exercises. You can see that after the code I wrote, the first comments I provided are about adding your own checks of the data. So this exercise is to add code there in which you perform checks on the data.**
+
+*Hint: There are hints written as comments in the script! Carefully think about what needs to be checked to be sure you have good and reliable data you can use.*
+
+*Note: For this exercise, you do not have to create figures yet, just do checks by checking numbers.*
+
+---
+
+5. **The checks so far were without visualizations, but you might have noticed that with such a large dataset it is sometimes difficult to perform checks without making any plots. So now create some visual checks.**
+
+*Hint: This should be done under the next set of comments in the R script. You can find some hints there again as well.*
+
+---
+
+6. **You perform these checks to be sure whether you can use this data. Think about whether it might be necessary for now to remove some outliers, or alter the data in any other way. If you think that is necessary, do that alteration under the next comments in the R script.**
+
+---
+
+7. **Now you have carefully analysed the data, we can get started with the real work. In your day to day job, extracting data is very important. You can see that in the R script the next comment is "### Extract data ###". Here you should create the extractions I will ask in this exercise:**
+
+*Hint: Use piping, and the commands filter, group_by, and summarise for these exercises. Also note that all the following extractions can use a very similar code.*
+
+A. **Extraction 1: Extract only the January 2021 import data. (For all extractions, save them under a new name)**
+
+B. **Extraction 2: Extract only the imports from Burkina Faso.**
+
+C. **Extraction 3: Extract only the imports of iron and steel.**
+
+D. **Extraction 4: Extract only imports of fertilisers from China.**
+
+E. **Extraction 5: Extract all imports from ECOWAS countries.**
+
+*Bonus: Besides these extractions, think of an extraction that might be interesting to do. Try to do that extraction yourself.*
+
+
+---
+
+8. **If you have succeeded in these extractions, you have them in new dataframes in your environment in R. However, the people who request extractions do not want to receive R data, let alone R scripts. So now choose one extraction, and save it as an Excel file, such that you can share it with people using Excel!**
+
+*Hint: Do not forget to use the "Trade vulnerability ICUMS" script, there is code to save data to Excel in there. Or just use the internet, there are many different ways to do this.*
+
+
+---
+
+9. (Bonus) **Besides using the trade data for extractions, a huge advantages of becoming R experts is that you can now easily make many beautiful visualizations of the trade data for publications. So use your knowledge of ggplot to make some interesting visualizations of the trade data, which could potentially be used for publications.**
+
+*Note: Write this code under the comment "Bonus: Create extra visualizations".*
+
+
+---
+
+End of Assignment
+
+Wow this was quite the assignment right? Very well done if you completed (part of) it!! This should have really taught you how you should use R for your day to day work with Ghana's trade data. 
+
+Please do note that we have just done this to practice with R for now. But we will (soon) have a meeting with the entire team to decide on a common methodology to use in R for any data extractions or visualizations. Such that in some time we will have a very structured way to use R for the trade work and that we make sure we all use the same methods. 
+
+---
