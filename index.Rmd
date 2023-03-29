@@ -345,8 +345,10 @@ Solutions to assignments:
 | *27-3 Feb/Mar*  |    Tuesday 13.00-15.00  | Discuss Assignment 2 + Visualizations |
 | *6-10 Mar*  |    XXX  | No meeting |
 | *13-17Mar*  |    Wednesday 13.00-15.00  | Visualizations + apply to trade data |
-| *20-24 Mar*  |    Wednesday 13.00-15.00  | Discuss Assignment 3 |
-| *27-31 Mar*  |    ...  | Analyzing ICUMS data - go through code, part 2 |
+| *20-24 Mar*  |    XXX  | No meeting |
+| *27-31 Mar*  |    Wednesday 13.00-15.00  | Start working on Assignment 4 |
+| *3-7 Apr*  |    ...  | ... |
+| *10-14 Apr*  |    ...  | ... |
 
 
 # After the training: CPI
