@@ -350,7 +350,7 @@ Solutions to assignments:
 | *27-31 Mar*  |    Wednesday 13.00-15.00  | Start working on Assignment 4 |
 | *3-7 Apr*  |    Wednesday 13.00-15.00  | More on Assignment 4 |
 | *10-14 Apr*  |    XXX  | No meeting |
-| *17-21 Apr*  |    Wednesday 13.00-dinner  | Recap lecture + way forward |
+| *17-21 Apr*  |    Wednesday 12.00-lunch/dinner  | Recap lecture + way forward |
 
 
 # After the training: CPI
