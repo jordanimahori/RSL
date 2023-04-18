@@ -1,0 +1,214 @@
+---
+title: 'Recap of R training - Trade'
+author: "Statistical Programming with R"
+date: ""
+output:
+  ioslides_presentation:
+    fig_height: 5
+    fig_width: 8
+    logo: logo_en.png
+    transition: faster
+    smaller: true
+  beamer_presentation: default
+---
+
+# Overview
+## Overview of the training so far
+- Introduction to R and R studio
+- Basics of R
+- Data manipulation
+- Analyzing data
+- Visualizations
+- Trade specifics
+
+# Recap of the previous lectures
+## Introduction to R and R Studio
+- What is the difference between R and R Studio?
+- Why would we learn R?
+- Introduction:
+  - Assigning elements to objects
+  - Saving scripts
+  - Manage projects
+- Special use cases for the GSS Trade Team
+
+# Projects + structure
+## Projects
+- What is a project?
+- How do we open our R scripts if we want to start work?
+- Why do we use projects?
+
+## How to keep it structured
+- Create a new folder on your computer for a new topic
+  - ICBT
+  - Trade Vulnerability
+  - R Training
+  - Extractions
+- Create sub-folders:
+  - input (all raw data you use as inputs, the Excel files)
+  - output (save your plots in here)
+- Create a new R project in the main folder
+- Create an R script (or multiple ones) in the main folder
+- Always work by opening the project, and from there opening the scripts
+
+# Basics of R
+## Basics of R (1)
+- Vectors and matrices
+  - Numeric and character
+  - How to extract: 
+    - `example_vector[3]`
+    - `example_matrix[2,4]` 
+    - `example_matrix[,3]`
+- Data frames
+  - Give columns names
+  - Extract by using names (=better!) 
+    - `df$cif`
+    - `df[ , cif]`
+    - `df$cif[4:8]`
+    
+## Basics of R (2)
+- More dimensions: arrays and lists
+  - For example when reading multiple sheets from multiple Excel files
+- Logical operators: `==, <, >, <=, >=, |, &, !`
+- Missing values
+  - `sum(c(1, 2, NA)) = NA`
+  - `sum(c(1, 2, NA), na.rm = TRUE) = 3`
+
+# Data manipulation + analysis
+## Data manipulation
+- Pipes: `%>%`
+- What does a pipe do?
+- Useful functions:
+  - head, tail
+  - dim, nrow, ncol
+  - table, summary
+  - filter, arrange, sort, select
+- Combining dataframes:
+  - cbind, rbind
+  - left_join, full_join, full_merge
+
+## Analyzing data (1)
+- Renaming data
+  - Best practice: `%>% rename(new_name = old_name)`
+- Selecting variables (= columns)
+  - `[]`, `df[2, ]`
+  - `df[ , "month"], df[ , c("year", "month", "cif")]`
+  - `df$year` 
+  - `df %>% select(year, month, cif)` 
+    - `df %>% select(!starts_with("BOE"))`
+    - `df %>% select(ends_with("a") | !is.na(year))`
+    - Many different possibilities (see lecture D)
+    - Could also add filters additionally: `%>% filter(age >= 18)` = select rows!!
+    
+## Analyzing data (2)
+- Aggregating data
+  - Using `group_by` and `summarise`
+- Mutate = to add new columns
+- Joins: merge or join
+  - For example to add HS description to HS codes
+  - Or to add continents to countries
+
+# Visualisations
+## Visualising data (1)
+- Why visualize
+  - General insights in the data
+  - Checks
+  - Publications
+- ggplot2
+  - Data (import_icums_22)
+  - Aesthetics (x, y)
+  - Geometric object (geom_bar, geom_line)
+  - Theme (anything related to what it looks like)
+- ggsave, to save plots
+- ggplot = layered structure, add new elements step by step
+
+## Visualising data (2)
+- KEY = Think about WHAT you are visualizing and WHY
+  - Important = make a SKETCH!!
+  - The story is essential
+    - Beforehand: what do you expect to see?
+    - During: what am I exactly showing here?
+    - After: what story does this tell?
+
+# Trade specifc R training
+## Trade specifics
+- Merge ICUMS extractions together, add many sheets together
+- Reformat ICUMS into Eurotrace format
+- Use R to create Eurotrace aggregates ourselves
+  - Still not able to exactly replicate numbers
+- Goal = be able to do all extractions ourselves as well
+- Important!!! = Really understanding the data (not just aggregates)
+- Make reports! (Inlcuding visualizations)
+- Also think of ICBT for example:
+  - Data in an Excel sheet
+  - Perform checks
+  - Create visualizations for publications
+
+## Assignments
+1. Reformatting ICUMS data into Eurotrace format
+2. Analyzing ICUMS data + checks 
+3. Visualizations
+4. Writing own code to analyze ICUMS data
+
+# How to continue?
+
+## Short term
+- Assignment 5:
+  - New ICUMS template, so need to write a new reformatting code
+  - Similar to assignment 1
+  - But now you are actually going to use it
+  - Team work! Who does what?
+  - How can/will Peter/I help?
+- Possible assignment 6:
+  - For example using ICBT data
+  - Either understanding my code to create visualisations
+  - Or create own code
+
+## Medium term (1)
+Not necessarily only for R, but in general:
+
+- Crucial to make some major decisions together
+- Mainly: which data to use, has to be the same for everyone
+  - In Eurotrace: selecting all countries and all commodities
+  - From ICUMS: 
+    - What to extract
+    - Which regimes to include
+    - Which CPC (custom procedure codes) to include
+    - Which checks need to be performed
+    - Which historical data to use (as sometimes changes are made to old data)
+    
+## Medium term (2)
+- Would need a sessions with the entire team to:
+  - All understand the issues with not having the same exact data and numbers
+  - Make sure everyone in GSS uses the same numbers
+  - Make sure all data we share is based on the same numbers
+  - Decide on color codes to use (export, import, specific products)
+  - Decide what kind of publications we want to create
+  - Create a system to guarantee long term consistency
+- Take steps to try to achieve consistency with other partners
+  - First of all customs and GRA and ICUMS, to be sure we use the right data
+  - Then with all users of Ghana trade data
+    - Ministry of Trade
+    - Bank of Ghana
+    - ICUMS
+    _ GSS
+    - etc.
+
+## Long term
+- Driven by the wishes of you as trade team
+- Day to day work
+  - Data extractions
+  - Visualizations
+- Different possible ways in which this is possible
+  - Everyone does a bit of R from time to time
+  - Some people more focused on R than others
+  - Using R as a way to check and confirm other methods
+  - Using R as main method
+- Follow-up training
+  - Continue with assignments (for how long?)
+  - Really using R for daily work (when and who)
+  - What would you want?
+  
+# Time for practical work
+
+# Time for dinner!!!
+
