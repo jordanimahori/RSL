@@ -326,6 +326,7 @@ Assignments:
 - [Assignment 2 (Deadline: 27-02)](Contents/Material/Trade/Assignments/Trade_Assignment_2.html){target="_blank"}
 - [Assignment 3 (Deadline: 20-03)](Contents/Material/Trade/Assignments/Trade_Assignment_3.html){target="_blank"}
 - [Assignment 4 (Deadline: 03-04)](Contents/Material/Trade/Assignments/Trade_Assignment_4.html){target="_blank"}
+- [Practical Assignment 5 (Deadline: TBD)](Contents/Material/Trade/Assignments/Trade_Assignment_5.html){target="_blank"}
 
 
 Solutions to assignments:
@@ -351,6 +352,8 @@ Solutions to assignments:
 | *3-7 Apr*  |    Wednesday 13.00-15.00  | More on Assignment 4 |
 | *10-14 Apr*  |    XXX  | No meeting |
 | *17-21 Apr*  |    Wednesday 12.00-lunch/dinner  | Recap lecture + way forward |
+| *24-28 Apr*  |    XXX  | Independent work on Assignment 4 + Recap |
+| *1-5 May*  |    XXX | Work on Practical Assignment 5 |
 
 
 # After the training: CPI

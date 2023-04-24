@@ -1,0 +1,70 @@
+---
+title: "Practical Assignment 5"
+author: "Reformatting new ICUMS data"
+date: "Deadline: TBD"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you are reformatting ICUMS data into the format we need to upload the data into Eurotrace. This is very similar to Assignment 1. However, you will be using the new templates from ICUMS, so now you are going to make code which you can actually use in day to day work. I will just provide some steps in this assignment, but will leave a lot of room for all of you to try to figure out how to do this as a team. Please do reach out to me quickly when you get stuck!
+
+---
+
+1. **First of all, download import data of January 2023 from ICUMS. As a first step we will use the import data of January 2023 to write the code. Later we can use this same (or slightly different) code for other months and exports.**
+
+---
+
+2. **Create a new folder on your computer with a name like "Reformatting ICUMS to Eurotrace", and create an input and output subfolder. Now create an R Project in the main folder, download the ICUMS data into input, and create an R script into the main folder with a name like "reformatting_import_newformat". Use this as a starting point, from here you can write your code.**
+
+---
+
+3. **Open the previous R script on reformatting data from ICUMS to Eurotrace. Go through the code again, and see if you understand the steps. Now make a list for yourself (or as a team) of the steps that need to be taken for the reformatting. (e.g. 1. Download data into right folder, 2. Read data into R, 3. Rename columns etc.) Use this as a guideline for writing the code.**
+
+---
+
+4. **Use the previous reformatting code, and adjust it to be able to read the new ICUMS data into R and to get it into the right format. **
+
+*Important note: Do think carefully about which columns should be used to create the output (for example, which country column etc.).*
+
+---
+
+5. **Using your code, create an output file in Excel which is suitable to export to Eurotrace, so in the right format and including the correct data.**
+
+*Important note: Many different Regimes are in this data, such as re-import as well as direct and other indirect imports. You should discuss (with Dominic!!) which regimes (and CPC codes) need to be included to upload into Eurotrace. So in addition to the old reformatting code, you need to include an extra part where you filter on specific regimes or CPC codes to include.*
+
+---
+
+6. **Carefully check your code, or let it be checked by other people. Do you understand every step you take, and why you include this step? Does this give you the output you want to get?**
+
+---
+
+7. **Perform some checks on your code. For example check if the total import value before your mutations and changes to the data are the same as the final total import value. Also do some kind of outlier checks, or other checks you think might be important.**
+
+---
+
+8. **Discuss the code with the entire team and decide whether you would be able to use this code in your actual work. Please also reach out to me (Femke) and let me know if you have any struggles or questions.**
+
+---
+
+9. **If you succeeded in this, try to use this code to create the output file for other months as well. And try to make a new script to reformat Export data. This will be very similar, but has some minor differences. You could try to let one or two people from the team to work on this, and then let it be checked by others of the team.**
+
+---
+
+End of Practical Assignment
+
+If you have been able to finish this practical assignment as a team, you have managed to use R to make your daily work much easier!! That is exactly what was the goal of learning R :).
+
+---
