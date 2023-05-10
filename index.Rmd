@@ -18,21 +18,9 @@ output:
 
 # Intro {.sidebar}
 
-This dashboard covers the materials for the course introducing R, and using it for CPI and trade statistics at GSS. The course is held from January 30 until February 3, 2023.
+This dashboard covers materials for a course introducing R -- focusing on its use in calculating trade statistics.
 
----
-
-Instructors: 
-
- - Femke
- - Peter
- - Simon
- - Laurent
-
-
----
-
-Material adopted from [Gerko Vink](https://github.com/gerkovink/R), Statistics Denmark and [Laurent Smeets](https://github.com/Laurent-Smeets-GSS-Account/RGhana).
+Material adopted from [Femke van den Bos](https://github.com/femkevdbos/RGhana), [Gerko Vink](https://github.com/gerkovink/R), Statistics Denmark and [Laurent Smeets](https://github.com/Laurent-Smeets-GSS-Account/RGhana).
 
 
 ---
@@ -51,14 +39,25 @@ The course starts at a very basic level and builds up gradually. No previous exp
 ### Course schedule 
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Monday*    | 9.30-13.30 | Introduction to R and RStudio  (A)   |
-|             | 14.15-17.00 | Basics of R (B) |
-| *Tuesday*   | 9.30-13.30 | Data manipulation (C)               |
-|             | 14.15-17.00 | Data manipulation (C)            |
-| *Wednesday* | 9.30-13.30 | Analyzing data (D)      |
-|             | 14.15-17.00 | Analyzing data (D)  |
-| *Thursday*  | 9.30- 17.00 | Specific sessions: CPI / Trade  |
-| *Friday*  |   9.30-17.00  | Specific sessions: CPI / Trade |
+| *Thursday, May 11*    | 12.00-14.00 | R and the National Revenue Authority   |
+| *Thursday, May 18*    | 14.00-16.00 | Introduction to R and RStudio   |
+| *Friday, May 19*      | 14.00-16.00 | Introduction to R and RStudio - *continued*   |
+| *Thursday, May 25*    | 14.00-16.00 | Basics of R |
+| *Friday, May 26*      | 14.00-16.00 | Basics of R (continued)  |
+| *Thursday, June 1*    | 14.00-16.00 | Data Manipulation (A)               |
+| *Thursday, June 2*    | 14.00-16.00 | Data Manipulation (A) - *continued*              |
+| *Thursday, June 16*   | 14.00-16.00 | Data Manipulation (B)            |
+| *Friday, June 17*     | 14.00-16.00 | Data Manipulation (B) - *continued*           |
+| *Thursday, June 29*   | 14.00-16.00 | Analyzing data (D)      |
+| *Friday, June 30*     | 14.00-16.00 | Analyzing data (D)  |
+| *Thursday, July 7*    | 14.00-16.00 | Visualizing Data  |
+| *Thursday, July 8*    | 14.00-16.00 | Visualizing Data - *continued* |
+| *Thursday, July 14*   | 14.00-16.00 | Topics - Writing Functions  |
+| *Thursday, July 15*   | 14.00-16.00 | Topics - Assertions and Testing |
+| *Thursday, July 21*   | 14.00-16.00 | Topics - Integrating with SQL  |
+| *Thursday, July 22*   | 14.00-16.00 | Topics - Git and GitHub |
+| *Thursday, July 28*   | 14.00-16.00 | Topics - Spatial Data  |
+| *Thursday, July 29*   | 14.00-16.00 | Topics - TBD |
 
 
 # Installing R + RStudio
@@ -66,7 +65,7 @@ The course starts at a very basic level and builds up gradually. No previous exp
 ## Column 1
 
 ### **1. Install `R`**
-`R` can be obtained [here](https://cran.r-project.org). We won't use `R` directly in the course, but rather call `R` through `RStudio`. Therefore it needs to be installed. 
+`R` can be obtained [here](https://cran.r-project.org). We won't use `R` directly in the course, but rather call `R` through `RStudio`. Therefore will it need to be installed. 
 
 ### **2. Install `RStudio` Desktop**
 
@@ -77,8 +76,8 @@ Rstudio is an Integrated Development Environment (IDE). It can be obtained as st
 Execute the following lines of code in the console window:
 
 ```{r eval=FALSE, echo = TRUE}
-install.packages(c("ggplot2", "stats", "tidyverse", "magrittr", "knitr", 
-                   "rmarkdown", "plotly", "shiny", "readxl", "tidyr", 
+install.packages(c("stats", "tidyverse", "magrittr", "knitr", 
+                   "rmarkdown", "plotly", "shiny", "readxl",
                    "janitor", "lubridate", "writexl", "devtools", 
                    "boot", "class", "car", "MASS", 
                    "ISLR", "DAAG", "mice", "sf"), 
@@ -101,7 +100,7 @@ compilation? (Yes/no/cancel)
 
 type `Yes` in the console and press the return key. 
 
-# Monday
+# Week 1 & 2
 
 ## Column 1
 
@@ -137,7 +136,7 @@ height = "300" width="450" frameborder="0"> </iframe>
 <br>
 See also [this `rmarkdown` cheat sheet](Contents/Material/Part A - Introduction/rmarkdown_cheat_sheet.pdf).
 
-# Tuesday
+# Week 2 & 3
 
 ## Column 1
 
@@ -162,7 +161,7 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 
 The above links are useful references that connect to today's materials.
 
-# Wednesday
+# Week 3 & 4
 
 ## Column 1
 
@@ -196,7 +195,7 @@ The `sf` setup for `R` is relatively new, and a lot of material about spatial da
 
 
 
-# CPI
+# Week 5 & 6
 
 ## Column 1
 
@@ -229,42 +228,7 @@ From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and ap
 
 
 
-# Trade
-
-## Column 1
-
-### Trade materials
-On Thursday and Friday the Trade team will specifically focus on the R code for trade data.
-
-- Introduction to Trade data
-    - [Lecture Trade](Contents/Material/Trade/Lecture_Trade.html){target="_blank"}
-- ICUMS data 
-  - Reformatting
-  - Cleaning and analyzing
-
-
-We are using the following R scripts:
-<ol>
-- [Reformatting Code Exports.Rmd](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
-- [Reformatting Code Imports.Rmd](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
-- [Trade vulnerability ICUMS.R](Contents/Material/Trade/Trade vulnerability ICUMS.R){target="_blank"}
-</ol>
-
-
-## Column 2
-
-### Schedule
-| Day         | Hours       | Topic                               | 
-|:------------|:------------|:------------------------------------|
-| *Thursday*  |  9.30 - 13.30  | Introduction to trade data |
-|   |  14.15 - 17.00 | ICUMS data, reformatting |
-| *Friday*  |    9.30 - 13.30  | Cleaning and analysing ICUMS data |
-|   |  14.15 - 17.00  | Working with the data! |
-
-
-
-
-# Further studies
+# Further Studies
 
 ## Column 1
 
@@ -287,28 +251,14 @@ The following references are currently available for free, either as pdfs or as 
 
 
 
-# After the training: Trade
-
-## Column 1
+# Additional Material
 
 ### Introduction
-As discussed at the end of the R training (30 Jan - 3 Feb) we agreed on a longer term plan to improve the R skills of the trade team. We will have weekly 2 hour long meetings to learn more in R, as well as to discuss assignments and practical issues you have while using R. Besides that, I am available for any questions, so always feel free to come by my office (332), or to text/call me to schedule a meeting.
+I am always available for any questions, so always feel free to come by my office.
 
-It must be noted that your own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments and discussions based on that.
+IYour own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments and discussions based on that.
 
-### Material to use
-Remember to always work from your Trade R folder and project on your computer. Below please find the R scripts we will work with, as well as the assignments and their solutions. 
-
-R scripts:
-
-- [Reformatting Code Exports](Contents/Material/Trade/Trade_formatting_exports.Rmd){target="_blank"}
-- [Reformatting Code Imports](Contents/Material/Trade/Trade_formatting_imports.Rmd){target="_blank"}
-- [Reformatting Code Warehousing](Contents/Material/Trade/Trade_formatting_warehousing.Rmd){target="_blank"}
-- [Reformatting Code Regime 9](Contents/Material/Trade/Trade_formatting_reg9.Rmd){target="_blank"}
-- [Trade vulnerability ICUMS](Contents/Material/Trade/Trade vulnerability ICUMS.R){target="_blank"}
-- [Assignment 4 -initial script](Contents/Material/Trade/Assignment 4 - initial script.R){target="_blank"}
-
-Additional lectures + practicals:
+### Additional lectures + practicals:
 
 - [Lecture Data Visualization](Contents/Material/happy_scientist-master/ggplot2/intro_to_tidyverse_ggplot2.html){target="_blank"}
 - [Practical ggplot - 1](Contents/Material/happy_scientist-master/ggplot2/exercises.Rmd){target="_blank"} 
@@ -328,77 +278,9 @@ Assignments:
 - [Assignment 4 (Deadline: 03-04)](Contents/Material/Trade/Assignments/Trade_Assignment_4.html){target="_blank"}
 - [Practical Assignment 5 (Deadline: TBD)](Contents/Material/Trade/Assignments/Trade_Assignment_5.html){target="_blank"}
 
-
 Solutions to assignments:
 
 - [Solution to Assignment 1](Contents/Material/Trade/Assignments/Solution_Assignment_1.html){target="_blank"}
 - [Solution to Assignment 2](Contents/Material/Trade/Assignments/Trade_Solution_2.html){target="_blank"}
 - [Solution to Assignment 3](Contents/Material/Trade/Assignments/Trade_Solution_3.html){target="_blank"}
-
-## Column 2
-### Schedule
-| Week         | Meeting day + time     | Topic         | 
-|:-----------|:---------------------|:----------------------------------|
-| *6-10 Feb*  |  Wednesday 13.00-15.00  | Recap of training + Assignment 1 |
-|  |  OR Friday 10.00-12.00  |  |
-| *13-17 Feb*  |    Wednesday 13.00-15.00  | Discuss Assignment 1 |
-|              |                         | + Intro to analyzing ICUMS |
-| *20-24 Feb*  |    Wednesday 13.00-15.00  | Analyzing ICUMS data - go through code, part 1 |
-| *27-3 Feb/Mar*  |    Tuesday 13.00-15.00  | Discuss Assignment 2 + Visualizations |
-| *6-10 Mar*  |    XXX  | No meeting |
-| *13-17Mar*  |    Wednesday 13.00-15.00  | Visualizations + apply to trade data |
-| *20-24 Mar*  |    XXX  | No meeting |
-| *27-31 Mar*  |    Wednesday 13.00-15.00  | Start working on Assignment 4 |
-| *3-7 Apr*  |    Wednesday 13.00-15.00  | More on Assignment 4 |
-| *10-14 Apr*  |    XXX  | No meeting |
-| *17-21 Apr*  |    Wednesday 12.00-lunch/dinner  | Recap lecture + way forward |
-| *24-28 Apr*  |    XXX  | Independent work on Assignment 4 + Recap |
-| *1-5 May*  |    XXX | Work on Practical Assignment 5 |
-
-
-# After the training: CPI
-
-## Column 1
-
-### Introduction
-As discussed at the end of the R training (30 Jan - 3 Feb & 7-9 Feb) we agreed on a longer term plan to improve the R skills of the CPI team. We will have assignments every 2 weeks to keep on practicing R. Besides that, I am available for any questions, so always feel free to come by my office (332), or to text/call me to schedule a meeting.
-
-It must be noted that your own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments based on that.
-
-### Material to use
-Create a CPI R folder and project on your computer, and always work from there. Below please find the R scripts we will work with, as well as the assignments and their solutions. 
-
-R scripts:
-
-- [CPI Indices Code](Contents/Material/CPI/CPI_indices_code_nocomments.R){target="_blank"}
-
-
-### Assignments + solutions
-Assignments:
-
-- [Assignment 1 (Deadline: 27-02)](Contents/Material/CPI/Assignments/CPI_Assignment_1.html){target="_blank"}
-- [Assignment 2 (Deadline: 13-03)](Contents/Material/CPI/Assignments/CPI_Assignment_2.html){target="_blank"}
-
-Solutions to assignments:
-
-- [Solution to Assignment 1](Contents/Material/CPI/Assignments/CPI_solution_1.html){target="_blank"}
-
-# After the training: Industry
-
-## Column 1
-
-### Introduction
-As discussed at the end of the R training (30 Jan - 3 Feb) we agreed on a longer term plan to improve the R skills of the Business and Industry team. We will have assignments to keep on practicing R. Besides that, I am available for any questions, so always feel free to come by my office (332), or to text/call me to schedule a meeting.
-
-It must be noted that your own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments based on that.
-
-### Material to use
-Create a "Practicing R" folder on your computer, as well as an R project in that folder, and always work from there. Below please find the assignments and their solutions. 
-
-### Assignments + solutions
-Assignments:
-
-- [Assignment 1 (Deadline: 15-05)](Contents/Material/Industry/Industry_Assignment_1.html){target="_blank"}
-
-Solutions to assignments:
 
