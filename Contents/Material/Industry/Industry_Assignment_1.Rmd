@@ -1,0 +1,80 @@
+---
+title: "Assignment 1"
+author: "Recap + Selecting FES"
+date: "Deadline: Monday 15-05-2023, 17.00"
+output: 
+html_document:
+self_contained: false
+lib_dir: libs
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE,
+  eval    = FALSE
+)
+
+```
+
+---
+
+### Introduction
+In this assignment you will first of all create the setup for the following assignments. Then you will practice the skills you learned with some general exercises, which in the end will lead up to being able to select FES based on your own criteria. 
+
+When you have finished the assignment, please send me your R script (including comments in the script!!), as well as the output Excel file if you managed to finish the entire assignment. Please do reach out to me with any questions or if you really get stuck! As it is the purpose to get stuck and make mistakes to learn new things :)
+
+---
+
+1. **First of all, create a new folder on your computer called "Practicing R" (or another name which you would like to give it). Then create a new project in R in this folder. Then create a new R script with a name like "Assignment 1". This is the script you are going to work in for this assignment.**
+
+*Hint: Use Practical A, in this practical you learned how to create projects and scripts.*
+
+---
+
+2. **Create a sub-folder in your Practicing R folder, called "input". Now download the "FES_applicants_new" file I sent you, and save it in this input folder. Open your Practicing R project from your Practicing R folder on your computer. Then open the project and the Assignment 1 script, and get ready to start the assignment. Before starting on the assignment, make sure you clean your environment.**
+
+---
+
+3. **The first step in the assignment is to load the "FES_applicants_new" file into R. So write code to get the data into R, and the inspect the data.**
+
+---
+
+4. **Get a good understanding of the data by using the skills you learned in R. How many rows are there? How many columns are there? Which variables are in the data? What exactly does the data show us? How could we use this data?**
+
+---
+
+5. **Now further inspect the data by using your skills to answer the following questions.**
+
+**a) Which education levels can be found in the data? (create a vector showing the different education levels that can be found in the data) **
+
+**b) How many applicants are there per region? (So create a table showing the number for every region) **
+
+**c) How many applicants did not provide a Certificate ID?**
+
+**d) How many duplicate email addresses are found in the email address column? (important to check as this can indicate duplicate applicants)**
+
+**e) Finally, perform some other checks that you think are important. Look at the different variables and which checks you could perform. Do these checks and conclude whether there are any issues based on your outcomes.**
+
+---
+
+6. **Clean the data by taking out not suitable candidates. For this assignment, only select candidates who: applied for the IBES survey, and are not currently working.**
+
+---
+
+7. **Decide on a way to give a score to all applicants. Decide on three variables to use for the scoring and write your code to give all applicants a score. Note that this is just for the sake of the assignment, so it does not need to be a perfect scoring system that you would want to use in reality, but do try to make it as realistic and useful as possible. You can for example think of giving 20 points for everyone with at least a bachelors degree. You can also think of giving points for experience with GSS, decide which variable to use for that. In the end you should have an additional column called "score" which has a score for every candidate.**
+
+---
+
+8. **Now you have created a score column, you can also select candidates. To not make it too complicated, just select the 100 candidates with the highest scores for every region. This means that in total you will select 16x100 = 1600 candidates. Also do a second selection, by just selecting the 1600 people with the highest score. Compare these two selections and discover the differences. Which method do you prefer and why?**
+
+---
+
+9. **Last (but not least) save the selection of your preference in an Excel file. This is important as when you do a selection like this, you do need to share the final selection of candidates in an Excel file to your colleagues.**
+
+---
+
+End of Assignment
+
+Well done! If you have been successful, you have refreshed a lot of the skills you learned in R, and also managed to learn many new things. Now you have practiced with loading data into R, critically inspecting and analyzing data, manipulating data, and saving data into Excel. These are very important skills!
+
+---

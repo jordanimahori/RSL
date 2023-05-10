@@ -383,3 +383,22 @@ Solutions to assignments:
 
 - [Solution to Assignment 1](Contents/Material/CPI/Assignments/CPI_solution_1.html){target="_blank"}
 
+# After the training: Industry
+
+## Column 1
+
+### Introduction
+As discussed at the end of the R training (30 Jan - 3 Feb) we agreed on a longer term plan to improve the R skills of the Business and Industry team. We will have assignments to keep on practicing R. Besides that, I am available for any questions, so always feel free to come by my office (332), or to text/call me to schedule a meeting.
+
+It must be noted that your own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments based on that.
+
+### Material to use
+Create a "Practicing R" folder on your computer, as well as an R project in that folder, and always work from there. Below please find the assignments and their solutions. 
+
+### Assignments + solutions
+Assignments:
+
+- [Assignment 1 (Deadline: 15-05)](Contents/Material/Industry/Industry_Assignment_1.html){target="_blank"}
+
+Solutions to assignments:
+
