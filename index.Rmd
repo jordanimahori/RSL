@@ -88,7 +88,7 @@ install.packages(c("stats", "tidyverse", "magrittr", "knitr",
 If you are not sure where to execute code, use the following figure to identify the console:
 
 <center>
-  <img src="console.png" alt="HTML5 Icon" width = 50%>
+  <img src="assets/console.png" alt="HTML5 Icon" width = 50%>
 </center>
 
 Just copy and paste the installation command and press the return key. When asked 
@@ -104,8 +104,8 @@ type `Yes` in the console and press the return key.
 
 ## Column 1
 
-### Mondays's materials
-We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
+### Week 1 & 2 Materials
+We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
 - Part A: Introduction
     - [Lecture A](Contents/Material/Part A - Introduction/Lecture_A.html){target="_blank"}
@@ -136,17 +136,19 @@ height = "300" width="450" frameborder="0"> </iframe>
 <br>
 See also [this `rmarkdown` cheat sheet](Contents/Material/Part A - Introduction/rmarkdown_cheat_sheet.pdf).
 
-# Week 2 & 3
+# Week 3 & 4
 
 ## Column 1
 
-### Tuesday's materials
-We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
+### Week 3 & 4 Materials
+We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
 - Part C: Data manipulation
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
+    - [Lecture on dplyr](Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html)
     - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C.html)
     - [Solutions to Practical C](Contents/Material/Part C - Data manipulation/Practical_C_Solution.html)
+ 
  
 ## Column 2
 
@@ -155,18 +157,18 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
 - [`magrittr`](https://magrittr.tidyverse.org)
 - [`R` for Data Science](http://r4ds.had.co.nz) - [Chapter 18 on pipes](http://r4ds.had.co.nz/pipes.html)
 - [R-bloggers tutorial on pipes](https://www.r-bloggers.com/2017/12/pipes-in-r-tutorial-for-beginners/)
-- [pipe tutorial on datacamp](https://www.datacamp.com/community/tutorials/pipe-r-tutorial)
-
 
 
 The above links are useful references that connect to today's materials.
 
-# Week 3 & 4
+
+
+# Week 5 & 6
 
 ## Column 1
 
-### Wednesdays's materials
-We adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
+### Week 5 & 6 Materials
+We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
 
 - Part D: Analyzing data
     - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
@@ -174,9 +176,6 @@ We adapt the course as we go. To ensure that you work with the latest iteration 
     - [Solutions to Practical D](Contents/Material/Part D - Analyzing data/Practical_D_Solutions.html)
     - [`hs_codes.RData`](Contents/Material/Part D - Analyzing data/hs_codes.RData)
 
-On Thursday February 2, we started the day with a lecture on tidyverse, focused on wrangling data with dplyr. The following lecture was used for that.
-
-  - [Lecture on dplyr](Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html)
 
 ## Column 2
 
@@ -199,10 +198,9 @@ The `sf` setup for `R` is relatively new, and a lot of material about spatial da
 
 ## Column 1
 
-### CPI materials
-On Thursday and Friday (2-3 Feb) the CPI team has specifically focused on the R code for the CPI. 
+### Week 5 & 6 Materials
 
-From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and apply this to the CPI data as well.
+For this section, we will focus on data visualization and apply this to the trade data as well.
 
 - Introduction to data visualization:
   - [Lecture Data Visualization](Contents/Material/happy_scientist-master/ggplot2/intro_to_tidyverse_ggplot2.html){target="_blank"}
@@ -216,16 +214,9 @@ From Tuesday until Thursday (7-9 Feb) we will focus on data visualization and ap
 
 ## Column 2
 
-### Schedule
-| Day         | Hours       | Topic                               | 
-|:--------------|:------------|:------------------------------------|
-| *Tuesday*  |  9.30 - 13.30  | Data visualization - Lecture |
-|   |  14.15 - 17.00  | Data visualization - Practical |
-| *Wednesday*  |   9.30 - 13.30  | Data visualization - Practical |
-|   |  14.15 - 17.00 | CPI data visualizations |
-| *Thursday*  |   9.30 - 13.30    | CPI data visualizations |
-|   |  14.15 - 17.00 | Q&A and specific CPI questions |
-
+### Useful resources:
+- [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.html)
+- [ggplot2 Book](https://ggplot2-book.org) 
 
 
 # Further Studies
@@ -256,7 +247,7 @@ The following references are currently available for free, either as pdfs or as 
 ### Introduction
 I am always available for any questions, so always feel free to come by my office.
 
-IYour own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments and discussions based on that.
+Your own motivation and dedication will determine how much progress you make. The more time you invest in learning R, the better you will get of course! Therefore, I would like this progress to be very much driven by what you want to learn, so please come up with topics to discuss yourself as well and I will adjust the assignments and discussions based on that.
 
 ### Additional lectures + practicals:
 
