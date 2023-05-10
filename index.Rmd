@@ -39,25 +39,35 @@ The course starts at a very basic level and builds up gradually. No previous exp
 ### Course schedule 
 | Day         | Hours       | Topic                               | 
 |:------------|:------------|:------------------------------------|
-| *Thursday, May 11*    | 12.00-14.00 | R and the National Revenue Authority   |
+| **Intro**             |             |                                 |
+| *Friday, May 12*      | 10.00-12.00 | R and the National Revenue Authority   |
+| **Week 1**            |             |                                 |
 | *Thursday, May 18*    | 14.00-16.00 | Introduction to R and RStudio   |
 | *Friday, May 19*      | 14.00-16.00 | Introduction to R and RStudio - *continued*   |
+| **Week 2**            |             |                                 |
 | *Thursday, May 25*    | 14.00-16.00 | Basics of R |
 | *Friday, May 26*      | 14.00-16.00 | Basics of R (continued)  |
+| **Week 3**            |             |                                 |
 | *Thursday, June 1*    | 14.00-16.00 | Data Manipulation (A)               |
-| *Thursday, June 2*    | 14.00-16.00 | Data Manipulation (A) - *continued*              |
+| *Friday, June 2*      | 14.00-16.00 | Data Manipulation (A) - *continued*              |
+| **Week 4**            |             |                                 |
 | *Thursday, June 16*   | 14.00-16.00 | Data Manipulation (B)            |
 | *Friday, June 17*     | 14.00-16.00 | Data Manipulation (B) - *continued*           |
+| **Week 5**            |             |                                 |
 | *Thursday, June 29*   | 14.00-16.00 | Analyzing data (D)      |
 | *Friday, June 30*     | 14.00-16.00 | Analyzing data (D)  |
+| **Week 6**            |             |                                 |
 | *Thursday, July 7*    | 14.00-16.00 | Visualizing Data  |
-| *Thursday, July 8*    | 14.00-16.00 | Visualizing Data - *continued* |
+| *Friday, July 8*      | 14.00-16.00 | Visualizing Data - *continued* |
+| **Week 7**            |             |                                 |
 | *Thursday, July 14*   | 14.00-16.00 | Topics - Writing Functions  |
-| *Thursday, July 15*   | 14.00-16.00 | Topics - Assertions and Testing |
+| *Friday, July 15*     | 14.00-16.00 | Topics - Assertions and Testing |
+| **Week 8**            |             |                                 |
 | *Thursday, July 21*   | 14.00-16.00 | Topics - Integrating with SQL  |
-| *Thursday, July 22*   | 14.00-16.00 | Topics - Git and GitHub |
+| *Friday, July 22*     | 14.00-16.00 | Topics - Git and GitHub |
+| **Week 9**            |             |                                 |
 | *Thursday, July 28*   | 14.00-16.00 | Topics - Spatial Data  |
-| *Thursday, July 29*   | 14.00-16.00 | Topics - TBD |
+| *Friday, July 29*     | 14.00-16.00 | Topics - TBD |
 
 
 # Installing R + RStudio
@@ -99,6 +109,9 @@ compilation? (Yes/no/cancel)
 ```
 
 type `Yes` in the console and press the return key. 
+
+
+
 
 # Week 1 & 2
 
@@ -274,4 +287,13 @@ Solutions to assignments:
 - [Solution to Assignment 1](Contents/Material/Trade/Assignments/Solution_Assignment_1.html){target="_blank"}
 - [Solution to Assignment 2](Contents/Material/Trade/Assignments/Trade_Solution_2.html){target="_blank"}
 - [Solution to Assignment 3](Contents/Material/Trade/Assignments/Trade_Solution_3.html){target="_blank"}
+
+
+
+
+# Topics
+
+### Introduction
+To be developed as we progress through the training.
+
 
