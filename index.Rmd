@@ -51,23 +51,23 @@ The course starts at a very basic level and builds up gradually. No previous exp
 | *Thursday, June 1*    | 14.00-16.00 | Data Manipulation (A)               |
 | *Friday, June 2*      | 14.00-16.00 | Data Manipulation (A) - *continued*              |
 | **Week 4**            |             |                                 |
-| *Thursday, June 16*   | 14.00-16.00 | Data Manipulation (B)            |
-| *Friday, June 17*     | 14.00-16.00 | Data Manipulation (B) - *continued*           |
+| *Thursday, June 29*   | 14.00-16.00 | Data Manipulation (B)            |
+| *Friday, June 30*     | 14.00-16.00 | Data Manipulation (B) - *continued*           |
 | **Week 5**            |             |                                 |
-| *Thursday, June 29*   | 14.00-16.00 | Analyzing data (D)      |
-| *Friday, June 30*     | 14.00-16.00 | Analyzing data (D)  |
-| **Week 6**            |             |                                 |
 | *Thursday, July 7*    | 14.00-16.00 | Visualizing Data  |
 | *Friday, July 8*      | 14.00-16.00 | Visualizing Data - *continued* |
+| **Week 6**            |             |                                 |
+| *Thursday, July 14*   | 14.00-16.00 | Loops and Functions  |
+| *Friday, July 15*     | 14.00-16.00 | Loops and Functions - *continued* |
 | **Week 7**            |             |                                 |
-| *Thursday, July 14*   | 14.00-16.00 | Topics - Writing Functions  |
-| *Friday, July 15*     | 14.00-16.00 | Topics - Assertions and Testing |
+| *Thursday, July 21*   | 14.00-16.00 | Topics - Writing Functions  |
+| *Friday, July 22*     | 14.00-16.00 | Topics - Assertions and Testing |
 | **Week 8**            |             |                                 |
-| *Thursday, July 21*   | 14.00-16.00 | Topics - Integrating with SQL  |
-| *Friday, July 22*     | 14.00-16.00 | Topics - Git and GitHub |
-| **Week 9**            |             |                                 |
-| *Thursday, July 28*   | 14.00-16.00 | Topics - Spatial Data  |
-| *Friday, July 29*     | 14.00-16.00 | Topics - TBD |
+| *Thursday, July 28*   | 14.00-16.00 | Topics - Integrating with SQL  |
+| *Friday, July 29*     | 14.00-16.00 | Topics - Git and GitHub |
+| **Week 9**           |             |                                 |
+| *Thursday, August 5*  | 14.00-16.00 | Topics - Spatial Data  |
+| *Friday, August 6*    | 14.00-16.00 | Topics - TBD |
 
 
 # Installing R + RStudio
@@ -113,12 +113,12 @@ type `Yes` in the console and press the return key.
 
 
 
-# Week 1 & 2
+# Introduction
 
 ## Column 1
 
-### Week 1 & 2 Materials
-We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
+### Week 1 & 2 -- Introduction to R
+We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, be sure to access the materials online.
 
 - Part A: Introduction
     - [Lecture A](Contents/Material/Part A - Introduction/Lecture_A.html){target="_blank"}
@@ -149,20 +149,20 @@ height = "300" width="450" frameborder="0"> </iframe>
 <br>
 See also [this `rmarkdown` cheat sheet](Contents/Material/Part A - Introduction/rmarkdown_cheat_sheet.pdf).
 
-# Week 3 & 4
+# Data Manipulation
 
 ## Column 1
 
-### Week 3 & 4 Materials
-We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
+### Week 3 -- Data Manipulation in R
+We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, be sure to access the materials online.
 
 - Part C: Data manipulation
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
     - [Lecture on dplyr](Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html)
     - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C.html)
     - [Solutions to Practical C](Contents/Material/Part C - Data manipulation/Practical_C_Solution.html)
- 
- 
+
+
 ## Column 2
 
 ### Useful references
@@ -176,42 +176,11 @@ The above links are useful references that connect to today's materials.
 
 
 
-# Week 5 & 6
+# Data Visualisation
 
 ## Column 1
 
-### Week 5 & 6 Materials
-We'll adapt the course as we go. To ensure that you work with the latest iteration of the course materials, we advice all course participants to access the materials online.
-
-- Part D: Analyzing data
-    - [Lecture D](Contents/Material/Part D - Analyzing data/Lecture_D.html)
-    - [Practical D](Contents/Material/Part D - Analyzing data/Practical_D_new.html)
-    - [Solutions to Practical D](Contents/Material/Part D - Analyzing data/Practical_D_Solutions.html)
-    - [`hs_codes.RData`](Contents/Material/Part D - Analyzing data/hs_codes.RData)
-
-
-## Column 2
-
-### Useful references
-
-- [The `ggplot2` reference page](https://ggplot2.tidyverse.org/reference/)
-
-The above link details pretty much all you can do with package `ggplot2`.
-
-- [Geocomputation with `R`](https://bookdown.org/robinlovelace/geocompr/)
-
-The `sf` setup for `R` is relatively new, and a lot of material about spatial data in `R` uses the older `sp` setup. This book is an introduction to spatial data the `sf` way.
-
-- [Create awesome HTML tables with `knitr::kable` and `kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
-
-
-
-
-# Week 5 & 6
-
-## Column 1
-
-### Week 5 & 6 Materials
+### Week 4 -- Data Visualation in Base R and ggplot2
 
 For this section, we will focus on data visualization and apply this to the trade data as well.
 
@@ -230,6 +199,35 @@ For this section, we will focus on data visualization and apply this to the trad
 ### Useful resources:
 - [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.html)
 - [ggplot2 Book](https://ggplot2-book.org) 
+
+
+# Loops and Functions
+
+## Column 1
+
+### Week 5 -- Loops and Functions
+
+We'll now focus on loops and functions for the next two weeks. Loops allow you to replace repetitive sections of code that would be tedious or impossible to write without them. Functions allow you to re-use code that you write, and are especially useful for saving time on common tasks. They are also much easier to debug than copy-pasted code.
+
+- Introduction to loops in R:
+  - [Lecture Loops & Functions](Contents/Material/Part F - Loops and functions/Lecture_F_new.html){target="_blank"}
+  - [Practical - Loops & Functions](Contents/Material/Part F - Loops and functions/Practical_F.html){target="_blank"}
+
+
+## Column 2
+
+### Useful resources:
+- [R for Data Science](https://r4ds.had.co.nz)
+
+
+
+
+# Topics
+
+### Introduction
+To be developed as we progress through the training.
+
+
 
 
 # Further Studies
@@ -276,11 +274,11 @@ Your own motivation and dedication will determine how much progress you make. Th
 ### Assignments + solutions
 Assignments:
 
-- [Assignment 1 (Deadline: 13-02)](Contents/Material/Trade/Assignments/Trade_Assignment_1.html){target="_blank"}
-- [Assignment 2 (Deadline: 27-02)](Contents/Material/Trade/Assignments/Trade_Assignment_2.html){target="_blank"}
-- [Assignment 3 (Deadline: 20-03)](Contents/Material/Trade/Assignments/Trade_Assignment_3.html){target="_blank"}
-- [Assignment 4 (Deadline: 03-04)](Contents/Material/Trade/Assignments/Trade_Assignment_4.html){target="_blank"}
-- [Practical Assignment 5 (Deadline: TBD)](Contents/Material/Trade/Assignments/Trade_Assignment_5.html){target="_blank"}
+- [Assignment 1](Contents/Material/Trade/Assignments/Trade_Assignment_1.html){target="_blank"}
+- [Assignment 2](Contents/Material/Trade/Assignments/Trade_Assignment_2.html){target="_blank"}
+- [Assignment 3](Contents/Material/Trade/Assignments/Trade_Assignment_3.html){target="_blank"}
+- [Assignment 4](Contents/Material/Trade/Assignments/Trade_Assignment_4.html){target="_blank"}
+- [Assignment 5](Contents/Material/Trade/Assignments/Trade_Assignment_5.html){target="_blank"}
 
 Solutions to assignments:
 
@@ -290,10 +288,5 @@ Solutions to assignments:
 
 
 
-
-# Topics
-
-### Introduction
-To be developed as we progress through the training.
 
 
