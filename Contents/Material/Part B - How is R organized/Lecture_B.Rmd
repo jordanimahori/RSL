@@ -19,7 +19,7 @@ output:
 This morning we have learned the basics of programming in `R`:
 
 - How to assign elements to objects (`<-`)
-- How to run code (Ctrl +)
+- How to run code
 - How to save `R`-scripts
 - How to manage projects in `RStudio`
 - How to create notebooks or markdown HTML files

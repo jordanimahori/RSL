@@ -4,30 +4,13 @@ author: "Statistical Programming with R"
 date: ""
 output:
   ioslides_presentation:
-    fig_height: 5
-    fig_width: 8
+    fig_height: 3
+    fig_width: 10
     logo: logo_en.png
     transition: faster
     smaller: true
   beamer_presentation: default
 ---
-
-# Overview of this course
-## Program
-### Course schedule 
-| Day         | Hours       | Topic                               | 
-|:------------|:------------|:------------------------------------|
-| *Monday*    | 9.30-13.30 | Introduction to R and RStudio  (A)   |
-|             | 14.15-17.00 | Basics of R (B) |
-| *Tuesday*   | 9.30-13.30 | Data manipulation (C)               |
-|             | 14.15-17.00 | Data manipulation (C)            |
-| *Wednesday* | 9.30-13.30 | Analyzing data (D)      |
-|             | 14.15-17.00 | Analyzing data (D)  |
-| *Thursday*  | 9.30- 17.00 | Specific sessions: CPI / Trade  |
-| *Friday*  |   9.30-17.00  | Specific sessions: CPI / Trade |
-
-
-
 
 # What is R?
 
@@ -46,6 +29,7 @@ output:
 - Community-driven
 
 - Based on the object-oriented language S (1975)
+
 
 # What is RStudio?
 
