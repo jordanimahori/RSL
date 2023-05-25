@@ -1,0 +1,47 @@
+---
+title: 'Analyzing data'
+author: "Statistical Programming with R"
+date: ""
+output:
+  ioslides_presentation:
+    fig_height: 5
+    fig_width: 12
+    logo: logo_en.png
+    transition: faster
+    smaller: true
+  beamer_presentation: default
+---
+
+
+## This lecture
+- Renaming data
+- Selecting variables
+- Aggregating data
+- Joins
+
+
+
+## Packages we use
+```{r}
+library(magrittr)
+library(tidyselect)
+library(tidyverse)
+library(datasets)
+```
+
+
+
+
+# Renaming Variables
+
+## Simplest way
+```{r}
+var1 <- c(1,2,4,6,8,10)
+var1
+var2 <- var1
+var2
+
+```
+We will return a bit to renaming later.
+
+

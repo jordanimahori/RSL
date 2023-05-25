@@ -1,5 +1,5 @@
 ---
-title: 'Data manipulation'
+title: 'Data Manipulation'
 author: "Statistical Programming with R"
 date: ""
 output:
@@ -15,8 +15,13 @@ output:
 
 ## This lecture
 
-- Data manipulation
+*Date Manipulation*
 
+- Filtering rows
+- Selecting columns
+- Creating calculated columns
+- Sorting observations
+- Renaming variables
 - Pipes
 
 <!-- - Tidy data -->
@@ -24,104 +29,112 @@ output:
 
 ## New packages we use
 ```{r warning=FALSE, message=FALSE}
-library(MASS)     # for the cats data
-library(haven)    # in/exporting data
-library(dplyr)    # data manipulation
-library(magrittr) # for pipes
+library(readr)      # reading/writing tabular data
+library(readxl)     # reading/writing data from Excel files
+library(dplyr)      # data manipulation
+library(magrittr)   # for pipes
 ```
 
 
+## Reading Data
 
-## New functions
-
-<!-- XXXX Check and add some plot stuff -->
-
-- `transform()`: changing and adding columns
-- `dplyr::filter()`: row-wise selection (of cases)
-- `table()`: frequency tables
-- `class()`: object class
-- `levels()`: levels of a factor
-- `order()`: data entries in increasing order
-- `dplyr::arrange()`: sorting
-- `haven::read_sav()`: import SPSS data
-
-## The cats data
+- We use different packages to read different types of data. 
+- For example, we use `read_csv()` to read a csv, and `read_excel()` for an xlsx file. 
 ```{r}
-head(cats)
+asycuda <- read_csv("~/Projects/NRA/RSL/data/asycuda_example.csv", 
+             guess_max = 100000)
+```
+
+## Quickly Viewing Data
+
+```{r}
+head(asycuda, n = 4)
+
+str(asycuda)          # Describes the structure of the data.frame
 ```
 
 
-```{r}
-str(cats)
-```
-
-## How to get only Female cats?
+## Filtering in Base R using Indexes
 
 ```{r}
-fem.cats <- cats[cats$Sex == "F", ]
-dim(fem.cats)
-head(fem.cats)
-```
-
-## How to get only *heavy* cats?
-```{r}
-heavy.cats <- cats[cats$Bwt > 3, ]
-dim(heavy.cats)
-head(heavy.cats)
-```
-
-## How to get only *heavy* cats?
-```{r}
-heavy.cats <- subset(cats, Bwt > 3)
-dim(heavy.cats)
-head(heavy.cats)
-```
-
-## another way: `dplyr`
-```{r}
-filter(cats, Bwt > 2, Bwt < 2.2, Sex == "F")
+imports <- asycuda[asycuda$DECTYPE == "IM4", ]
+head(imports)
 ```
 
 
-## Working with factors
+## Filtering in Base R using Indexes
 ```{r}
-class(cats$Sex)
-levels(cats$Sex)
-```
-
-## Working with factors
-```{r}
-levels(cats$Sex) <- c("Female", "Male")
-table(cats$Sex)
-head(cats)
-```
-
-## Sorting 
-
-```{r}
-sorted.cats <- cats[order(cats$Bwt), ]
-head(sorted.cats)
-```
-
-## another way:dplyr 
-
-```{r}
-sorted.cats2 <- arrange(cats,Bwt)
-head(sorted.cats2)
+high_cif <- asycuda[asycuda$CIFVALUE > 2500000000, ]
+head(high_cif)
 ```
 
 
-
-## Combining matrices or dataframes
-
+## Filtering in Base R using the 'subset' Function
 ```{r}
-cats.numbers <- cbind(Weight = cats$Bwt, Height = cats$Hwt)
-head(cats.numbers)
+high_cif2 <- subset(asycuda, CIFVALUE > 2500000000)
+dim(high_cif2)
+head(high_cif2)
 ```
 
-## Combining matrices or dataframes
+
+## Filtering using `dplyr`
 ```{r}
-rbind(cats[1:3, ], cats[1:5, ])
+filter(asycuda, DECTYPE == "IM4", CIFVALUE > 2500000000)
+```
+
+
+# Sorting 
+
+## Sorting in Base R
+
+```{r}
+sorted_asycuda <- asycuda[order(asycuda$CIFVALUE), ]
+head(sorted_asycuda)
+```
+
+## Sorting using `dplyr` 
+
+```{r}
+sorted_asycuda2 <- arrange(asycuda, CIFVALUE)
+head(sorted_asycuda2)
+```
+
+
+# Selecting Variables
+
+
+## Selecting in Base R using Subsetting
+
+R comes with the [] operator, which can be used to select elements in vectors and lists, and columns rows from data.frames or matrices.
+
+```{r}
+asycuda[4,]    # To select fourth row
+asycuda[, 3]   # To select the third column
+asycuda[4, 3]  # To select the element in row 4, column 3
+```
+- For a vector `my_vect`, the command `my_vect[n]` returns the n’th element.
+
+- For a data.frame `my_df`, the command `my_df[n,m]` returns the n’th element of the m’th column
+
+- Writing `df[n,]` returns the n’th row
+
+- What do you think the command `my_df[,m]` returns?
+
+
+## Selecting in Base R using Subsetting
+
+- It is possible to select by using names, too:
+`my_df[c("rowname 1", "rowname 2"), c("columnname 1", "columnname 2", "columnname 3")]`
+
+will return a subset of the dataframe `my_df` consisting of the intersection of the 2 rows named `rowname 1` and `rowname 2` and the 3 columns named `columnname 1`, `columnname 2` and `columnname 3`.
+
+- which dimensions would that subset have?
+
+
+## Selecting using dplyr
+
+```{r}
+select(imports, OFFICECODE, CIFVALUE)
 ```
 
 # Pipes
@@ -129,32 +142,39 @@ rbind(cats[1:3, ], cats[1:5, ])
 ## This is a pipe:
 
 ```{r}
-read_sav("boys.sav") %>%
+read_csv("~/Projects/NRA/RSL/data/asycuda_example.csv", 
+                     guess_max = 100000, show_col_types = FALSE) %>%
   head()
 ```
 
-It effectively replaces `head(read_sav("boys.sav"))`.
+It effectively replaces:
+`head(read_excel("~/Projects/NRA/RSL/data/asycuda_example.csv"))`.
 
 
 ## Why are pipes useful?
-Let's assume that we want to load data, change a variable, filter cases and select columns. Without a pipe, this would look like
+Let's assume that we want to load data, filter cases, select columns and modify a variable's values. Without a pipe, this would look like
 ```{r}
-boys  <- read_sav("boys.sav")
-boys2 <- transform(boys, hgt = hgt / 100)
-boys3 <- filter(boys2, age > 15)
-boys4 <- subset(boys3, select = c(hgt, wgt, bmi))
+asycuda <- read_excel("~/Projects/NRA/RSL/data/Import Export May 2022.xls", 
+                       guess_max = 100000)
+asycuda2 <- filter(asycuda, DECTYPE == "IM4")
+asycuda3 <- select(asycuda2, OFFICECODE, DECTYPE, CIFVALUE)
+asycuda_example <- mutate(asycuda3, 
+                          CIFVALUE = CIFVALUE*runif(n=length(CIFVALUE), min=0.5, max=1.5))
+
+head(asycuda_example)
 ```
 
 With the pipe:
 ```{r}
-boys <-
-  read_sav("boys.sav") %>%
-  transform(hgt = hgt/100) %>%
-  filter(age > 15) %>%
-  subset(select = c(hgt, wgt, bmi))
-```
+asycuda_example <-
+  read_excel("~/Projects/NRA/RSL/data/Import Export May 2022.xls", 
+             guess_max = 100000) %>%
+  filter(DECTYPE == "IM4" | DECTYPE == "EX1") %>%
+  select(OFFICECODE, DECTYPE, CIFVALUE) %>%
+  mutate(CIFVALUE = CIFVALUE*runif(n=length(CIFVALUE), min=0.5, max=1.5))
 
-Benefit: a single object in memory that is easy to interpret
+head(asycuda_example)
+```
 
 
 ## With pipes
@@ -173,53 +193,23 @@ rnorm(10) %>% mean()
 ```
 - `f(x, y)` becomes `x %>% f(y)` 
 ```{r}
-boys %>% cor(use = "pairwise.complete.obs")
+asycuda %>% filter(OFFICECODE == "SLFQE")
 ```
+
+
+## What do pipes do: 
+
 - `h(g(f(x)))` becomes `x %>% f %>% g %>% h` 
 ```{r}
-boys %>% subset(select = wgt) %>% na.omit() %>% max()
+asycuda %>% filter(OFFICECODE == "SLFQE") %>% select(-DECTYPE)
 ```
-
-## Useful 1: outlier filtering
-```{r}
-nrow(cats)
-
-cats.nooutl <- 
-  cats %>% 
-  filter(Hwt < mean(Hwt) + 3 * sd(Hwt), 
-         Hwt > mean(Hwt) - 3 * sd(Hwt))
-nrow(cats.nooutl)
-
-cats.outl <- 
-  cats %>% 
-  filter(Hwt >= mean(Hwt) + 3 * sd(Hwt) | Hwt <= mean(Hwt) - 3 * sd(Hwt))
-nrow(cats.outl)
-```
-
-
-## Useful 2: filter out NA values 
-
-```{r}
-mycats <- data.frame(Sex = as.factor(c("F","M",NA)),
-                     Bwt = c(1.9,NA, 2.1),
-                     Hwt = c(8.2, 8.0, NA))
-mycats
-```
-
-```{r}
-mycats %>% filter(!is.na(Sex))
-```
-
-
-<!-- mycats %>% filter_at(vars(Bwt,Hwt), any_vars(is.na(.))) -->
-
-<!-- mycats %>% filter(if_all(everything(), ~ !is.na(.))) -->
 
 
 ## The role of `.` in a pipe
 In `a %>% b(arg1, arg2, arg3)`, `a` will become `arg1`. With `.` we can change this.
 ```{r error=TRUE}
 set.seed(123)
+
 1:5 %>%
   mean() %>%
   rnorm(10)
@@ -232,21 +222,6 @@ set.seed(123)
   rnorm(n = 10, mean = .)
 ```
 The `.` can be used as a placeholder in the pipe.
-
-## Placeholder example
-Remember: `sample()` takes a random sample from a vector
-```{r}
-sample(x = c(1, 1, 2, 3, 5, 8), size = 2)
-```
-
-Sample 3 positions from the alphabet and show the position and the letter
-```{r}
-set.seed(123)
-1:26 %>%
-  sample(3) %>%
-  paste(., LETTERS[.])
-```
-
 
 
 # Practical 

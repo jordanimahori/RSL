@@ -3219,23 +3219,9 @@ line-height: 1.9;
           </hgroup>
   </slide>
 
-<slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Recap</h2></hgroup><article  id="recap" class="smaller ">
+<slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Vectors, Matrices and Data Frames</h2></hgroup><article  id="vectors-matrices-and-data-frames">
 
-</article></slide><slide class=""><hgroup><h2>So far</h2></hgroup><article  id="so-far" class="smaller ">
-
-<p>This morning we have learned the basics of programming in <code>R</code>:</p>
-
-<ul>
-<li>How to assign elements to objects (<code>&lt;-</code>)</li>
-<li>How to run code</li>
-<li>How to save <code>R</code>-scripts</li>
-<li>How to manage projects in <code>RStudio</code></li>
-<li>How to create notebooks or markdown HTML files</li>
-</ul>
-
-</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Objects that contain more than one element</h2></hgroup><article  id="objects-that-contain-more-than-one-element" class="smaller ">
-
-</article></slide><slide class=""><hgroup><h2>More than one element</h2></hgroup><article  id="more-than-one-element" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>More than one element</h2></hgroup><article  id="more-than-one-element">
 
 <ul>
 <li>Several elements of the same type, e.g. the integers from 1 to 5, can be concatenated into a vector</li>
@@ -3250,34 +3236,12 @@ a</pre>
 <li>As is typical for <code>R</code> there a several ways to accomplish this</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>b &lt;- 1:5
+<pre class = 'prettyprint lang-r'>b &lt;- 5:1
 b</pre>
 
-<pre >## [1] 1 2 3 4 5</pre>
+<pre >## [1] 5 4 3 2 1</pre>
 
-</article></slide><slide class=""><hgroup><h2>Character vectors</h2></hgroup><article  id="character-vectors" class="smaller ">
-
-<p>Characters (or character strings) in <code>R</code> are indicated by the double quote identifier.</p>
-
-<pre class = 'prettyprint lang-r'>a.new &lt;- c(a, &quot;A&quot;)
-a.new</pre>
-
-<pre >## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;A&quot;</pre>
-
-<p>Notice the difference with <code>a</code> from the previous slide</p>
-
-<pre class = 'prettyprint lang-r'>a</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-</article></slide><slide class=""><hgroup><h2>Quickly identifying elements in vectors</h2></hgroup><article  id="quickly-identifying-elements-in-vectors" class="smaller ">
-
-<pre class = 'prettyprint lang-r'>rep(a, 15)</pre>
-
-<pre >##  [1] 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3
-## [39] 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5</pre>
-
-</article></slide><slide class=""><hgroup><h2>Calling elements in vectors</h2></hgroup><article  id="calling-elements-in-vectors" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Calling elements in vectors</h2></hgroup><article  id="calling-elements-in-vectors">
 
 <p>If we would want just the third element, we would type</p>
 
@@ -3285,21 +3249,21 @@ a.new</pre>
 
 <pre >## [1] 3</pre>
 
-</article></slide><slide class=""><hgroup><h2>Multiple vectors in one object</h2></hgroup><article  id="multiple-vectors-in-one-object" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Multiple vectors in one object</h2></hgroup><article  id="multiple-vectors-in-one-object">
 
 <p>This we would refer to as a matrix</p>
 
-<pre class = 'prettyprint lang-r'>c &lt;- matrix(a, nrow = 5, ncol = 2)
+<pre class = 'prettyprint lang-r'>c &lt;- matrix(c(a, b), nrow = 5, ncol = 2)
 c</pre>
 
 <pre >##      [,1] [,2]
-## [1,]    1    1
-## [2,]    2    2
+## [1,]    1    5
+## [2,]    2    4
 ## [3,]    3    3
-## [4,]    4    4
-## [5,]    5    5</pre>
+## [4,]    4    2
+## [5,]    5    1</pre>
 
-</article></slide><slide class=""><hgroup><h2>Calling elements in matrices #1</h2></hgroup><article  id="calling-elements-in-matrices-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Calling elements in matrices #1</h2></hgroup><article  id="calling-elements-in-matrices-1">
 
 <ul>
 <li>The first row is called by</li>
@@ -3307,7 +3271,7 @@ c</pre>
 
 <pre class = 'prettyprint lang-r'>c[1, ]</pre>
 
-<pre >## [1] 1 1</pre>
+<pre >## [1] 1 5</pre>
 
 <ul>
 <li>The second column is called by</li>
@@ -3315,9 +3279,9 @@ c</pre>
 
 <pre class = 'prettyprint lang-r'>c[, 2]</pre>
 
-<pre >## [1] 1 2 3 4 5</pre>
+<pre >## [1] 5 4 3 2 1</pre>
 
-</article></slide><slide class=""><hgroup><h2>Calling elements in matrices #2</h2></hgroup><article  id="calling-elements-in-matrices-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Calling elements in matrices #2</h2></hgroup><article  id="calling-elements-in-matrices-2">
 
 <ul>
 <li>The intersection of the first row and second column is called by</li>
@@ -3325,323 +3289,118 @@ c</pre>
 
 <pre class = 'prettyprint lang-r'>c[1, 2]</pre>
 
-<pre >## [1] 1</pre>
+<pre >## [1] 5</pre>
 
 <p>In short; square brackets [] are used to call elements, rows, columns (and much more beyond the scope of this course)</p>
 
-</article></slide><slide class=""><hgroup><h2>Matrices with mixed numeric / character data</h2></hgroup><article  id="matrices-with-mixed-numeric-character-data" class="smaller ">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Frames</h2></hgroup><article  id="data-frames">
 
-<p>If we add a character column to matrix <code>c</code>; everything becomes a character:</p>
-
-<pre class = 'prettyprint lang-r'>cbind(c, letters[1:5])</pre>
-
-<pre >##      [,1] [,2] [,3]
-## [1,] &quot;1&quot;  &quot;1&quot;  &quot;a&quot; 
-## [2,] &quot;2&quot;  &quot;2&quot;  &quot;b&quot; 
-## [3,] &quot;3&quot;  &quot;3&quot;  &quot;c&quot; 
-## [4,] &quot;4&quot;  &quot;4&quot;  &quot;d&quot; 
-## [5,] &quot;5&quot;  &quot;5&quot;  &quot;e&quot;</pre>
-
-</article></slide><slide class=""><hgroup><h2>Matrices with mixed numeric / character data</h2></hgroup><article  id="matrices-with-mixed-numeric-character-data-1" class="smaller ">
-
-<p>Alternatively,</p>
-
-<pre class = 'prettyprint lang-r'>cbind(c, c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;))</pre>
-
-<pre >##      [,1] [,2] [,3]
-## [1,] &quot;1&quot;  &quot;1&quot;  &quot;a&quot; 
-## [2,] &quot;2&quot;  &quot;2&quot;  &quot;b&quot; 
-## [3,] &quot;3&quot;  &quot;3&quot;  &quot;c&quot; 
-## [4,] &quot;4&quot;  &quot;4&quot;  &quot;d&quot; 
-## [5,] &quot;5&quot;  &quot;5&quot;  &quot;e&quot;</pre>
-
-<p>Remember, matrices and vectors are numerical OR character objects. They can never contain both and still be used for numerical calculations.</p>
-
-</article></slide><slide class=""><hgroup><h2>Data frames</h2></hgroup><article  id="data-frames" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Data frames</h2></hgroup><article  id="data-frames-1">
 
 <pre class = 'prettyprint lang-r'>d &lt;- data.frame(&quot;V1&quot; = rnorm(5),
                 &quot;V2&quot; = rnorm(5, mean = 5, sd = 2), 
                 &quot;V3&quot; = letters[1:5])
 d</pre>
 
-<pre >##            V1       V2 V3
-## 1 -0.56047565 8.430130  a
-## 2 -0.23017749 5.921832  b
-## 3  1.55870831 2.469878  c
-## 4  0.07050839 3.626294  d
-## 5  0.12928774 4.108676  e</pre>
+<pre >##            V1         V2 V3
+## 1  1.02709209  0.9740931  a
+## 2 -0.80039324 -0.4457116  b
+## 3 -0.09404068  5.2704680  c
+## 4  0.46403449  9.2585803  d
+## 5  1.12967224  7.1767545  e</pre>
 
 <p>We &lsquo;filled&rsquo; a dataframe with two randomly generated sets from the normal distribution - where \(V1\) is standard normal and \(V2 \sim N(5,2)\) - and a character set.</p>
 
-</article></slide><slide class=""><hgroup><h2>Data frames (continued)</h2></hgroup><article  id="data-frames-continued" class="smaller ">
-
-<p>Data frames can contain both numerical and character elements at the same time, although never in the same column.</p>
-
-<p>You can name the columns and rows in data frames (just like in matrices)</p>
-
-<pre class = 'prettyprint lang-r'>row.names(d) &lt;- c(&quot;row 1&quot;, &quot;row 2&quot;, &quot;row 3&quot;, &quot;row 4&quot;, &quot;row 5&quot;)
-d</pre>
-
-<pre >##                V1       V2 V3
-## row 1 -0.56047565 8.430130  a
-## row 2 -0.23017749 5.921832  b
-## row 3  1.55870831 2.469878  c
-## row 4  0.07050839 3.626294  d
-## row 5  0.12928774 4.108676  e</pre>
-
-</article></slide><slide class=""><hgroup><h2>Calling row elements in data frames</h2></hgroup><article  id="calling-row-elements-in-data-frames" class="smaller ">
-
-<p>There are two ways to obtain row <code>3</code> from data frame <code>d</code>:</p>
-
-<pre class = 'prettyprint lang-r'>d[&quot;row 3&quot;, ]</pre>
-
-<pre >##             V1       V2 V3
-## row 3 1.558708 2.469878  c</pre>
-
-<p>and</p>
-
-<pre class = 'prettyprint lang-r'>d[3, ]</pre>
-
-<pre >##             V1       V2 V3
-## row 3 1.558708 2.469878  c</pre>
-
-<p>The intersection between row 2 and column 3 can be obtained by</p>
-
-<pre class = 'prettyprint lang-r'>d[2, 3]</pre>
-
-<pre >## [1] &quot;b&quot;</pre>
-
-</article></slide><slide class=""><hgroup><h2>Calling columns elements in data frames</h2></hgroup><article  id="calling-columns-elements-in-data-frames" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Calling columns elements in data frames</h2></hgroup><article  id="calling-columns-elements-in-data-frames">
 
 <p>Both</p>
 
 <pre class = 'prettyprint lang-r'>d[, &quot;V2&quot;] # and</pre>
 
-<pre >## [1] 8.430130 5.921832 2.469878 3.626294 4.108676</pre>
+<pre >## [1]  0.9740931 -0.4457116  5.2704680  9.2585803  7.1767545</pre>
 
 <pre class = 'prettyprint lang-r'>d[, 2]</pre>
 
-<pre >## [1] 8.430130 5.921832 2.469878 3.626294 4.108676</pre>
+<pre >## [1]  0.9740931 -0.4457116  5.2704680  9.2585803  7.1767545</pre>
 
 <p>yield the second column. But we can also use <code>$</code> to call variable names in data frame objects</p>
 
 <pre class = 'prettyprint lang-r'>d$V2</pre>
 
-<pre >## [1] 8.430130 5.921832 2.469878 3.626294 4.108676</pre>
+<pre >## [1]  0.9740931 -0.4457116  5.2704680  9.2585803  7.1767545</pre>
 
-</article></slide><slide class=""><hgroup><h2>Beyond two dimensions</h2></hgroup><article  id="beyond-two-dimensions" class="smaller ">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Operations</h2></hgroup><article  id="operations">
 
-<p>If you wish to use numerical objects that have more than two dimension, an array would be a suitable object. The following code yields a 3-dimensional array (2 rows, 4 columns and 3 matrices):</p>
-
-<pre class = 'prettyprint lang-r'>e &lt;- array(1:24, dim = c(2, 4, 3))
-e</pre>
-
-<pre >## , , 1
-## 
-##      [,1] [,2] [,3] [,4]
-## [1,]    1    3    5    7
-## [2,]    2    4    6    8
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3] [,4]
-## [1,]    9   11   13   15
-## [2,]   10   12   14   16
-## 
-## , , 3
-## 
-##      [,1] [,2] [,3] [,4]
-## [1,]   17   19   21   23
-## [2,]   18   20   22   24</pre>
-
-</article></slide><slide class=""><hgroup><h2>Indexing an array</h2></hgroup><article  id="indexing-an-array" class="smaller ">
-
-<p>The square bracket identification works similarly to the identification of matrices and dataframes, but with the added dimension(s). For example,</p>
-
-<pre class = 'prettyprint lang-r'>e[1, 3, 2]</pre>
-
-<pre >## [1] 13</pre>
-
-<p>yields the element in the first row of the third column in the second matrix. This is exactly the downside to an array: it is a series of matrices.</p>
-
-<p>In other words, characters and numerical elements may not be mixed.</p>
-
-</article></slide><slide class=""><hgroup><h2>Potential problem with array</h2></hgroup><article  id="potential-problem-with-array" class="smaller ">
-
-<p>If we replace the third matrix in the array by a character version of that matrix, we obtain</p>
-
-<pre class = 'prettyprint lang-r'>e[, , 3] &lt;- as.character(e[, , 3])
-e</pre>
-
-<pre >## , , 1
-## 
-##      [,1] [,2] [,3] [,4]
-## [1,] &quot;1&quot;  &quot;3&quot;  &quot;5&quot;  &quot;7&quot; 
-## [2,] &quot;2&quot;  &quot;4&quot;  &quot;6&quot;  &quot;8&quot; 
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3] [,4]
-## [1,] &quot;9&quot;  &quot;11&quot; &quot;13&quot; &quot;15&quot;
-## [2,] &quot;10&quot; &quot;12&quot; &quot;14&quot; &quot;16&quot;
-## 
-## , , 3
-## 
-##      [,1] [,2] [,3] [,4]
-## [1,] &quot;17&quot; &quot;19&quot; &quot;21&quot; &quot;23&quot;
-## [2,] &quot;18&quot; &quot;20&quot; &quot;22&quot; &quot;24&quot;</pre>
-
-</article></slide><slide class=""><hgroup><h2>Solution: a list</h2></hgroup><article  id="solution-a-list" class="smaller ">
-
-<p>List are just what it says they are: lists. You can have a list of everything mixed with everything. For example, an simple list can be created by</p>
-
-<pre class = 'prettyprint lang-r'>f &lt;- list(a)
-f</pre>
-
-<pre >## [[1]]
-## [1] 1 2 3 4 5</pre>
-
-<p>Elements or objects within lists can be called by using double square brackets [[]]. For example, the first (and only) element in list <code>f</code> is object <code>a</code></p>
-
-<pre class = 'prettyprint lang-r'>f[[1]]</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-</article></slide><slide class=""><hgroup><h2>Lists (continued)</h2></hgroup><article  id="lists-continued" class="smaller ">
-
-<p>We can simply add an object or element to an existing list</p>
-
-<pre class = 'prettyprint lang-r'>f[[2]] &lt;- d
-f</pre>
-
-<pre >## [[1]]
-## [1] 1 2 3 4 5
-## 
-## [[2]]
-##                V1       V2 V3
-## row 1 -0.56047565 8.430130  a
-## row 2 -0.23017749 5.921832  b
-## row 3  1.55870831 2.469878  c
-## row 4  0.07050839 3.626294  d
-## row 5  0.12928774 4.108676  e</pre>
-
-<p>to obtain a list with a vector and a data frame.</p>
-
-</article></slide><slide class=""><hgroup><h2>Lists (continued)</h2></hgroup><article  id="lists-continued-1" class="smaller ">
-
-<p>We can add names to the list as follows</p>
-
-<pre class = 'prettyprint lang-r'>names(f) &lt;- c(&quot;vector&quot;, &quot;data frame&quot;)
-f</pre>
-
-<pre >## $vector
-## [1] 1 2 3 4 5
-## 
-## $`data frame`
-##                V1       V2 V3
-## row 1 -0.56047565 8.430130  a
-## row 2 -0.23017749 5.921832  b
-## row 3  1.55870831 2.469878  c
-## row 4  0.07050839 3.626294  d
-## row 5  0.12928774 4.108676  e</pre>
-
-</article></slide><slide class=""><hgroup><h2>Calling elements in lists</h2></hgroup><article  id="calling-elements-in-lists" class="smaller ">
-
-<p>Calling the vector (a) from the list can be done as follows</p>
-
-<pre class = 'prettyprint lang-r'>f[[1]]</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-<pre class = 'prettyprint lang-r'>f[[&quot;vector&quot;]]</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-<pre class = 'prettyprint lang-r'>f$vector</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-</article></slide><slide class=""><hgroup><h2>Lists in lists</h2></hgroup><article  id="lists-in-lists" class="smaller ">
-
-<p>Take the following example</p>
-
-<pre class = 'prettyprint lang-r'>g &lt;- list(f, f)</pre>
-
-<p>To call the vector from the second list within the list g, use the following code</p>
-
-<pre class = 'prettyprint lang-r'>g[[2]][[1]]</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-<pre class = 'prettyprint lang-r'>g[[2]]$vector</pre>
-
-<pre >## [1] 1 2 3 4 5</pre>
-
-</article></slide><slide class=""><hgroup><h2>Logical operators</h2></hgroup><article  id="logical-operators" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Basic Operations</h2></hgroup><article  id="basic-operations">
 
 <ul>
-<li><p>Logical operators are signs that evaluate a statement, such as <code>==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, and <code>|</code> (OR) as well as <code>&amp;</code> (AND). Typing <code>!</code> before a logical operator takes the complement of that action. There are more operations, but these are the most useful.</p></li>
-<li><p>For example, if we would like elements out of matrix <code>c</code> that are larger than 3, we would type:</p></li>
+<li>R operates much as you would expect a calculator to function.</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>c[c &gt; 3]</pre>
+<pre class = 'prettyprint lang-r'>1 + 2</pre>
 
-<pre >## [1] 4 5 4 5</pre>
+<pre >## [1] 3</pre>
 
-</article></slide><slide class=""><hgroup><h2>Why does a logical statement on a matrix return a vector?</h2></hgroup><article  id="why-does-a-logical-statement-on-a-matrix-return-a-vector" class="smaller ">
+<pre class = 'prettyprint lang-r'>2*3</pre>
 
-<pre class = 'prettyprint lang-r'>c &gt; 3</pre>
+<pre >## [1] 6</pre>
 
-<pre >##       [,1]  [,2]
-## [1,] FALSE FALSE
-## [2,] FALSE FALSE
-## [3,] FALSE FALSE
-## [4,]  TRUE  TRUE
-## [5,]  TRUE  TRUE</pre>
+<pre class = 'prettyprint lang-r'>6 / 1.3</pre>
 
-<p>The column values for <code>TRUE</code> may be of different length. A vector as a return is therefore more appropriate.</p>
+<pre >## [1] 4.615385</pre>
 
-</article></slide><slide class=""><hgroup><h2>Logical operators (cont’d)</h2></hgroup><article  id="logical-operators-contd" class="smaller ">
+<pre class = 'prettyprint lang-r'>2^5</pre>
+
+<pre >## [1] 32</pre>
+
+</article></slide><slide class=""><hgroup><h2>Vectorised Operations</h2></hgroup><article  id="vectorised-operations">
 
 <ul>
-<li>If we would like the elements that are smaller than 3 OR larger than 3, we could type</li>
+<li>Many operations are &lsquo;vectorised&rsquo;, meaning that they are designed to operate on vectors.</li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>c[c &lt; 3 | c &gt; 3] #c smaller than 3 or larger than 3</pre>
+<pre class = 'prettyprint lang-r'>a + b</pre>
 
-<pre >## [1] 1 2 4 5 1 2 4 5</pre>
+<pre >## [1] 6 6 6 6 6</pre>
 
-<p>or</p>
+<pre class = 'prettyprint lang-r'>a * b</pre>
 
-<pre class = 'prettyprint lang-r'>c[c != 3] #c not equal to 3</pre>
+<pre >## [1] 5 8 9 8 5</pre>
 
-<pre >## [1] 1 2 4 5 1 2 4 5</pre>
+<pre class = 'prettyprint lang-r'>a / b</pre>
 
-</article></slide><slide class=""><hgroup><h2>Logical operators (cont’d)</h2></hgroup><article  id="logical-operators-contd-1" class="smaller ">
+<pre >## [1] 0.2 0.5 1.0 2.0 5.0</pre>
+
+<pre class = 'prettyprint lang-r'>a^b</pre>
+
+<pre >## [1]  1 16 27 16  5</pre>
+
+</article></slide><slide class=""><hgroup><h2>Logical Operations</h2></hgroup><article  id="logical-operations">
+
+<ul>
+<li>Logical operators are signs that evaluate a statement, such as <code>==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>|</code> (OR) as well as <code>&amp;</code> (AND).</li>
+<li>Typing <code>!</code> before a logical operator takes the complement of that action. There are more operations, but these are the most useful.</li>
+</ul>
+
+<pre class = 'prettyprint lang-r'>a &gt; 3</pre>
+
+<pre >## [1] FALSE FALSE FALSE  TRUE  TRUE</pre>
+
+</article></slide><slide class=""><hgroup><h2>Logical operators (cont’d)</h2></hgroup><article  id="logical-operators-contd">
 
 <ul>
 <li>In fact, <code>c != 3</code> returns a matrix</li>
 </ul>
 
-<pre >##       [,1]  [,2]
-## [1,]  TRUE  TRUE
-## [2,]  TRUE  TRUE
-## [3,] FALSE FALSE
-## [4,]  TRUE  TRUE
-## [5,]  TRUE  TRUE</pre>
+<pre >## [1]  TRUE  TRUE FALSE  TRUE  TRUE</pre>
 
 <ul>
 <li>Remember <code>c</code>?:</li>
 </ul>
 
-<pre >##      [,1] [,2]
-## [1,]    1    1
-## [2,]    2    2
-## [3,]    3    3
-## [4,]    4    4
-## [5,]    5    5</pre>
+<pre >## [1] 1 2 3 4 5</pre>
 
-</article></slide><slide class=""><hgroup><h2>Things that cannot be done</h2></hgroup><article  id="things-that-cannot-be-done" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Things that cannot be done</h2></hgroup><article  id="things-that-cannot-be-done">
 
 <ul>
 <li>Things that have no representation in real number space (at least not without tremendous effort)
@@ -3663,7 +3422,7 @@ f</pre>
 
 <pre >## [1] NA</pre>
 
-</article></slide><slide class=""><hgroup><h2>Standard solves for missing values</h2></hgroup><article  id="standard-solves-for-missing-values" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Solutions for missing values</h2></hgroup><article  id="solutions-for-missing-values">
 
 <p>There are two easy ways to perform &ldquo;listwise deletion&rdquo;:</p>
 
@@ -3675,55 +3434,92 @@ f</pre>
 
 <pre >## [1] 3</pre>
 
-</article></slide><slide class=""><hgroup><h2>Floating point example</h2></hgroup><article  id="floating-point-example" class="smaller ">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Data Types</h2></hgroup><article  id="data-types">
 
-<pre class = 'prettyprint lang-r'>(3 - 2.9)</pre>
+</article></slide><slide class=""><hgroup><h2>Numeric Data</h2></hgroup><article  id="numeric-data">
 
-<pre >## [1] 0.1</pre>
+<p>There are different types of &lsquo;numeric&rsquo; data, consisting of:</p>
 
-<pre class = 'prettyprint lang-r'>(3 - 2.9) &lt;= 0.1</pre>
+<ul>
+<li>Integers</li>
+<li>Floats (&lsquo;single&rsquo; and &lsquo;double&rsquo; precision)</li>
+</ul>
 
-<pre >## [1] FALSE</pre>
+<pre class = 'prettyprint lang-r'>3L - 2L == 1</pre>
+
+<pre >## [1] TRUE</pre>
 
 <pre class = 'prettyprint lang-r'>(3 - 2.9) - .1</pre>
 
 <pre >## [1] 8.326673e-17</pre>
 
-</article></slide><slide class=""><hgroup><h2>Some programming tips:</h2></hgroup><article  id="some-programming-tips" class="smaller ">
+<p>Floating point numbers are essentially scientific notation:</p>
+
+<p>Roughly speaking, a single-precision floating point can hold about 8 digits, and a double can hold about 16 digits.</p>
+
+</article></slide><slide class=""><hgroup><h2>Character Data</h2></hgroup><article  id="character-data">
+
+<p>Character data is of type Character.</p>
+
+<pre class = 'prettyprint lang-r'>library(stringr)
+a = c(&quot;Ishmail Enterprise&quot;, &quot;Bah Industries&quot;, &quot;Sheku &amp; Sheku Enterprise&quot;, 
+      &quot;Rahim and Sons.&quot;, &quot;Philip Inc.&quot;)
+a[str_detect(a, &quot;Enterprise&quot;)]</pre>
+
+<pre >## [1] &quot;Ishmail Enterprise&quot;       &quot;Sheku &amp; Sheku Enterprise&quot;</pre>
+
+</article></slide><slide class=""><hgroup><h2>Logical/Boolean (True/False) Data</h2></hgroup><article  id="logicalboolean-truefalse-data">
 
 <ul>
-<li>keep your code tidy</li>
-<li>use comments (text preceded by <code>#</code>) to clarify what you are doing
-
-<ul>
-<li>If you look at your code again, one month from now: you will not know what you did –&gt; unless you use comments</li>
-</ul></li>
-<li>when working with functions, use the TAB key to quickly access the help for the function’s components</li>
-<li>work with logically named <code>R</code>-scripts
-
-<ul>
-<li>indicate the sequential nature of your work</li>
-</ul></li>
-<li>work with <code>RStudio</code> projects</li>
+<li>Consists of TRUE or FALSE and are the result of logical operations.</li>
+<li>They can be used for subsetting a vector/array/data.frame as seen earlier, in <code>if</code> statements and elsewhere.</li>
 </ul>
 
-</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Practical</h2></hgroup><article  id="practical" class="smaller ">
+<pre class = 'prettyprint lang-r'>TRUE == FALSE</pre>
 
-</article></slide><slide class=""><hgroup><h2>How to approach the next practical</h2></hgroup><article  id="how-to-approach-the-next-practical" class="smaller ">
+<pre >## [1] FALSE</pre>
 
-<p>Aim to make the exercises without looking at the answers.</p>
+<pre class = 'prettyprint lang-r'>a &lt;- c(1, 2, 3, 4)
+b &lt;- c(4, 3, 2, 1)
+a &gt; b</pre>
+
+<pre >## [1] FALSE FALSE  TRUE  TRUE</pre>
+
+<pre class = 'prettyprint lang-r'>r_descriptors &lt;- c(&quot;powerful&quot;, &quot;flexible&quot;, &quot;frustrating&quot;)
+&quot;frustrating&quot; %in% r_descriptors</pre>
+
+<pre >## [1] TRUE</pre>
+
+</article></slide><slide class=""><hgroup><h2>Factors</h2></hgroup><article  id="factors">
 
 <ul>
-<li>Use the answers to evaluate your work</li>
-<li>Use the help to identify the workings of functions</li>
+<li>Factors represent categorical data with a finite number of categories.</li>
+<li>They are especially useful when performing calculations on subsets of data.</li>
 </ul>
 
-<p>If this does not work out –&gt; switch to the answer-based practical.</p>
+<pre class = 'prettyprint lang-r'>head(mtcars, n = 4)</pre>
 
-<p>In any case; ask for help when you feel help is needed.</p>
+<pre >##                 mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4      21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag  21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710     22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1</pre>
+
+<pre class = 'prettyprint lang-r'>mtcars$fuel_consumption &lt;- ifelse(mtcars$mpg &lt; mean(mtcars$mpg), &quot;high&quot;, &quot;low&quot;)
+
+table(mtcars$cyl, mtcars$fuel_consumption)</pre>
+
+<pre >##    
+##     high low
+##   4    0  11
+##   6    4   3
+##   8   14   0</pre>
+
+</article></slide><slide class=""><hgroup><h2>A Final Word</h2></hgroup><article  id="a-final-word">
 
 <ul>
-<li>Do not &lsquo;struggle&rsquo; for too long: we only have limited time!</li>
+<li>Data types determine which operations are and are not permissible, and how a function behaves.</li>
+<li>If you are running into weird errors, check that your data is of the type you expect.</li>
 </ul></article></slide>
 
 
