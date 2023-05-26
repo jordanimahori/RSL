@@ -160,7 +160,6 @@ We'll adapt the course as we go. To ensure that you work with the latest iterati
     - [Lecture C](Contents/Material/Part C - Data manipulation/Lecture_C.html)
     - [Lecture on dplyr](Contents/Material/happy_scientist-master/dplyr/intro_to_tidyverse_dplyr.html)
     - [Practical C](Contents/Material/Part C - Data manipulation/Practical_C.html)
-    - [Solutions to Practical C](Contents/Material/Part C - Data manipulation/Practical_C_Solution.html)
 
 
 ## Column 2

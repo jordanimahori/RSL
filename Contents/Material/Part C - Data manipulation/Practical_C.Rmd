@@ -29,32 +29,49 @@ The following packages are required for this practical:
 ```{r}
 library(dplyr)
 library(magrittr)
+library(readxl)
+library(readr)
 ```
 
 ---
 
-1. **Open the workspace cpi_sample.RData. You need to download this file and put it in the project folder.**
+1. **Open the dataset that you've brought with you. You should first put this file in the project folder.**
 
-
+```{r}
+# hint -- readr or readxl may be what you need depending on the format
+```
 ---
 
-2. **Inspect the data, how many rows and columns are there in the data? What does that mean?**
+2. **Inspect the data: (1) how many rows and columns are there in the data? (2) What are the data types of the different variables?**
 
+```{r}
+# hint -- look at functions dim and str 
+```
 ---
 
+3. **Create two datasets containing rows matching certain conditions, once using subscripting and again using dplyr:filter.**
+
+```{r}
+# hint -- in the console, type: ?filter
+
+```
 ---
 
-3. **Further inspect the data, what does this data set show? What can this data be used for?**
-
+4. **Create new datasets that contain only three columns (of your choice), once using subscripting and again using dplyr:select.** 
+```{r}
+# hint -- in the console, type ?select
+```
 ---
 
-4. **In the `cpi_sample` data set, ..... Use a pipe to transform `hgt` in the `boys` dataset to height in meters and verify the transformation.**
+5. **Rename each variable in your smaller datasets, once using colnames() and again using dplyr:rename.**
+```{r}
+#hint -- look up rename
+```
+---
 
-<!-- Using the standard `%>%` and the `%$%` pipes: -->
-```{r, echo = F}
-boys %>%
-  transform(hgt = hgt / 100) %$%
-  mean(hgt, na.rm = TRUE)
+6. **Write a single command that reads, filters, selects columns, and renames the variable using pipes.**
+```{r}
+# hint -- pipes are constructed using the %>% operator
 ```
 
 ---
