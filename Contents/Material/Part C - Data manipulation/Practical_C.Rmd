@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 ---
 
 #### Exercises
-In this practical we are going to use sample CPI data to practice with data manipulation.
+In this practical we are going to use ITAS/ECR/Asycuda data to practice with data manipulation.
 
 
 ---

@@ -3399,22 +3399,19 @@ head(sorted_asycuda2)</pre>
 ##   &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;
 ## 1 SLFQE      IM4     17111744.</pre>
 
-<pre class = 'prettyprint lang-r'>asycuda[, 3]   # To select the third column</pre>
+<pre class = 'prettyprint lang-r'>head(asycuda[, 3])   # To select the third column</pre>
 
-<pre >## # A tibble: 18,115 × 1
-##      CIFVALUE
-##         &lt;dbl&gt;
-##  1 571702393.
-##  2 442377642.
-##  3  33929896.
-##  4  17111744.
-##  5  53030236.
-##  6  24695327.
-##  7 144559681.
-##  8 773690164.
-##  9  11152565.
-## 10  14480200.
-## # ℹ 18,105 more rows</pre>
+<pre >## # A tibble: 6 × 1
+##     CIFVALUE
+##        &lt;dbl&gt;
+## 1 571702393.
+## 2 442377642.
+## 3  33929896.
+## 4  17111744.
+## 5  53030236.
+## 6  24695327.</pre>
+
+</article></slide><slide class=""><hgroup><h2>Selecting in Base R using Subsetting (cont.)</h2></hgroup><article  id="selecting-in-base-r-using-subsetting-cont." class="smaller ">
 
 <pre class = 'prettyprint lang-r'>asycuda[4, 3]  # To select the element in row 4, column 3</pre>
 
@@ -3422,13 +3419,6 @@ head(sorted_asycuda2)</pre>
 ##    CIFVALUE
 ##       &lt;dbl&gt;
 ## 1 17111744.</pre>
-
-<ul>
-<li><p>For a vector <code>my_vect</code>, the command <code>my_vect[n]</code> returns the n’th element.</p></li>
-<li><p>For a data.frame <code>my_df</code>, the command <code>my_df[n,m]</code> returns the n’th element of the m’th column</p></li>
-<li><p>Writing <code>df[n,]</code> returns the n’th row</p></li>
-<li><p>What do you think the command <code>my_df[,m]</code> returns?</p></li>
-</ul>
 
 </article></slide><slide class=""><hgroup><h2>Selecting in Base R using Subsetting</h2></hgroup><article  id="selecting-in-base-r-using-subsetting-1" class="smaller ">
 
@@ -3495,35 +3485,35 @@ asycuda_example &lt;- mutate(asycuda3,
 head(asycuda_example)</pre>
 
 <pre >## # A tibble: 6 × 3
-##   OFFICECODE DECTYPE    CIFVALUE
-##   &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;
-## 1 SLFQE      IM4      743801273.
-## 2 SLFQE      IM4     1074309552.
-## 3 SLFQE      IM4       37722426.
-## 4 SLFQE      IM4       29593192.
-## 5 SLFQE      IM4       32444904.
-## 6 SLFQE      IM4       30138752.</pre>
+##   OFFICECODE DECTYPE   CIFVALUE
+##   &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt;
+## 1 SLFQE      IM4     351729307.
+## 2 SLFQE      IM4     774258513.
+## 3 SLFQE      IM4      35302843.
+## 4 SLFQE      IM4      23640398.
+## 5 SLFQE      IM4      34566634.
+## 6 SLFQE      IM4      29783211.</pre>
 
 <p>With the pipe:</p>
 
 <pre class = 'prettyprint lang-r'>asycuda_example &lt;-
-  read_excel(&quot;~/Projects/NRA/RSL/data/Import Export May 2022.xls&quot;, 
-             guess_max = 100000) %&gt;%
+  asycuda %&gt;%
   filter(DECTYPE == &quot;IM4&quot; | DECTYPE == &quot;EX1&quot;) %&gt;%
   select(OFFICECODE, DECTYPE, CIFVALUE) %&gt;%
+  arrange(desc(CIFVALUE)) %&gt;%
   mutate(CIFVALUE = CIFVALUE*runif(n=length(CIFVALUE), min=0.5, max=1.5))
 
 head(asycuda_example)</pre>
 
 <pre >## # A tibble: 6 × 3
-##   OFFICECODE DECTYPE    CIFVALUE
-##   &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;
-## 1 SLFQE      IM4      394524015.
-## 2 SLFQE      IM4     1027893802.
-## 3 SLFQE      IM4       73906090.
-## 4 SLFQE      IM4       18640130.
-## 5 SLFQE      IM4       52365235.
-## 6 SLFQE      IM4       15514807.</pre>
+##   OFFICECODE DECTYPE      CIFVALUE
+##   &lt;chr&gt;      &lt;chr&gt;           &lt;dbl&gt;
+## 1 SLFQE      EX1     358920789812.
+## 2 SLFQE      EX1     115964609464.
+## 3 SLFQE      EX1     163047469918.
+## 4 SLFQE      EX1      73491089337.
+## 5 SLFKT      IM4     129466600455.
+## 6 SLFQE      IM4      53284543267.</pre>
 
 </article></slide><slide class=""><hgroup><h2>With pipes</h2></hgroup><article  id="with-pipes" class="smaller ">
 
@@ -3544,7 +3534,7 @@ head(asycuda_example)</pre>
 
 <pre class = 'prettyprint lang-r'>rnorm(10) %&gt;% mean()</pre>
 
-<pre >## [1] -0.6611538</pre>
+<pre >## [1] -0.1194604</pre>
 
 <ul>
 <li><code>f(x, y)</code> becomes <code>x %&gt;% f(y)</code></li>

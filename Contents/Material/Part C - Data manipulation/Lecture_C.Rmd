@@ -165,15 +165,14 @@ head(asycuda_example)
 With the pipe:
 ```{r}
 asycuda_example <-
-  read_excel("~/Projects/NRA/RSL/data/Import Export May 2022.xls", 
-             guess_max = 100000) %>%
+  asycuda %>%
   filter(DECTYPE == "IM4" | DECTYPE == "EX1") %>%
   select(OFFICECODE, DECTYPE, CIFVALUE) %>%
+  arrange(desc(CIFVALUE)) %>%
   mutate(CIFVALUE = CIFVALUE*runif(n=length(CIFVALUE), min=0.5, max=1.5))
 
 head(asycuda_example)
 ```
-
 
 ## With pipes
 Your code becomes more readable:

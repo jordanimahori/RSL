@@ -3302,12 +3302,12 @@ c</pre>
                 &quot;V3&quot; = letters[1:5])
 d</pre>
 
-<pre >##            V1         V2 V3
-## 1  1.02709209  0.9740931  a
-## 2 -0.80039324 -0.4457116  b
-## 3 -0.09404068  5.2704680  c
-## 4  0.46403449  9.2585803  d
-## 5  1.12967224  7.1767545  e</pre>
+<pre >##            V1       V2 V3
+## 1 -2.37884606 8.264067  a
+## 2  1.66619477 5.456961  b
+## 3  1.05365516 2.936259  c
+## 4 -0.35612756 7.306376  d
+## 5 -0.07598657 7.704309  e</pre>
 
 <p>We &lsquo;filled&rsquo; a dataframe with two randomly generated sets from the normal distribution - where \(V1\) is standard normal and \(V2 \sim N(5,2)\) - and a character set.</p>
 
@@ -3317,17 +3317,17 @@ d</pre>
 
 <pre class = 'prettyprint lang-r'>d[, &quot;V2&quot;] # and</pre>
 
-<pre >## [1]  0.9740931 -0.4457116  5.2704680  9.2585803  7.1767545</pre>
+<pre >## [1] 8.264067 5.456961 2.936259 7.306376 7.704309</pre>
 
 <pre class = 'prettyprint lang-r'>d[, 2]</pre>
 
-<pre >## [1]  0.9740931 -0.4457116  5.2704680  9.2585803  7.1767545</pre>
+<pre >## [1] 8.264067 5.456961 2.936259 7.306376 7.704309</pre>
 
 <p>yield the second column. But we can also use <code>$</code> to call variable names in data frame objects</p>
 
 <pre class = 'prettyprint lang-r'>d$V2</pre>
 
-<pre >## [1]  0.9740931 -0.4457116  5.2704680  9.2585803  7.1767545</pre>
+<pre >## [1] 8.264067 5.456961 2.936259 7.306376 7.704309</pre>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Operations</h2></hgroup><article  id="operations">
 

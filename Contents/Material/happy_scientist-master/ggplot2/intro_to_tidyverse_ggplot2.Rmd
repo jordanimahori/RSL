@@ -1,51 +1,31 @@
+
 ---
-title: "Introduction to the Tidyverse"
-subtitle: "part 2: data visualization with ggplot2"
-author: "Laurent Smeets adopted from Malcolm Barrett"
+title: 'Visualising Data in R'
+author: "Statistical Programming with R"
 date: \today
 output:
-  xaringan::moon_reader:
-    css: ["default", "theme.css"]
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+  ioslides_presentation:
+    fig_height: 5
+    fig_width: 8
+    logo: logo_en.png
+    transition: faster
+    smaller: true
+  beamer_presentation: default
 ---
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, fig.align = "center", dpi = 320, fig.height = 4)
-library(mbmisc)
+# library(mbmisc)
 library(tidyverse)
-library(tidymeta)
+# library(tidymeta)
 library(datasauRus)
 
 diabetes <- read_csv("diabetes.csv")
 ```
 
 
-class: inverse-ns, center
-
-background-image: url(tidyhex.png)
----
-
-class: inverse-ns, center
-
-# Working with data in R
-## the `r font_col("tidyverse", "#E69F00")` is a collection of `r font_col("friendly and consistent", "#56B4E9")` tools for data analysis and visualization. 
-
----
-class: inverse-ns, center
-
-# Working with data in R
-## `r font_col("the tidyverse is a collection of friendly and consistent tools for data analysis and visualization. ", "#6C7B7F")`
-## They live as `r font_col("R packages", "#E69F00")` each of which does one thing well. 
-
----
-
-background-image: url(https://raw.githubusercontent.com/tidyverse/tidyverse/master/man/figures/logo.png)
-background-position: 90% 10%
 ## `library(tidyverse)` will load  
 ## the core tidyverse packages: 
 
@@ -59,16 +39,13 @@ background-position: 90% 10%
 #### [forcats](https://github.com/hadley/forcats), for factors.
 
 ---
-background-image: url(http://hexb.in/hexagons/ggplot2.png)
-background-position: 90% 10%
+
 
 # ggplot2: Elegant Data Visualizations in R
 
 ## a Layered Grammar of Graphics
 
 ---
-background-image: url(http://hexb.in/hexagons/ggplot2.png)
-background-position: 90% 10%
 
 # ggplot2: Elegant Data Visualizations in R
 
@@ -76,8 +53,6 @@ background-position: 90% 10%
 ## Data is mapped to aesthetics; Statistics and plot are linked
 
 ---
-background-image: url(http://hexb.in/hexagons/ggplot2.png)
-background-position: 90% 10%
 
 # ggplot2: Elegant Data Visualizations in R
 
@@ -86,9 +61,6 @@ background-position: 90% 10%
 ## Sensible defaults; Infinitely extensible
 
 ---
-
-background-image: url(http://hexb.in/hexagons/ggplot2.png)
-background-position: 90% 10%
 
 ## Publication quality & beyond
 

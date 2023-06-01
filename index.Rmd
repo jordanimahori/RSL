@@ -46,28 +46,26 @@ The course starts at a very basic level and builds up gradually. No previous exp
 | *Friday, May 19*      | 14.00-16.00 | Introduction to R and RStudio - *continued*   |
 | **Week 2**            |             |                                 |
 | *Thursday, May 25*    | 14.00-16.00 | Basics of R |
-| *Friday, May 26*      | 14.00-16.00 | Basics of R (continued)  |
+| *Friday, May 26*      | 14.00-16.00 | Data Manipulation (A)  |
 | **Week 3**            |             |                                 |
-| *Thursday, June 1*    | 14.00-16.00 | Data Manipulation (A)               |
-| *Friday, June 2*      | 14.00-16.00 | Data Manipulation (A) - *continued*              |
+| *Thursday, June 1*    | 14.00-16.00 | Data Manipulation (B)               |
+| *Friday, June 2*      | 14.00-16.00 | Data Visualisation (A)               |
 | **Week 4**            |             |                                 |
-| *Thursday, June 29*   | 14.00-16.00 | Data Manipulation (B)            |
-| *Friday, June 30*     | 14.00-16.00 | Data Manipulation (B) - *continued*           |
+| *Thursday, June 15*   | 14.00-16.00 | Data Visualisation (B)            |
+| *Friday, June 16*     | 14.00-16.00 | Strings, Factors & Dates       |
 | **Week 5**            |             |                                 |
-| *Thursday, July 7*    | 14.00-16.00 | Visualizing Data  |
-| *Friday, July 8*      | 14.00-16.00 | Visualizing Data - *continued* |
+| *Thursday, June 22*   | 14.00-16.00 | Loops and Functions  |
+| *Friday, June 23*     | 14.00-16.00 | Loops and Functions - *continued* |
 | **Week 6**            |             |                                 |
-| *Thursday, July 14*   | 14.00-16.00 | Loops and Functions  |
-| *Friday, July 15*     | 14.00-16.00 | Loops and Functions - *continued* |
+| *Thursday, June 29*   | 14.00-16.00 | Topics - Using NRA's Data Warehouse  |
+| *Friday, June 30*     | 14.00-16.00 | Topics - Git and GitHub |
 | **Week 7**            |             |                                 |
-| *Thursday, July 21*   | 14.00-16.00 | Topics - Writing Functions  |
-| *Friday, July 22*     | 14.00-16.00 | Topics - Assertions and Testing |
+| *Thursday, July 7*    | 14.00-16.00 | Topics - More About Strings |
+| *Friday, July 8*      | 14.00-16.00 | Topics - Data Matching |
 | **Week 8**            |             |                                 |
-| *Thursday, July 28*   | 14.00-16.00 | Topics - Integrating with SQL  |
-| *Friday, July 29*     | 14.00-16.00 | Topics - Git and GitHub |
-| **Week 9**           |             |                                 |
-| *Thursday, August 5*  | 14.00-16.00 | Topics - Spatial Data  |
-| *Friday, August 6*    | 14.00-16.00 | Topics - TBD |
+| *Thursday, July 14*   | 14.00-16.00 | Topics - Assertions and Testing |
+| *Friday, July 15*     | 14.00-16.00 | Topics - Comparison of Means and Hypothesis Testing |
+| *More to be added*.   |             |       |
 
 
 # Installing R + RStudio
@@ -127,7 +125,7 @@ We'll adapt the course as we go. To ensure that you work with the latest iterati
     - [`markdown.Rmd`](Contents/Material/Part A - Introduction/markdown.Rmd){target="_blank"}
 
 - Part B: Basics of R
-    - [Lecture B](Contents/Material/Part B - How is R organized/Lecture-B_november.html){target="_blank"}
+    - [Lecture B](Contents/Material/Part B - How is R organized/Lecture_B.html){target="_blank"}
     - [Practical B](Contents/Material/Part B - How is R organized/Practical_B.html){target="_blank"}
     - [Solutions to Practical B](Contents/Material/Part B - How is R organized/Practical_B_walkthrough.html){target="_blank"}
     - [`boys.RData`](Contents/Material/Part B - How is R organized/boys.RData)
